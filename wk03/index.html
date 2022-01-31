@@ -146,10 +146,178 @@
             billion to +2.1 billion </li>
         <li><b>Encoding Text</b> - computers encode text by assigning a unique binary code to each character</li>
         <li><b>Processing Speed</b> - 64 bit processors computers can receive or send 8 bytes of data at once. Each time the processor writes to memory or reads data from memory is a cycle. the base unit is the hertz (Hz). 1 hertz is 1 cycle / second<br>            1 kilohertz (KHz) = 1000 Hz; 1 megahertz (MHz) = 1 million HZ - seen on older PC Bus interfaces; 1 gigahertz (GHz) = 1 billion Hz </li>
-        <li><b>Storage Space</b> - </li>
-        <li><b>Throughput</b> - </li>
-        <li><b>System Memory</b> - </li>
+        <li><b>Storage Space</b> - refers to bytes, since bits and bytes are so small we use a metric system to describe the groups, Kilobyte, Megabyte, Gigabyte, and Terabyte (each 1024 times larger than the group before)</li>
+        <li><b>Throughput</b> - Data transmission from 1 computer to the other - a gigabit internet connection can send 1 billion 0s and 1s per second. It also has to do with the PC Bus speed - the bus speed is how quickly the system can move data from one
+            component to another. Gigabit speed is what is common in many modern modems, Megabit is stil very common for home networks, Terabit (Tbps) is used to link data centers and cities</li>
+        <li><b>System Memory</b> - RAM is volatile and clears data when the computer shuts down.
+            <ul>
+                <li>DRAM - Dynamic ram; SDRAM - Synchronous DRAM - is dynamic RAM that is synchronized with system bus; Dual Inline Memory Module (DIMM) - is a stick made of several DRAM circuits - used for SDRAM in Desktop PC; (SO-DIMM) - Small Outline DIMM
+                    - are used in laptops</li>
+            </ul>
+        </li>
     </ul>
+    <h3>2.3.5 - Data Representation - TEXT ENCODING STANDARDS - ASCII & UNICODE</h3>
+    ASCII & Unicode
+    <p>ASCII is 7 bit code that can hold 128 characters (7 0s all the way to 7 1s)<br>is: S = 83; s = 115; $ = 36
+        <br><b>Extended ASCII</b> was created to use the 8th bit, encompassing characters 128 -255; Extended ASCII includes accented letters and math symbols
+        <br><br><b>Unicode</b> was released in 1992 to alleviate the limitations of sending ASCII code between different nations.<br> Unicode is 16 bit and can represent millions of characters.
+    </p>
+    <h3>2.3.6 - Data Representation Facts</h3>
+    ASCII - developed in 1963. ASCII is seven-bit code and represents 128 characters (from 7 0s - 7 1s).
+    <br>Each letter and symbol is assigned a number (0-127). Extended ASCII was developed to represent accented letters and additional symbols (128-255).
+    <br><br>Unicode - was developed in 1992, using 16-bit encoding and is capable of representing millions of characters. Emojis are Unicode characters.
+    <br> Unicode can employ different encoding stanards - that is what: UTF-8; UTF-16; and UTF-32 are. UTF-8 & UTF-16 are the most common -- websites often use UTF-8 encoding.
+    <br> <i>section quiz</i>
+    <h2>2.4 - Media Formatting</h2>
+    covering: how pictures and sounds are encoded as ones and zeros; raster and vector images; when is file size more important, when is quality more important?
+    <br><br> <b>KEY TERMS</b>
+    <br><br>
+    <ul>
+        <li><b>Sample</b> - part of a sound wave that is captured, measured, and assigned a numeric value during digital sound recording</li>
+        <li><b>Bit Depth</b> - amount of memory used to store the numeric value of a sound sample during digital sound recording. 8-bit sound uses 1 byte to store the value of each sample. 16-bit uses 2 bytes per sample. the higher the bit depth, the better
+            the sound, generally speaking. </li>
+        <li><b>Sampling Rate</b> - the number of individual samples taken each second during digital recording. Measured in Hertz, higher the sample rate, the better the recording. most modern recordings are 44.1Hz.</li>
+        <li><b>Frame Rate</b> - Number of images, or frames, that are taken each second during digital video recording, most digital videos average 30 FPS, with a push towards 60 FPS in gaming and high def</li>
+        <li><b>Resolution</b> - number of pixels in the width and height of each frame in a digital video recording, the higher the resolution, the clearer the image.</li>
+        <li><b>Color Depth</b> - amount of memory computer uses to display colors in a digital image or video. 8-bit color images use one byte of data for each pixel. 24-bit color uses 3 bytes for each pixel.</li>
+        <li><b>RGB Display</b> - display on a computer monitor that is made up of sets of tiny red, green, and blue (RGB) lights, easch set combining to make a pixel. a pixe will display different colors depending on the brightness of each light</li>
+        <li><b>Raster Images</b> - images stored by dividing a picture into rows of pixels and collecting the color values of each pixel, in order, row-by-row</li>
+        <li><b>Vector Images</b> - images stored by mathematically describing the shapes in the image. a circle might be stored as a center point and the distance from the center point to the circle's edge; a square will be saved as 4 lines each with a beginning
+            point and a length.</li>
+        <li><b>File Compression</b> - way to reduce the size of files making them easier to store</li>
+        <li><b>Lossless Compression</b> - compression algorithm, such as GIF, PNG, PDF, and ZIP, that doesn't affect the original data.</li>
+        <li><b>Lossy Compression</b> - compression algorithm, such as JPG, MP3, MP4 that slightly alter the data to make it easier to store, taking advantage of the limitations of human sight and hearing, and is usually used for images, videos, and audio
+            files
+        </li>
+        <li><b>Run-Length Encoding</b> - common lossless compression algorithm that looks for repeated patterns of bits or bytes and records the pattern and then number of times the pattern is repeated</li>
+        <li><b>Compression Artifact</b> - patch of pixels in a compress image or video that have less visable detail than the rest of the image</li>
+        <li><b>Bitrate</b> - Kilobits of audio data processed each second</li>
+        <li><b>Video Codecs</b> - Pieces of software that either compress or decompress digital media</li>
+        <li><b>Wireframes</b> - first step in designing 3D model which provides the outline of the model, including only the vertices and lines without including and surfaces, textures, or lighting</li>
+        <li><b>Rendering</b> - second step in designing a 3D model which converts the models int 2D images on a computer</li>
+        <li><b>Ray Tracing</b> - advanced rendering method that is used to create incredibly realistic lighting effects for things like video games and movies</li>
+    </ul>
+    <h3>2.4.1 - Digital Sound and Video</h3> in the past audio and video was recorded physically using analog techniques, now it is recorded digitally and encoded through 1 and 0s.
+    <br> soundwaves are smooth curves and are stored as smooth curves when recording analog. In digital recording we talk about <b>bit depth</b>, or how many bits are used to encode 1 sample
+    <br> early computers used 8 bits to encode 1 sample, so each sample had 256 possible values. Today most computers use 16 bit audio with 65,535 possible values. The higher the bit rate the better the sound quality.
+
+    <br><b>Sampling Rate</b> sampling rate details how many samples are taken per second 1000 samples per second would be 1KHz and would not sound very good, most modern music is recorded in at least 44.1 KHz.
+    <br>the higher the Sample Rate or Bit Rate, the larger the filesize. The reason that High Fidelity Audio files are so large is because they contain high bit rate, and sample rate.
+
+    <p><b>Video</b><br>Video is still image shown very quickly so that it tricks your brain into believing it is moving. Video quality is determined by Frame Rate, Resolution, and Color-Depth.
+        <br> <b>Frame Rate</b> is the measure of how many frames are shown per second, the higher the frame rate, the smoother the motion - most video is in 30FPS.
+        <br> Resolution is the amount of pixels in each individual image, higher resolution images are clearer and take more storage.
+        <br> Color Depth - 8 bit color uses 1 byte per pixel limiting to 256 colors; whereas 24-bit color uses 3 bytes of data and can represent millions of colors.
+        <br> the better the color depth the more realistic the video will appear, and the larger the video will be.
+    </p>
+    <h3>2.4.2 - Digital Sound and Video Facts</h3>
+
+    <br> Graphic Devices, also referred to as monitors or displays, must be connected to a graphic adapter / or graphics card through an HDMI or Display
+    <br><b>Graphic Device Resolution Chart</b>
+    <br>- SVGA 800 � 600 (generates an analog signal)
+    <br>- XGA 1024 � 768
+    <br>- XGA+ 1152 � 864
+    <br>- WXGA 1280 � 720
+    <br>- SXGA 1280 � 1024
+    <br>- WSXGA+ 1680 � 1050
+    <br>- UXGA 1600 � 1200
+    <br>- FHD 1920 � 1080
+    <br>- WUXGA 1920 � 1200
+    <br>- QHD 2560 � 1440
+    <br>- 4K UHD 3840 � 2160
+    <br><br> Aspect Ratio is the proportion between width and height. common ratios are 4:3 - analog TV broadcast; 16:9 - HDTV and Production Films; 16:10 - Computer Display
+    <br>Display Devices -- LCD - Liquid Crystal Display - work by having backlight reflect through liquid crystals.
+    <br><br> Touchscreens are capacitive. they are configured through software to support multi-touch events. used in handheld devices and kiosk
+    <br><br> Digital Projectors - some use DLP (Digital Light Processing) technology that uses mirror along with light and color filters to display an image on a screen
+
+    <h3>2.4.3 - File Compression</h3>
+    <br> Run-Length Encoding - takes advantage of the fact that multiple pixels of the same color are normally by each other and instead of storing (ex: red, red, red, red, red, red -- the area will be saved as 6red (denoting 6 red spaces))
+    <br> Run-Length Encoding is a Lossless compression <b>Algorithm</b> and makes no changes to the original file. Zip, PDF, PNG, and GIF are all examples of Lossless Compression. The
+    <br><br> Lossy Compression does change the file a small amount. Lossy compression takes advantage of the fact that human sight and hearing is imperfect. JPG is the most common Lossy image type, MP3 and MP4 are Lossy Audio and Video formats.
+    <br> in video when a background (or other pixels in the frame) do not change from frame to frame it is called Temporal Redundancy and Lossy video compression can take advantage of that to improve file size. errors that arise due to video being too
+    compressed are called Compression Artifacts.
+    <br><br>Most audio compression techniques discard data in the ultrasonic range since humans cannot hear in that range, but they strive to keep data in the vocal range.
+    <br>audio on telephones is compressed to limit the amount do data being transmitted so more people can use phone service at one time.
+    <h3>2.4.4 - File Compression Facts</h3>
+    <h3>2.4.5 - Digtial Audio Formats </h3>
+    <ul>
+        <li>Bitrate</li> - kilobits of audio data process each second.
+        <li>WAV / AIFF - Waveform Audio File (WAV) was created in 1991 by Microsoft and IBM. Apple Created AIFF (Audio Interchange File Format). These audio formats are uncompressed and are used for TV, Radio, and media that needs quality files for editing.</li>
+        <li>MP3 / AAC - MPEG Layer 3 is a format of Lossy data compression, developed by the Moving Pictures Experts Group (MPEG). MP3 uses 'audio masking' to reduce file size of audio files. Patented in November 1996.
+            <br>in 1997 a patent was filed for AAC (Advanced Audio Coding) which is similar but uses a more complex compression algorithm for better sound quality. AAC is used by YouTube, Android, iOS, iTunes, and gaming systems because of it's small
+            size and excellent quality. </li>
+        <li>WMA - Windows Media Audio was released in 1999 - it is not used freely, but does have higher quality compression at lower bitrate.</li>
+        <li>MIDI - Musical Instrument Digital Interface don't contain audio waves. MIDI files contain the instructions of which notes are played, when they are played, and how long they are to be held. </li>
+    </ul>
+    <h3>2.4.6 - Digital Video Formats</h3>
+    <b>Video Codec</b> - the codec is a piece of software that either compresses or decompresses digital media. Most codecs have 2 components:
+    <br>-- an <b>encoder</b> = that compresses the information for easier storage and sharing
+    <br>-- and the <b>decoder</b> - that decompresses the file to play back.
+    <br> there will be a video and audio codec to handle both the image and the audio files that comprise a video.
+    <br><br>MPEG-4 is a commonly used video codec that uses an advanced compression algorithm. DivX is a movie encoding codec that utilizes certain MPEG-4 files and compresses the movie to fit on a single DVD. DivX HD does the same for HD movies.
+    <h4>Video Formats</h4>
+    some formats are compressed while others are not (Lossy vs Lossless). <br>
+    <b>MP4</b> - common for internet video because of the small file size. one of the most common formats.
+    <b>AVI</b> - Audio Video Interleave. created in 1992 by Microsoft for Windows. AVI are made of small container files known as RIFF (Resource Interchange File Format) files which divide each AVI file's data into smaller chunks. Each chunk of the AVI
+    file contains
+    <br>metadata about the file (such as dimension and frame rate) and a second chunk that includes the audio and visual data. AVI files are NOT compressed and can become large, not used much outside of Windows because of limitations compared to modern
+    formats, like MP4.
+    <br><b>WMV</b> - Compressed video storage format developed by Microsoft for the Microsoft Advanced Systems Format (ASF). compressed and encoded by Microsoft codecs, you need additional software to play these files on Mac computers.
+    </>
+    <h3>2.4.7 - Digital Images</h3>
+    Raster and Vector Graphics - when all 3 lights of a pixel (Red, Green, Blue) [RGB] are on (set to 255) then the pixel displays white.
+    <br><b>Raster</b> - these are BitMap images and are the most common. Raster images save every pixel of information and can be very detailed, therefore very large in size. they also do not scale up well. Small raster images will appear pixelated when
+    scaled up.
+    <br><b>Vector</b> - 3D movies and video games use vector graphics (so do logos), as well as fonts. Instead of storing each pixel of information, vector graphics draw using circles and curves. Vector graphics are highly scalable and do not lose detail
+    when stretched or scaled up.
+    <br> The filesize is normally samller than raster images, making vector files easier to store. Vector graphics are not as easy to create as raster images and vector images do not include the same level of detail as rater images, most only contain
+    a few colors and shapes.
+    <h3>2.4.8 - Digital Image Facts</h3>
+    RGB Display, Raster, Vector
+    <h3>2.4.9 - Digital Image Formats</h3>
+    <br><b>.jpg</b> - JPEG (Joint Photograhic Experts Group) is the most common. Compressed file type that reduces size 20:1 without sacrificing too much image quality (lossy). Supports 24-bit color. Easy to share and popular.
+    <br><b>.png</b> - Portable Network Graphics is a raster file format. Lossless compression of images. Released in 1994 to improve GIF format. Supports 24-bit color and an 'alpha channel' that allows transparency levels in an image. PNG cannot be animated
+    like GIF.
+    <br><b>.gif</b> - Graphics Interchange Format, released in 1987 by CompuServ. Lossless format that is often used for web images. GIF is used for icons and buttons because the limited color palette still looks good. Today GIF is mostly used for small
+    animated image files.
+    <br><b>.tiff</b> - Tagged Image Fiie Format, created in 1986 for storing raster graphics. Created by Aldus (later Adobe), Microsoft, and Hewlett-Packard. TIFF has NO compression and is the ideal format for high-quality printing. Modern web browsers
+    DO NOT support the format without plugins.
+    <h3>2.4.10 - 3D Models</h3>
+    3D models are used in movies and video games. They are used by manufacturers to create new products before production, and the can be used to 3D print solid objects.
+    <br><br><b>Wireframes</b> - 1st step in 3D modeling, provides outline of model, including vertices and lines without including any surface, texture, or lighting.
+    <br> wireframes are skeletons. The models are created by connecting points (known as vertices) with lines (known as paths). These lines create 3-Dimensional polygons.
+    <br> Wireframes are easier for computers to manipulate, so animators create the wireframe and then fully render the model with more powerful computers later.
+    <br><br><b>Rendering</b> - the 2nd step of the process is rendering, or taking a 3D model and converting it to a 2D image on the computer. Images are rendered for stills, or for animated video. Rendering can take a great deal of time and computer
+    resources.
+    <br><br><b>Ray Tracing</b> - this is an advanced rendering method used to create realistic lighting effects for video games and movies.
+
+    <h3>2.4.11 - Activity: Compare Digital Media</h3>
+
+    1. explain concept of sampling and sample rate, then listen to a 2kHz, 8kHz, and 44.1kHz file (given on site).
+    <br>2. explain compression and lossy versus lossless compression. then compare 2 images (given on site)
+    <br>3. explain 'bit depth' in audio recordings. listen to an 8-bit, then a 32-bit recording (on site)
+    <br>4. describe difference between raster and vector images. then view them (on site)
+    <br>5. describe concept of image resolution, then compare 94x140 image to 604 x 900 image (on site)
+
+    <br><br> -- Digital sound recordings capture a sound wave and divide it in into distinct segments, the recording then assigns a value to each segment; a single segment's value is called it's <b>Sample Height</b>.
+    <br>The program then decides how much memory to allocate to store the value of each sample - that amount is called <b>Bit Depth</b>
+    <br> The <b>sample rate</b> is how many individual samples are taken each second, measured in hertz (Hz).
+
+    <br><br> text documents and computer programs need to be stored with 'Lossless' compression so they do not corrupt data.
+
+
+    <h2>2.5 Digital Media Careers</h2>
+    <a href="https://labsimapp.testout.com/v6_0_480/index.html/productviewer/1184/2.5/3c4cd191-2f13-42f2-af50-2378de42d4f7">TestOut Chapter 2.5</a>
+    <br>Key Terms:
+    <ul>
+        <li><b>Video Production Specialist</b> - IT profoessions that designs, records, and edits videos, marketing, commercials, or other digital video content</li>
+        <li><b>Graphic Designer</b> - creative artist who designs digital images and illustrations for a wide variety of purposes</li>
+        <li><b>Digital Audio Producer</b> - specializes in recording and editing audio for video, podcast, or other purposes</li>
+    </ul>
+    <h3>2.5.3 - Video Production Specialist</h3>
+    video reviewing only Video Production with some goofy guy named Alan
+
+
 
 </body>
 
