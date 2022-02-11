@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 Week 04 Chapter 03 - Computer Hardware</title>
+</head>
+
+<body>
+    <h1>CTEC - 101 Week 04 Chapter 03 - Computer Hardware</h1>
+
+    i will be using the TestOut Lab Simulator this test. like pc builder game plus vm, also.
+    <br><br> Computing Devices: Desktop - modular, more powerful -- peripheral devices are necessary to work, monitor, keyboard, mouse; not mobile & need a/c power
+    <br> notebook - keyboard and display are bundled with computer for ease of mobility -- difficult to upgrade, more expensive, less powerful
+    <br> mobile - smaller and easier to use than notebook -- difficult to repair or upgrade, difficult to use for productivity applications
+    <h4>3.2.2 computing device facts</h4>
+    - Desktop - often used to connect to a network and can be considered a network client.
+    <br>- All-in-one - more difficult to upgrade and repair, normally no expandable memory or internal storage
+    <br> - Laptop or Notebook - monitor, keyboard, mouse, and networking are built together with cpu for portability. more expensive than comparable desktop computers, more difficult to upgrade and repair
+    <br> - Hybrid-Laptop Device - 2-in-1 devices cater to need of tablet and laptop user.
+    <br> - Gaming Console - built for gaming and use with gaming controller instead of keyboard and mouse.
+    <br> - Network Client - a device that can connect to a network -- all of these devices listed can be network clients.
+    <br> - Mobile - often use touchscreen. -- less computing power than other devices.
+    <br> - Servers - purpose is to share disk storage or perform service for large number of people, such as web, email, or database services.
+    <h4>3.2.3 - Activity: Research Computing Devices</h4>
+    <h4>3.2 quiz</h4>
+    <h2>3.3 - Internal Components</h2>
+    <a href="https://labsimapp.testout.com/v6_0_486/index.html/productviewer/1184/3.3/3c4cd191-2f13-42f2-af50-2378de42d4f7"> 3.3 Internal Components</a>
+    <br>BIOS - Basic Input / Output System
+    <br> power supplies take A/C power from wall and turn it to D/C power
+    <br> Network Interface Card = NIC
+    <h4>3.3.3 - Electrostatic Discharge</h4>
+    ESD Prevention -- 1st discharge yourself before starting -- touch the case
+    <br>2nd - use static mats and static floor mats to keep the charge from building up
+    <br>3rd - don't touch the gold tab connectors when handling parts.
+    <br>4th - keep components in the static shielding bag (heavy grey bag that computer parts come in)
+    <br>5th - keep plastic and styrofoam away from the item you are working on
+    <br>6th - humidity is better --- because dry air builds up electrostatic charge more quickly
+    <h4>3.3.4 - Fetch-Execute Cycle</h4>
+    <br>Input - Processing - Output - Storage (basically how a computer works)
+    <br><br>Program Counter -
+    <br> Instruction Register -
+    <br> Accumulator -
+    <br><br> each physical location on a RAM chip has an Address Location and can store a Single Value.
+    <br> all the CPU knows how to do is Fetch-Decode-Execute
+    <h4>3.3.5 - CPU Types</h4>
+    <br>x86 - designed to process 64bits of information, older CPUs were designed for 32bit
+    <br> consume a lot of power and get very hot
+    <br><br> Arm Processors (Advanced RISC Machine) use a reduced instruction set, consume less energy and do not get as hot
+    <h4>3.3.6 - CPU Facts </h4>
+    AMD and Intel - 32bit x86 = x86; 64bit x-86 = x64; x86 vs ARM
+    <h4>3.3.7 - Motherboards and Expansion Cards</h4>
+    the BUS - short for omnibus ('for all') allows for communication across components on a MotherBoard - the Bus is all the circuitry on the MotherBoard
+    <br>the Bus is responsible for transferring the following:
+    <li><b>Power</b>- bus provides the electricity from the power supply to each component</li>
+    <li><b>Data</b>- information transferred between the components in the computer.</li>
+    <li><b>Memory Location</b>- bus keeps track of the address where the data is stored in the memory</li>
+    <li><b>Clock Timing</b>- has a clock mechanism which synchronizes how all components work together over the bus</li>
+    <br><br> the bus architecture has changed over the years.
+    <li><b>PCI</b> - Peripheral Component Interconnect - usually 32-bits wide, although 64-bit versions were used as well. runs @ 33mhz can transfer data @ 133 MB/s (or 266 MB/s for 64-bit version)</li>
+    <li><b>PCI with AGP</b> - similar to PCI but specifically for graphics support. replaced with PCIe in modern systems</li>
+    <li><b>PCI Express (PCIe)</b> - next gen I/O bus architecture. each PCIe slot links to a switch which prioritizes the routes of data through a point-to-point dedicated connection and provides a serial full-duplex method of transmission.
+        <ul>
+            <li>basic PCIe provides one lane for transmission at a rate of 250 MB/s per lane for V1. V2 can deliver 500 MB/s; V3 = 1 GB/s; and V4 = 2 GB/s per lane. PCIexpress slots can have 2x, 4x, 8x, 16x, & 32x transmission lanes so a V4 with 32 lanes
+                of transmission would be super fast</li>
+            <li>in addition to increased speed, PCIe offers higher quality service</li>
+            <li>PCIe is backwards compatible and allows legacy PCI tech to be run in the same system</li>
+            <li>PCIe busses are most commonly used for video cards in modern systems, although any device can be designed for a PCIe slot</li>
+        </ul>
+    </li>
+    <br>Expansion Cards are circuit boards that connect to the computer's MoBo - the expansion card gives the MoBo additional power or functionality.
+    <br><br> video, network, and audio expansion cards are the most common type, although additional usb, or media reader slots would be types of expansion cards, also
+    <br> network cards feature RJ-45 ports to connect a computer, via unshielded twisted pair cable, to the network. aka ethernet ports, and now wifi connectivity.
+    <br><br>Audio cards feature a DSP chip (Digital Signal Processor) - DSP chips are optimized for converting electrical signal to audio signal.
+    <h4>3.3.8 - Power and Cooling</h4>
+    PSU = Power Supply Unit -- converts A/C power (wall) to D/C (low voltage) current; should have at least 40% greater than "Required Power Consumption"
+    <br>most modern computer systems also conform to ATX specifications that provide 5-Volt Standby (5VSB) voltage.
+    <br><br>Cooling
+    <br>Heatsinks, Air Cooling (with fans); Water Cooling; Active-Liquid Heat Sink (no outside pump like in 'Water Cooling'); Immersion Cooling.
+    <h4>3.3.9 - Explore the MotherBoard</h4>
+    video
+    <h4>3.3.10 - Explore the MotherBoard</h4>
+    lab
+    <h4>3.3.11 - Install Memory</h4>
+    video -
+    <h4>3.3.13 - Install Video Card</h4>
+    <h2>3.4 - Input and Output</h2>
+    <h4>3.4.3 - Installing External Devices</h4>
+    usb 2.0 provides 500 Milliamps of power & usb 3. provides 900 milliamps - if the device can operate off of that amount of power it is known as a bus powered device
+    <br> if device needs additional power then it is a self powered device
+    <h4>3.4.5 - External Devices</h4>
+    common connection types: USB A, USB B, USB C, Mini USB, Micro USB, firewire (depricated), audio, VGA, DVI, HDMI, RJ-45, Display Port and Mini-Display, Thunderbolt, IR - InfraRed, and Bluetooth
+    <br><br>USB data transfer rates - 1.0 = 12 Mbit/s; 2.0 = 480 Mbit/s; 3.0 = 5Gbit/s [known as SuperSpeed];
+    <br>3.1 = 10 Gbit/s [known as SuperSpeed+]; 3.2 = 20 Gbit/s; 4.0 = 40 Gbit/s
+    <h4>3.4.6 - Touchscreens</h4>
+    <b>Resistive Touchscreens</b> - rely on resistance (or pressure) applied to the screen - 2 thin layers of transparent material with 'spacer dots' sandwiched between them. and
+    <b>capacitive touchscreen</b> - relies on electricity from the body to register location changes
+    <br><br> resistive touchscreens work well with pressure, and are better for outdoor conditions
+    <br> capacitive touchscreens display better image clarity and better multi-touch functionality
+    <h4>3.4.7 - Printers</h4>
+    size of unit, capacity, speed, sophistication of printed item, and cost
+    <br> inkjet vs laser
+    <br><br> replacement ink cartridges are expensive and print can fade over time
+    <br><br> laser printers are more expensive to initially purchase and maintain
+    <h4>3.4.9 - How Cameras Work</h4>
+    lens, digital sensitive material / sensor, and a shutter
+    <h4>3.4.10 - Connect a Monitor</h4>
+    <h4>3.4.12 - Install Peripherals (USB Devices)</h4>
+    <h4>3.4.14 - Setup a Computer</h4>
+    <h2>Storage</h2>
+    <a href="https://labsimapp.testout.com/v6_0_486/index.html/productviewer/1184/3.5/3c4cd191-2f13-42f2-af50-2378de42d4f7">3.5 Storage link</a>
+    <br><br>most common HDD controllers:
+    <br>SCSI = Small Computer System Interface from the 70's with the 50-pin flat ribbon
+    <br>IDE/EIDE/PATA = Integrated Drive Electronics (IDE), Enhanced IDE (EIDE), Parallel Advanced Technology Attachment (PATA)
+    <br>SATA - Serial Advanced Technology Attachment
+    <h4>3.5.3 - Emerging Storage Technologies</h4>
+    <b>Heat Assisted Magnetic Recording</b> - uses heat to increase the magnetism of the drive, in turn can store more data on smaller sectors increasing the amount of storage in the same physical space
+    <br><b>3D Flash Memory</b> - tiers of 2D solid state memory (SSD) stacked to store more information in the same amount of space
+    <br><br>Synthesized DNA Strands - in the human body a single gram of DNA can store 215 petabytes (215 million gigabytes) of information, also if kept in the right conditions the data will not corrupt over hundreds of years. it is difficult at the
+    time to encode and decode information onto DNA (costly and time-consuming)
+    <h4>3.5.4 - Install SATA drive lab</h4>
+    <h4>3.5.6 - Files and File Systems</h4>
+    files systems - FAT32 (File Allocation Type); NTFS (New Technology File System); HFS+ [extended Hierarchical File System](MacOS); ext4 (Linux)
+    <h4>3.5.7 - File System Features</h4>
+    <b> Compression </b> - compress file to save size on storage device
+    <br><b>Encryption</b> - make some information secure
+    <br><b>Permissions</b> - shows wether a user has the write to change a file, or only view
+    <br><b>Journaling</b> - keeps up with all changes that are made to files
+    <br><b>Limitations</b> - FAT32 had limitations of 4GB, but Newer file systems have much larger limitations to up to 16 exobytes
+    <br><b>Naming Rules</b> - some symbols are reserved and cannot be used in file names
+    <h4>3.5.8 - File System Facts</h4>
+    Files are the 1 & 0s that are organized and stored together.
+    <br>File Formats - how a file's data is stored, normally metadata, then data - the metadata gives information on how to decode the data
+    <br>File Extensions - tell what type of file it is, executable, image, audio, video, spreadsheet, etc..
+    <br>File Systems - use the 'directory' file to keep track of the information in storage. the directory file keeps up with all file names, extension, date created, read/write permissions, and location on the disk.
+    <br>Specific File Systems - windows currently uses NTFS, mac uses APFS (Apple File System) as of 10.13 and Linux uses ext3, ext4, and is moving towards BtrFS (B-Tree File System)
+    <br>P2P - File Sharing
+    <h4>3.5.9 - Drives and Partitions</h4>
+    <h4>3.5.10 - Disk Defragmentation</h4>
+    HDD can fragment and need to be defragmented; SSD does not have that issue, SSD does not have a loss of time in trying to access fragmented data
+    <h4>3.5.13 - Format Drives</h4>
+    did quick format and used powershell $ <b><i>convert</i></b> to convert a drives's filesystem without destroying any data!!!
+    <h4>Perform Disk Maintenance</h4>
+    <h2>3.6 - Hardware Trouble Shooting</h2>
+    <a href="https://labsimapp.testout.com/v6_0_486/index.html/productviewer/1184/3.6/3c4cd191-2f13-42f2-af50-2378de42d4f7">3.6 Hardware Troubleshooting lesson</a>
+    <br><br>Troubleshooting
+    <li>1- Identify the Problem</li>
+    <li>2- Identify what has changed</li>
+    <li>3- Create a hypothesis</li>
+    <li>4- Determine the appropriate fix</li>
+    <li>5- Implement the fix</li>
+    <li>6- Verify Functionality</li>
+    <li>7- Document the Solution for future reference</li>
+    <h4>3.6.2 - Troubleshooting Facts</h4>
+    <pre>
+        CompTIA Troubleshooting Steps:
+1-Identify the problem.
+    Gather information.
+    Duplicate the problem, if possible.
+    Question users - Identify symptoms.
+    Determine if anything has changed.
+    Approach multiple problems individually.
+2-Research knowledge base/Internet, if applicable.
+3-Establish a theory of probable cause.
+    Question the obvious.
+    Consider multiple approaches.
+        Divide and conquer.
+4-Test the theory to determine the cause.
+    Once the theory is confirmed (confirmed root cause), determine the next steps to resolve the problem.
+    If the theory is not confirmed, establish a new theory or escalate.
+5-Establish a plan of action to resolve the problem and identify potential effects.
+6-Implement the solution or escalate as necessary.
+7-Verify full system functionality and, if applicable, implement preventive measures.
+8-Document findings/lessons learned, actions, and outcomes.
+    </pre>
+
+    <h4>3.6.3 - Motherboard Troubleshooting</h4>
+    <ul>
+        <li><b>Physical Damage</b> - check for physical damage if you smell burning, could be overheating capacitors or even an overheating CPU causing damage. Mobo may have to be replaced</li>
+        <li><b>Faulty Power Supply</b> - if the unit spontaneously restarts, powers down, fails at bootup, or will not power up, it may be a faulty PSU (Power Supply Unit) --
+            <br>test using the paperclip test. bend paper clip into 'u' shape. insert 1 end into power supply pin 16 and the other end into pin 17 - if the fan won't turn on after powering on the PSU, then the unit is faulty. </li>
+        <h4>3.6.4 - Memory Troubleshooting</h4>
+        <ul>
+            <li><b>Ram Issues</b>- could call crash, stall, or not being able to boot the computer</li>
+            <li><b>Data Corruption</b> - data can become corrupted through memory or physical storage corruption. </li>
+            <li><b>Computer Memory Errors</b></li>
+            <li><b>Memory Error Troubleshooting</b>
+                <pre>
+                    Troubleshooting Memory Errors
+One reason you might experience memory errors is that the memory card isn't properly installed or has come loose. Also, the socket that the memory card is seated in might have gone bad or needs cleaning. The following steps can help you diagnose and fix the issue.
+
+1.Make sure that the memory card is compatible for the computer, especially if you're getting errors after installing new memory on the system. Compatibility specs can be found on the manufacturer's website.
+
+2.Confirm that you've configured the memory correctly. The correct configuration depends on the kind of computer you're using. The documentation that comes with the computer, the manufacturer's website, or the the manufacturer's technical support are all good resources to find the configuration the computer requires.
+
+3.If everything is installed correctly, try re-installing the memory module. Push the module firmly into the socket until you hear a click. Then, compare the height of that module to the surrounding modules to make sure it has a similar height.
+
+4.If the above steps don't fix the problem, try removing any newly installed memory and see if the problem persists. You can also try swapping the memory into different slots. If the memory works in one socket but not in another, the problem may be with the socket and not the memory module.
+
+5.If a socket isn't working, you can clean the socket to see if that improves the situation. First, use a gentle cloth and wipe the pins on the module. You can then use compressed air to blow any built-up dust from the socket. There are also special kinds of cleaners that you can purchase at computer equipment stores. Do not use a solvent as this can cause further damage to the socket.
+
+6.Finally, try to update the BIOS information, especially if you've recently upgraded the memory. The BIOS is regularly updated by motherboard manufacturers. These updates can help to fix bugs that crop up during the life cycle of a particular motherboard. If the BIOS is not up to date, it can contribute to memory problems.
+
+7.If none of these steps work, you may have faulty hardware. If the computer is still under warranty, contact the manufacturer to schedule a repair or replacement.
+                </pre>
+            </li>
+            <li><b>Causes and Preventions</b></li>
+            <ul>
+                <li> Causes- power surge, electrostatic discharge, excessive heat, faulty or old memory module </li>
+                <li> Preventions - use a surge protector, wear the anti-static bracelet, keep the computer, vents, and fans free from obstructions for good air flow</li>
+            </ul>
+        </ul>
+        <h4>3.6.5 - Processor Trouble Shooting</h4>
+        <b>Power source issue</b> - make certain the plug from the wall is working, make certain the power cable is firmly plugged into the wall and the PSU, try another power cable and reboot the machine. Inside
+        <br><b>Beep Codes</b> - if the computer has power it will run a POST (Power-On Self Test) when booted. if you receive an error before display to the screen you will get an audible Beep Code.
+        <br>the motherboard manual should have a list of the codes. may be listed as: BIOS error beep, BIOS beep code, POST error codes, POST beep codes.
+        <br><b>Overheating or Improperly Seated CPU</b> - check the thermal paste and make certain the CPU is properly seated (make certain the power cable is unplugged from the machine)
+        <br><br> clean that computer
+        <h4>3.6.6 - Storage Troubleshooting</h4>
+        <h4>3.6.9 - Troubleshoot Memory</h4>
+        <h4>3.6.11 - Troubleshoot CPU Installation</h4>
+        <h4>3.6.14 - Troubleshoot SATA Devices</h4>
+        <h2>3.7 Computer Hardware Careers</h2>
+        PC Repair Technician or Electrical Engineer -- electrical engineers create, research, design technology
+
+
+
+</body>
+
+</html>
