@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 Computer Software wk 05</title>
+</head>
+
+<body>
+    <h1>CTEC-101 Computer Software wk 05</h1>
+    <h3>4.2 Operating Systems</h3>
+    <ul>
+        <li><b>Operating System</b>- allows users to interact with a computer in a meaningful way </li>
+        <li><b>Graphical User Interface</b>- os that uses pictures and icons to represent files, folders and system conotrols</li>
+        <li><b>Command Line Interface</b>- allows user to interact through keyboard</li>
+        <li><b>Disk Management</b>- role of OS that helps keep storage devices well organized and maintained</li>
+        <li><b>Application Management</b>- role of OS that manages apps installed on system. Apps are run, configured, and deleted through app mgmt</li>
+        <li><b>Service Management</b>- role of OS that runs process or programs automatically in the background. These programs are 'services' which index files for better searches, verify software, etc...</li>
+        <li><b>Device Management</b>- role of OS determines hardware that is connected, interprets instructions from hardware, and sends instructions. includes device drivers</li>
+        <li><b>Access Control/Protection</b>- role of OS that requires users to log in with their credentials before accessing sensitive info. manages antivirus software and such to keep malicious files from the system</li>
+        <li><b>Windows Settings App</b>- in Win10 app that organized settings and customizes how the computer looks and functions</li>
+        <li><b>Windows Update</b>- feature of Win OS that keeps the system up to date</li>
+        <li><b>Windows Registry</b>- database that stores settings for OS and other programs. these are stored as key; value pairs</li>
+        <li><b>Registry Editor</b>- utility in Win OS that lets you view keys in the registry</li>
+    </ul>
+    OSs allow Hardware, Software, and Users to work together.
+    <h3>4.2.2 OS Interfaces</h3>
+    GUI vs CLI
+    <h3>4.2.4 Windows Settings</h3>
+    <h3>4.2.6 Windows Registry</h3>
+    <h3>4.2.7 explore Windows 10 os</h3>
+    <h3>4.2.5 Win OS Settings </h3>
+    <h3>4.2.9 </h3>
+    <h2>4.3 More System Software</h2>
+    <a href="https://labsimapp.testout.com/v6_0_486/index.html/productviewer/1184/4.3/3c4cd191-2f13-42f2-af50-2378de42d4f7">link to 4.3</a>
+
+    <h1>CTEC-101 Week 05 Chapter 04 - Additional Computer Software</h1>
+    <pre>
+    System Software
+    An operating system is the most common example of system software. Three other types are utility software, device drivers, and firmware. The table below takes a short look at each one.
+    Table 1: System Software
+    Term 	Description
+    Utility Software 	Utility software analyzes, configures, and optimizes the computer. Unlike application software, which benefits the end user directly, utility software is used to support and maintain the computer system. Some common types of utility software include:
+    
+        Backup software creates backup copies of data and restores them if the original data is lost or corrupted
+        Compression software compresses and decompresses files, making storage more efficient
+        Disk cleaners delete temporary or unnecessary information from disk drives
+        Antivirus software prevents viruses and other malware from harming the computer system
+    
+    Device Drivers 	A device driver is software that helps an operating system communicate with hardware devices, such as printers, video cards, scanners, and cameras. Instead of an operating system, such as Windows, having instructions for every hardware device that can be attached, users install the driver for the specific hardware. The driver translates signals from the operating system into instructions the hardware can understand.
+    
+    In many cases, some device drivers can be installed by Windows using plug-and-play technology. This means that when you plug in a device, such as a USB disk, Windows automatically locates and installs the correct device driver for you.
+    
+    In other cases, the driver must be manually installed. In Windows, this is most often accomplished using the Device Manager. In Windows 10 (version 1803 and newer), Device Manager can be accessed by right-clicking Start and selecting Device Manager from the list shown.
+    
+    When you have to uninstall a driver, Device Manager is useful to verify that a driver was fully removed. In Windows 10 (version 1803 and newer), you can also manage device drivers by right-clicking Start and going to Settings > Devices.
+    
+    With Linux-based systems, you may find some GUI interfaces for installing device drivers, but many times you must download, compile, and install drivers manually.
+    
+    Firmware 	Firmware is read-only software preinstalled on a device that tells the device how to work. In many ways, it's like a low-level operating system. Firmware can be found in televisions, remote controls, game consoles, printers, cameras, music players, and even automobiles. Sometimes, manufacturers release firmware updates that fix bugs and add new features.
+    
+    Common Windows Utilities
+    Windows Settings 	The Windows Settings App customizes how the computer looks and functions. The Settings App lets you make most configuration changes that used to be done in the Control Panel (if you're familiar with older versions of Windows).
+    To launch the Settings App, click the Start button and select Settings. Within the app are several options you can use to configure system settings such as security, power plans, network connections, installed applications, accessibility settings, and display settings.
+ 
+    File Explorer 	File Explorer (formerly known as Windows Explorer) is a file management application that comes with Windows. File Explorer's main purpose is to let you view, open, copy, move, and otherwise manage your files and folders.
+ 
+    Task Manager 	Task Manager is a process management administration utility that comes with Microsoft Windows. It lets users perform tasks such as shut down applications that are not responding; view processes and applications that are using system resources; view network usage; and disconnect users from the system.
+     One of the most common things you'll do with Task Manager is to end an unresponsive app. To perform this task, take the following steps:
+    
+        Press Ctrl + Alt + Delete and select Task Manager
+        Select the Processes tab.
+        Select the unresponsive app or process from the list.
+        Select End task
+    
+    Device Manager 	Device Manager is a Windows utility that lets you view and control peripheral devices and other hardware components. You can use Device Manager to troubleshoot hardware issues, update drivers, and view the technical properties of hardware devices.   
+</pre>
+
+    <h3>4.3.5 Boot Process</h3>
+    <pre>
+    The Boot Process
+The following graphic shows what happens when you turn on (also known as boot) a computer. The process is similar for almost all types of computers, including desktops, laptops, phones, and gaming consoles.
+The Boot Process
+
+The following steps describe the six tasks involved in the boot process.
+
+Step 1: Activate the BIOS
+Whenever you turn a computer turn on, electricity flows from a power source (such as a wall outlet or battery) into the motherboard. The power activates the basic input/output system (BIOS). A BIOS is a simple program that's written directly into the motherboard's hardware.
+
+Step 2: Check the CMOS
+The first thing the BIOS does is look at the complementary metal-oxide-semiconductor (CMOS) chip. The CMOS contains the BIOS settings (instructions) for exactly how each hardware device on the computer should be initialized.
+
+Step 3: Initialize Hardware
+The BIOS then initializes (wakes up) each piece of hardware according to the instructions it finds in the CMOS. This includes fans, memory, hard drives, and processors.
+
+Step 4: POST
+Once everything's been initialized, the BIOS runs a program called power-on self-test (POST). The BIOS checks each hardware device and verifies that it's working properly.
+On many computers, the BIOS reports the results of POST with a beep code. A single beep means everything's fine. If there's a problem, it plays a combination of beeps. The user can then refer to the motherboard's documentation to interpret the beep code and find out what the problem is.
+
+Step 5: Find an Operating System
+Once POST is done, the BIOS looks for a bootable device or a storage drive that contains an operating system. It does this according to a predetermined boot order, which is stored on the CMOS.
+On a typical desktop computer, the first drive in the boot order is the optical drive. If there isn't a disc with an operating system in the tray, the BIOS will check the next drive in the boot order.
+
+Step 6: Load the OS into RAM
+Once the BIOS finds an operating system, it loads it into the computer's RAM. From there, the processor starts executing the instructions and the OS takes over. At this point, the job of the BIOS is finished and it becomes dormant.
+
+</pre>
+    <h3>4.3.6 BIOS settings</h3>
+    computer settings in BIOS -
+
+    <br><br> UEFI - Unified Extensible Firmware Interface - boot tool
+
+    <br><br><pre>
+
+    Clearing CMOS and Resetting BIOS Settings
+        
+    First method	
+    1.To reset the CMOS and return everything to factory defaults:
+    2.Boot your computer. While the computer is booting, do step 2.
+    3.Press the indicated key to enter the BIOS settings page.
+    4.Choose BIOS Setup Utility.
+    5.Navigate to Reset BIOS Settings (wording may vary by manufacturer). It's usually found near the bottom of the options.
+    6.Save the settings.
+    7.Restart the computer.
+    
+    Second method
+    1.To reset the BIOS by resetting the CMOS battery:
+    2.Unplug the computer. If using a laptop, remove the main battery.
+    3.Open the computer case. If you're using a laptop find the CMOS battery panel and open it.
+    4.Remove the CMOS battery.
+    5.Let the CMOS battery sit out for a few minutes.
+    6.Return the CMOS battery to its original place.
+    7.Replace any main batteries if the computer is a laptop.
+    8.Plug in the computer.
+    9.Verify the settings are reset.
+    
+    Third Method	If you're trying to reset a desktop computer, you may be able to use the CLEAR CMOS jumper if the motherboard one. Follow theses steps:
+    1.Unplug the computer
+    2.Open the computer case. The jumper is located on the motherboard and should have a label that says CLEAR CMOS or something similar. The jumper may be on a two-pin or three-pin setup.
+    3.If it's on a two-pin setup, remove the jumper completely.
+    4.If it's on a three-pin setup, move the jumper over from the two pins it's on and onto the other pins. The center pin will remain the same.
+    5.Close the case and plug in your computer.
+    6.Reboot to see if the settings have been reset.
+    If you've been successful, repeat the process and return the jumper to its original position. If you don't, the CMOS will be cleared every time you boot the computer.
+</pre>
+    <h3>4.3.7 - BIOS Lab</h3>
+    <h3>4.3.9 - clear CMOS Lab</h3>
+    <h3>4.3.10 - Update Firmware</h3>
+    <h3>4.3.13 - Virtualization</h3> use virtual machines for <b>compatibility</b> (to run a program on a system it wouldn't work on)
+    <br><b>backup and preservation</b>, or for <b>Testing</b>
+    <h3>4.3.14 - Virtualization Technology lab</h3>
+    enable VT on a windows machine (in BIOS)
+    <h3>4.3.16 - Create Virtual Machine</h3>
+    <h3>4.3.18 quiz</h3>
+    <h1>CTEC-101 - Chapter 4.4 - File Management</h1>
+    <pre>
+File -	The smallest container within a computer's storage system that is used to store information such as data, settings, and commands used in a computer program. A file is the smallest container that can be copied, deleted, or moved within a file system.
+
+File format - 	The way in which the content of a file is organized. Often, a file type is indicated by the file extension such as .jpg, .gif, .png., .mp3, .wav, .wma, .mp4, .avi, and .wmv.
+
+File system	- The methods and structures that an operating system uses to organize files on a storage device like a hard drive. File systems often use directory structures to keep track of files.
+
+File permissions - 	The use of user and file attributes to control the actions a user can perform (read, write, delete, etc.) on each file. Also known as usage restrictions.
+
+Journaling -	The process of tracking changes to a file so that a file can be repaired or restored in case of file corruption or data loss.
+
+NTFS - 	A journaling file system that allows you to choose the users or groups that can access files and folders.
+
+Command line interface - An interface that allows a user to interact with the computer through input from the keyboard. The input is entered as commands. The command line is used primarily by IT and other tech professionals.
+</pre>
+    <h3>4.4.5 Assign File Permissions</h3>
+    <h3>4.4.7 Copy Files from USB Thumb Drive</h3>
+    <h3>4.4.9 Permissions</h3>
+    <pre>
+    Folder Permissions
+    Read	Allows you to see files and subfolders within the folder. You can also view folder ownership, permissions, and attributes.
+    
+    Write	Allows you to create new files and subfolders within the current folder; change folder attributes; and view details of folder ownership and permissions.
+    
+    List folder contents permissions	Allow you to see the names of files and subfolders in the current folder.
+    
+    Read & Execute folder permissions	Allow you to navigate through folders to reach other content, even if you don't have permissions for that content. You can also perform all actions permitted by the Read and List Folder Contents permissions.
+    
+    Modify Folder permissions	Allow you to delete the folder and perform actions permitted by the Write and Read & Execute permissions.
+    
+    Full control Folder permissions	Allow you to change permissions, take ownership, and delete subfolders and files as well as perform actions permitted by all other NTFS folder permissions.
+
+
+    File Permissions
+    Read file permissions	Allow you to read the file attributes, ownership, and permissions.
+
+    Write file permissions	Allow you to overwrite the file, change file attributes, and view file ownership and permissions.
+
+    Read & Execute file permissions	Allow you to run the application and perform actions permitted by the Read permission.
+
+    Modify file permissions	Allow you to modify and delete the file; and to perform actions permitted by Write and the Read & Execute permissions.
+
+    Full Control file permissions	Allow you to change permissions, take ownership of the file, and perform all actions permitted by all the other NTFS file permissions.  
+</pre>
+    <h3>4.4.12 Using the Windows Command Line</h3>
+    open 'cmd' prompt, powershell is more commonly used.
+    <h3>Linux Shell Commands</h3>
+    <h2>4.5 Application Software</h2>
+    <a href="https://labsimapp.testout.com/v6_0_486/index.html/productviewer/1184/4.5/3c4cd191-2f13-42f2-af50-2378de42d4f7">link to 4.5</a>
+    <br><br><pre>
+    Productivity Software	Software that is used to perform common tasks in a business or home office such as word processing, spreadsheets, presentations, web browsing, and visual diagramming.
+    
+    Collaboration Software	Software that facilitates the sharing, processing, and management of files, documents and other data between members of a team. This software includes message boards, screen sharing, conferencing software, email, calendaring, instant messaging, text messaging, and online workspace and document sharing.
+    
+    Business Software	Software designed for advanced or specialized business functions such as database management, project management, customer relationship management, accounting, desktop publishing, graphic design, and computer aided design.
+    
+    Netiquette	The rules of etiquette that should be observed while using computer networks, such as the internet.
+    
+    Windows Application	A traditional desktop application or program.
+    
+    Windows 10 App	A Windows program that is installed and maintained through the Windows Store and uses the type of interface you would typically see on a touchscreen device.
+    
+    App Store	A platform that allows users to search for a variety of apps that can be delivered to many different devices. Most apps in app stores can be downloaded for free while others must be purchased.
+</pre>
+    <h3>Productivity Software</h3>
+    ie: Microsoft App
+    <pre>
+Office Application Suites -	Microsoft Office, including Word, Excel, and PowerPoint, is the most widely-used office productivity software. Other popular suites include OpenOffice and LibreOffice, which are free open source solutions, and Google’s G-Suite, which is a paid service. One of the reasons people like to use an integrated office application suite is that they have a common user interface and make it easy to share data between applications.
+
+Word Processing	- Word processors store, manipulate, and format text. Most of the things we read, like books, newspapers, and web articles, were first written in a word processor.
+
+Spreadsheets -	A spreadsheet is an application where data is organized into rows and columns. They can be used to store and organize information, as well as perform complex calculations. Spreadsheets can also create charts and graphs, which are useful for making sense of data.
+
+Presentations -	Slideshow presentations are most commonly used as a visual supplement for a verbal presentation. They help highlight the speaker's most important points and illustrate difficult concepts. They're also a great way to share visual media, such as pictures and videos, with a large audience.
+
+Web Browsers -	When web browsers are used for online research and for building relationships with business customers, they are also considered productivity software. The most popular browsers include Google Chrome, Mozilla Firefox, and Apple Safari. Most web browsers are free to download and install on a computer.
+
+Visual Diagramming -	Visual diagramming tools help create flowcharts and other graphical representations of ideas. Most word processing and presentation software includes built-in visual diagramming tools. For more shapes and diagram templates, you can use a dedicated visual diagramming tool such as Microsoft Visio or Google Drawings.
+
+Cloud-Based Options -	Cloud-based productivity software such as Google’s G-Suite and Microsoft Office Online run inside a web browser. These web applications allow online collaborative editing. This means multiple users can work on the same document, presentation, or spreadsheet at the same time.
+</pre>
+    <h3>Collaboration Software</h3> - discussion boards, screen sharing, webinars, email, group calendar, instant messaging (done on computers normally), texting is sms (through phone service)
+    <pre>
+Message boards	- or discussion forums are online sites where people can hold discussions on various topics by posting messages. Topics can vary greatly from how to fix a computer to the latest news on your favorite TV show.
+                    Conversations happen in threads, where one person posts a message or question, then other users respond to it. Since discussions on these boards are done asynchronously, they're also a great way to brainstorm ideas without having to set up a meeting.
+Screen sharing	 -Screen sharing allows a user's screen to be viewed by one or more people. This feature can be used by a support person to view the screen of a user who needs help. Or, several users can view a trainer's screen while a technique is demonstrated. Applications that allow screen sharing include:
+                Skype
+                Chrome Remote Desktop
+                HipChat
+Conferencing software - 	Webinars and other conferencing software allow you to connect with people through video, voice, and chat. Also known as web casts or web conferencing, webinars may be used for meetings, lectures, presentations, or training events that need to reach large audiences at remote locations.
+
+Email -	Although there has been a rise in various forms of digital communication, email remains the most popular. Short for electronic mail, email is much like sending a letter or note through the post, except that it's delivered electronically.
+        Email software allows you to write a message, add the recipient's email address, and click send. In addition to its speed, email has other benefits over traditional mail such as the ability to attach files and send a single message to many recipients.
+            There are two types of email systems: webmail and desktop clients. Webmail, such as Gmail and Yahoo! mail, are accessed through a web browser. Email clients, such as Microsoft Outlook, run as separate applications on a computer.
+            Microsoft Outlook  is an example of a personal information manager (PIM). It can help clients manage contacts, calendar items, and reminders, as well as email.            
+            
+Calendaring	Online calendars are an excellent way to coordinate the schedules of each member on a team. Usually, everyone on the team has an individual calendar to mark when they are busy or available.
+            It's an easy to see when everyone is available to have a meeting or when a team member should be left alone.
+
+Instant messaging (IM)	- Instant messaging is exactly what its names implies: a way to send messages that are instantly presented to the recipient. Most conversations on instant messaging happen in real time and can include two or more people.
+        The communication is instant because both recipients are logged onto the same IM server using the same client software. Instant messaging is a popular form of social interaction, as well as a useful tool in the business world. Examples of instant messaging services are:
+            WhatsApp
+            Google Hangouts
+            Facebook Messenger
+            Slack
+            Skype
+    Instant messaging software can also include the ability to have voice calls or video calls. In case of voice calls, the audio sounds are sent as data packets over the network eliminating the need for standard telephone lines. This ability to make voice calls over the internet is called Voice over IP, or VoIP.
+    Video communication through IM apps works in the same way. To have real-time conversations without latency issues (delays in delivery of sound or video), it is important to have reliable internet service with enough bandwidth for the application to function without delays.
+
+Text messaging -	Text messaging, sometimes called Short Messaging Service (SMS) or texting, is similar to instant messaging because communication is done through short messages. The main difference is that text messaging is handled through a phone service; instant messaging uses the internet.
+                Generally, texting is done on cell phones. A similar service, Multimedia Message Service (MMS) allows pictures and videos to be sent in text messages.
+                
+Online workspace & document sharing	Cloud-based solutions provide an online workspace for people to collaborate more effectively. Online workspaces are a great way to share documents, spreadsheets, presentations, or other files. Online workspaces allow you to track revisions and provide feedback.
+        Because documents are stored and accessed online, they can support collaborative editing, where multiple users work simultaneously on a document. Examples of cloud-based solutions services include:
+            Microsoft Office 365
+            G-Suite by Google
+
+Video teleconferencing	- As technology has developed, it has become more and more common to have meetings, conferences, interviews, and one-on-one communications through video conferencing.
+        There are three basic categories of video teleconferencing: room-based video conferencing, telepresence, and desktop videoconferencing. All of these include the interaction of at least two users through high-quality video and audio over an IP network.
+        Room-based video conferencing is generally based on hardware that is placed and configured in a room designed for meetings. It requires compatibility with the video conferencing system on the other end of the connection.
+        Telepresence is transmitting your presence to a remote location such as a boardroom. Telepresence generally involves several people from remote locations virtually attending a meeting using HD or 4K resolution technologies (even virtual reality headsets) to give the feeling of meeting together in person.
+        Desktop video conferencing is video teleconferencing in which the software and hardware needed for the communication are in a desktop computer. This technology allows for last minute meetings and communications.
+
+Remote Desktop - 	There are times when you would like to access a computer remotely, maybe you are working from home and need to access your desktop at the office, or maybe you need to help someone at another location with their IT issue.
+                Remote Desktop is software that allows you to use a remote computer as if it were sitting in front of you.
+                Remote desktop software also allows for screen sharing. It allows you to display your screen for others to view remotely without the ability for them to interact with it or control any part of it.
+</pre>
+    <h3>Business Software</h3>
+    <h2>Printing</h2>
+    <pre>
+Device Drivers-	Software that allows an operating system to communicate with hardware devices, such as printers, video cards, scanners, and cameras.
+
+Shared Printer-	A printer that is attached to one computer but allows printing access to multiple computers and devices connected to the same network.
+
+Print Job-	A file or set of files that have been submitted to a printer.
+
+Print Queue-	A container that holds print jobs that are waiting to be sent to a printer that may be too busy to accept the print job.
+
+Print Server-	A device or computer that connects client computers to printers. Client computers send print jobs to a print server that may hold them in a print queue before forwarding them to a printer.
+
+3D Printing-	3D Printing, sometimes known as additive manufacturing, is the process of creating a three-dimensional solid object from a digital file.
+</pre>
+    <h3>4.6.4 Install and Configure a local printers</h3>
+    <h1>4.7 Software Troubleshooting</h1>
+    <pre>
+Software Crash-	A common issue in which software stops running properly, forcing you to exit and reopen the program.
+
+System Slowness-	A common issue where the software starts running more slowly than usual and every command the computer makes may be delayed by a few seconds or longer.
+
+System Crash-	An issue in which software problems cause the system to crash completely, possibly forcing the entire system to restart. This can cause data loss.
+
+Malicious Software Infection-	A kind of software that can harm a computer and compromise security.
+
+Task Manager-	A program used by Windows to provide information about how a computer is performing and which processes and services are running at any given time.
+</pre>
+    <br>Task Scheduler - configure when specific tasks run
+    <br><br>option-ctrl-esc will force close a mac app
+    <h2>4.8 System Support Careers</h2>
+    <pre>
+Technical Support Specialist-	A specialist that serves as the main contact for a company's help desk or support organization, often performing tasks such as recording help desk tickets, simple troubleshooting, researching a knowledge base, and providing basic support.
+
+Managed Service Provider-	A third party technical support organization employed by a company in order to cut costs and focus on business operations.
+</pre>
+
+
+
+
+
+</body>
+
+</html>
