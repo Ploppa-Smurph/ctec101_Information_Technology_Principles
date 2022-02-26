@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 wk 07 Microsoft Excel</title>
+</head>
+
+<body>
+    <h1>CTEC-101 wk 07 Microsoft Excel</h1>
+    <pre>
+Creating Workbooks: Workbooks are the name for individual Excel files. Each workbook can be composed of one or more worksheets. When creating a new workbook, you can choose from hundreds of useful templates, or you can create a new workbook from scratch.
+
+Managing Worksheets: A single workbook can contain multiple worksheets. Think of a worksheet as a single page of your workbook. Dividing information into different worksheets keeps your information neat and organized.
+
+Entering Data: Always keep your information organized when you make a spreadsheet, especially when working with large amounts of data.
+
+Protecting Worksheets: To protect workbooks and worksheets from changes, focus on the particular cells that you want to protect and the cells that you want to edit.
+
+Printing Worksheets: Even though printing isn't its primary function, Excel has several tools and options you can use to print great-looking spreadsheets.
+
+Formatting Cells: An important part of spreadsheet creation is formatting and design. Formatting cells includes borders, colors, and number formatting (such as percentages and decimal places shown).
+
+Entering Simple Formulas: Excel can do everything a calculator can, but Excel is much faster when you are working with large amounts of data. Formulas are used to generate calculations from data within a workbook.
+
+Using Advanced Functions: In addition to basic math operations, Excel can perform a variety of logical tests and other analyses on your data by using advanced functions.
+
+Creating Charts: Charts are the best way to visually represent your data. Charts make it much easier to spot an important trend or pattern that would otherwise be missed when looking at numbers alone. Excel can create almost any type of chart for your spreadsheets.
+
+Organizing Data in Tables: Excel can take an existing array of data and automatically format it into a table. Tables make it easy to organize, sort, filter, and total your data.
+
+Summarizing Complex Data: Outlines provide a great way to group and summarize transactional data on a worksheet. PivotTables provide a convenient way to ask questions about complex data and display results in a custom report.
+</pre>
+    <h2>5.2 Creating and Managing Workbooks</h2>
+    the rectangles are called 'cells' and are organized into rows and columns
+    <br> rows are numbered and columns are lettered
+    <br>the cell names start with the column and then the number, ex: D2 would be column D and row 2
+    <br><br>tab will go to the next cell (to the right), shift-tab to go back
+    <br> Worksheets and Workbooks -- the workbook is the excel file - when we save we save the entire workbook
+    <h3>5.2.2 Worksheet Management</h3>
+    <h3>5.2.3 Templates and Themes</h3>
+    <h3>5.2.4 External Data</h3>in Data tab - 'Get External Data' - can use different 'Delimiters'
+    <pre> Workhsheet Management<br>
+    1. Worksheet: A worksheet is an individual spreadsheet within a workbook. There is no limit to the number of worksheets a single workbook can contain. Each worksheet has its own tab at the bottom of the screen. These tabs can be rearranged by dragging them.
+    2. New Worksheet: Create a new blank worksheet by clicking the New sheet button.
+    3. Delete a Worksheet: Delete a worksheet by right-clicking its tab and clicking Delete. Deleting a worksheet is permanent, so always make sure there is no important data in the worksheet before you delete it.
+    4. Rename a Worksheet: Rename a worksheet by right-clicking its tab and clicking Rename.
+    5. Duplicate a Worksheet: Duplicate a worksheet by right-clicking its tab and clicking Move or Copy. In the dialog box that appears, select the Create a Copy check box, choose the location where you want the copy to appear, and click OK.
+    6. Tab Color: Worksheet tabs can be color-coded by right-clicking and clicking Tab Color, then selecting a color. In Image 1, the February worksheet has a tab color applied to it.
+    </pre>
+    <pre>Workbook Management <br>
+1. Workbook: An Excel workbook is a collection of one or more worksheets. Simply put, each Excel file is a workbook. The name of the workbook pictured in Image 2 is Book1.
+2. New: On the New tab, you can create a new, blank workbook or use an existing template.
+3. Open: Click the Open tab to open an existing workbook on your computer.
+4. Save/Save As: The Save and Save As tabs are used to save an existing workbook. By default, Excel saves an .xlsx file. PDF and CSV are two other useful formats you can save as. A PDF file will retain all of the formatting of the original document and can be accessed on any computer, but further edits are difficult to make. A CSV (comma-separated values) file can be opened and edited using any spreadsheet program, so this format is useful for collaboration with users without Excel.
+5. Print: The Print tab is where you can print a workbook. This tab contains the print settings, including page orientation and margin sizes, as well as the print preview, where you can see how your workbook will look while printed.
+6. Blank Workbook: In the File tab, click New > Blank Workbook to create a new blank workbook.
+    </pre>
+    <pre>Data Import<br>
+        1. From Access: From Access imports a table or query from an Access database.
+        2. From Web: From Web opens a browser where you can search for data tables on the Internet to import. This is useful for importing bank statements, bills, and credit card transactions into Excel for analysis.
+        3. From Text: From Text imports .txt files. This is especially useful when the file is delimited in a nonstandard way, such as with tabs or other special characters.
+        4. From Other Sources: From Other Sources is used to import data from various formats and sources, such as from a SQL server or XML file.
+    </pre>
+    <h3>5.2.8 Workbook Management Tip</h3>
+    <pre>
+File Management: When saving and managing workbook files, consider the following recommendations:
+-Use a hierarchical folder system that will allow you to find workbook files easily. To make file searches easier, add property information (File > Info).
+
+-Take advantage of the default AutoRecover information, which is saved every 10 minutes. Use this feature to recover recent document changes or unsaved files when your computer shuts down or crashes while Excel is open. You can view the recovered documents by going to the Info tab in the Backstage view and clicking Manage Versions > Recover Unsaved Documents.
+
+-Use the Track Changes feature (found on the Review tab) to log changes that you or other people make to workbook drafts.
+
+Distributing Workbooks: When importing or distributing data, consider the following recommendations:
+-When your workbook is complete, use the Mark as Final option to make the document read only, restricting any further edits. You can also restrict users from making specific types of changes. To mark a document as final, go to the Info tab in the Backstage view and click Protect Document > Mark as Final.
+
+-For sensitive information, require a password to open the workbook. You can also use the Document Inspector to perform an inspection for sensitive information before distributing the workbook. You can access the Document Inspector in the Info tab of the Backstage view by clicking Check for Issues > Inspect Document.
+
+Using Multiple Worksheets: To make using multiple worksheets easier, consider the following suggestions:
+-When naming your worksheets, stick to a single naming convention. This makes it easier to know what information is on a sheet just by looking at its tab.
+
+-Make your worksheets as uniform as possible. This is especially useful if you want to make a formula that pulls information from various sheets.
+
+-If you plan to have several worksheets with similar data, create a template sheet that you can copy and use as many times as you need.
+</pre>
+    <h2>5.3 Organizing and Entering Data</h2>
+    relationship between rows and columns, copy and paste, delete row and column vs deleting data from row or column, undo and redo paste formatting, values, transposed, formula only, and formatting and formula
+    <h3>5.3.3 Large Dat Sets</h3>
+    freeze panes, hiding rows and columns
+    <pre>
+<h4>5.3.2 Basic Features for Entering Data</h4>
+
+1. Undo or RedoYou can undo or redo almost any action in Excel. The Undo and Redo buttons are found on the Quick Access Toolbar. You can also use the keyboard shortcuts Ctrl + Z for Undo and Ctrl + Y for Redo.
+
+2. CutThe Cut command moves the information from the selected cells to the new location after you paste it. You can use the Cut button on the Home tab in the Clipboard group, or you can use the keyboard shortcut Ctrl + X.
+
+3. CopyThe Copy command copies information from the selected cells to the Clipboard. The information can then be pasted to other locations. You can use the Copy button on the Home tab in the Clipboard group, or you can use the keyboard shortcut Ctrl + C.
+
+4. Paste OptionsThe Paste command is used to paste information from the Clipboard to the selected cell or cells of your worksheet. By default, pasting will fill the selected cells with the formulas and formatting of the source cells. However, there are other paste options available when you click the bottom half of the Paste button in the Clipboard group.
+    --Paste Formatting gives the destination cells the same formatting as the copied cells.
+    --Paste Values copies the values from the Clipboard without the formulas. Use this if you want to copy the result of one of Excel's calculations.
+    --Transpose switches the rows and columns of the copied data.
+
+5. Name BoxThe Name Box shows the coordinates of the currently selected cell. You can select any cell in a worksheet by typing its coordinates into this box and pressing Enter. This is useful when you are working with extremely large worksheets.
+
+6. Row TitleThis is the title for a row of data. Rows are all of the cells of a worksheet in a horizontal line and are defined by numbers.
+
+7. Selected CellThe Selected Cell is the one that is ready to receive input from the keyboard. Even if you have a range of cells selected, there will always be one cell that text will appear in when you type. This cell is identified by a dark green outline and can also be seen in the Name Box.
+
+8. Column TitleThis is the title for a column of data. Columns are all of the cells of a worksheet in a vertical line and are defined by letters.
+
+9. Worksheet TitleThis is the title for the worksheet. It was created by merging several cells together using the Merge & Center button in the Alignment group.
+</pre>
+    <pre><h4>5.3.3 Cell Insertion, Deletion, and Hiding Features</h4>
+1. Insert CellsYou can use the Insert button in the Cells group to insert rows and columns. Click the arrow below the Insert button and click either Insert Sheet Rows or Insert Sheet Columns. Rows are inserted above the currently selected row; columns are inserted to the left of the currently selected column. Alternatively, you can right-click a row or column header and click Insert to insert a row or column.
+
+2. Delete CellsRows or columns can be deleted by using the Delete button in the Cells group. To do this, select a cell in the row or column you want to delete. Then, click the arrow below the Delete button and click either Delete Sheet Rows or Delete Sheet Columns. Alternatively, you can right-click a row or column header and click Delete to delete a row or column.
+    --It's important to understand that deleting cells is different than deleting cell contents. To delete cell contents, select the cell or cells and press Delete. This will remove the information and leave the empty cells behind. Deleting cells will completely remove the selected cells from the spreadsheet.
+
+3. ClearClear opens a drop down with several options for clearing cell contents.
+    -Clear All removes all information from a selection, leaving default-white cells behind.
+    -Clear Formats removes all formatting from a selection, leaving the data intact.
+    -Clear Contents removes the data from a selection, leaving the formatting intact.
+    -Clear Comments removes all comments from a selection.
+    -Clear Hyperlinks removes hyperlinks from a selection, leaving the data and formatting intact.
+    
+4. Hide Rows/ColumnsRows and Columns can be hidden from view. This is useful when you want to focus on only certain parts of your data or if you have formulas that don't need to be seen. To hide a row or column, right-click the row or column header and click Hide. To unhide a row or column, select the rows or columns on both sides of the hidden one. Then, right-click the row or column header and click Unhide.
+</pre>
+    <pre><h4>5.3.4 Freezing Panes</h4>
+1. Freeze PanesThe Freeze Panes feature is useful when navigating worksheets that are too large to fit on your screen. When a row or column is frozen, it will remain visible no matter where you scroll on your worksheet. The Freeze Panes button will freeze all the rows and columns above and to the left of your current selection. For example, if you click Freeze Panes when cell C3 is selected, you will freeze rows 1 and 2 (above row 3) and columns A and B (to the left of column C). When you have frozen panes, this button turns into Unfreeze Panes, which unfreezes all rows and columns.
+
+2. Freeze Top RowFreeze Top Row will automatically freeze the top row of a worksheet, regardless of which cell is selected.
+
+3. Freeze First ColumnFreeze First Column will automatically freeze the first column of a worksheet, regardless of which cell is selected.
+</pre>
+    <pre>Data Entry: Using keyboard shortcuts and proper formatting can speed up data entry considerably.
+    --Press the Tab key and Shift + Tab to move right and left one column.
+    --Press Enter and Shift + Enter to move down and up one row.
+    --Clearly label your rows and columns. This helps you know where certain data should be entered.
+
+Clipboard: The Clipboard in Excel is a bit different from other Microsoft Office applications. 
+    --Any data you have on the Clipboard will be surrounded by a marching ants border. If you see a border, you have information in the Clipboard.
+    --Using the Cut command doesn't delete information from your spreadsheet until you paste that information somewhere else. This is different from most applications, where the Cut command immediately deletes the selected information.
+    --You can remove the marching ants (and clear your Clipboard) by double clicking a cell in your spreadsheet.
+</pre>
+    <h2>5.4 Changing Properties and Printing Worksheets</h2>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
