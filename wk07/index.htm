@@ -54,7 +54,9 @@ Summarizing Complex Data: Outlines provide a great way to group and summarize tr
 1. Workbook: An Excel workbook is a collection of one or more worksheets. Simply put, each Excel file is a workbook. The name of the workbook pictured in Image 2 is Book1.
 2. New: On the New tab, you can create a new, blank workbook or use an existing template.
 3. Open: Click the Open tab to open an existing workbook on your computer.
-4. Save/Save As: The Save and Save As tabs are used to save an existing workbook. By default, Excel saves an .xlsx file. PDF and CSV are two other useful formats you can save as. A PDF file will retain all of the formatting of the original document and can be accessed on any computer, but further edits are difficult to make. A CSV (comma-separated values) file can be opened and edited using any spreadsheet program, so this format is useful for collaboration with users without Excel.
+4. Save/Save As: The Save and Save As tabs are used to save an existing workbook. By default, Excel saves an .xlsx file. PDF and CSV are two other useful formats you can save as. 
+    A PDF file will retain all of the formatting of the original document and can be accessed on any computer, but further edits are difficult to make. 
+    A CSV (comma-separated values) file can be opened and edited using any spreadsheet program, so this format is useful for collaboration with users without Excel.
 5. Print: The Print tab is where you can print a workbook. This tab contains the print settings, including page orientation and margin sizes, as well as the print preview, where you can see how your workbook will look while printed.
 6. Blank Workbook: In the File tab, click New > Blank Workbook to create a new blank workbook.
     </pre>
@@ -146,8 +148,207 @@ Clipboard: The Clipboard in Excel is a bit different from other Microsoft Office
     --You can remove the marching ants (and clear your Clipboard) by double clicking a cell in your spreadsheet.
 </pre>
     <h2>5.4 Changing Properties and Printing Worksheets</h2>
+    <h3>5.4.1 Data Protection</h3>protecting worksheets and unlocking some cells
+    <br><pre>
+1. Protect Sheet: Excel allows you to control what content others can modify in your worksheets, ensuring that your worksheets will continue to function as intended. To protect an individual worksheet, click Protect Sheet and then enter a password. By default, all cells within a worksheet are locked; however, the cells won't actually be locked until the worksheet is protected. Before protecting the worksheet, you'll need to unlock any cell that users should be allowed to edit.
 
+2. Protect Workbook: If you want to protect all worksheets in your workbook from being edited, click Protect Workbook and then enter a password. But remember, all worksheet cells are locked by default. So if you forget to unlock any cells, you will need to unprotect the workbook by entering your password, and then unlock the cells. You can then protect the workbook again. Any time you protect a workbook, you can choose a new password.
 
+3. Unlocked Cell: When you want to allow users to edit cells in a protected workbook, you need to unlock the desired cells. You can do this by right-clicking on the cell you want to unlock and clicking Format Cells, which opens the Format Cells dialog box. On the Protection tab, click to clear the Locked check box.
+    </pre>
+    <h3>5.4.2 Data Validation</h3>
+    <pre>
+1. Info & PropertiesThe properties of a workbook provide metadata—information that describes the document. This information includes the document title, author name, subject, and keywords that identify the contents of the file. To modify a document's properties, go to the Info tab of the Backstage view and click on the property you want to edit.
+
+2. Printer SelectionYou may already be connected to more than one printer; for example, the printer you use at school and the printer you use at home. The default printer will be displayed by name under Printer, but you can easily select a non-default printer to use. To select a non-default printer, simply select the printer from the Printer drop-down list (you may need to add the printer to your computer's configuration first).
+
+3. Sheet SelectionBy default, Excel will print only the active worksheet, which is usually the worksheet that is currently displayed in your workspace. But if needed, you can choose to print all worksheets in the workbook or even a particular selection of cells.
+
+4. Paper SidesIf your printer supports double-sided printing, you have two options for how it can print: flipping the paper on the short edge or on the long edge. If your printer does not support double-sided printing, you can select the option to manually print on both sides, which requires you to manually flip and reload the paper into the printer.
+
+5. Paper CollationBy default, Excel prints collated copies of your worksheet, which is usually the best choice. If you have a multiple-page worksheet that you are printing for six peers to review, the default collated option will keep each copy of the worksheet together, rather than printing page one six times, page two six times, page three six times, and so on.
+
+6. Paper OrientationThere are two types of page orientation. Excel's default page orientation setting is Portrait, where the long edge of the paper is vertical, but worksheets can also be printed in Landscape orientation, where the long edge of the paper is horizontal. Page orientation settings can also be found on the Page Layout tab.
+
+7. Paper SizeMost worksheets can be printed on the standard 8.5" x 11" paper size. However, large data sets may call for other options, such as the 8.5" x 14" legal size.
+
+8. Margin SettingsA margin is the amount of space between the text and the edge of the paper. Excel's default margin style is Normal, which leaves a 0.7 inch space between the text and each edge of the paper. You can customize the margin style on the Page Layout tab by clicking Margins.
+
+9. Scaling OptionsDepending on how much data your worksheet contains, you may choose to scale the content to fit on one page. You can also choose to shrink the printout so none of the rows extend beyond one page high or so none of the columns extend beyond one page wide.
+</pre>
+    <h3>5.4.3 Excel Printing Tips</h3>
+    <pre>
+1. Print AreaBecause many worksheets contain a large amount of data, Excel allows you to define a print area, which is the selection of cells that you wish to print. When printing a worksheet, you can choose to ignore the print area. To clear the print area, click Print Area > Clear Print Area.
+        
+2. Print TitlesThe Print Titles button opens a dialog box where you can specify which rows or columns you would like repeated on each page.
+</pre>
+    <pre>
+Protecting Worksheets: When protecting workbooks and worksheets, consider the following:
+   --If you don't enter a password when you protect a worksheet, any user can remove the protection by clicking Unprotect Sheet.
+   --Use a password you won't forget. There is no way to recover a lost password, so if you forget it, you'll never be able to make changes to your worksheet.
+   --By default, protecting a worksheet prevents all actions except for entering data into unlocked cells. You can customize user permissions in the Protect Sheet dialog box, which appears when you click Protect Sheet.
+
+Printing Worksheets: Remember the following suggestions when printing worksheets:
+    --Always format spreadsheets you intend to print. Separate rows and columns are nearly impossible to discern when spreadsheets are printed without formatting.
+    --If you're using a black and white printer, format your spreadsheet without colors before printing to make sure the printed page is readable.
+    --When printing a multiple page spreadsheet, include page numbers. Without numbered pages, knowing the correct page order can be difficult.
+</pre>
+    <h2>5.5 Formatting Cells</h2>
+    <h3>5.5.1 Number Formats</h3> percents, dollars, decimals, phone #s and dates
+    <pre>
+1. Number FormatsIn the Number Format drop down, you can choose custom formatting for your numerical data. By default, numbers are formatted using the General style, but other number formats include Currency, Date, Fraction, and Percentage.
+
+2. Increase DecimalThe Increase Decimal button increases the number of decimal places that display in the selected cell. This can be useful for when you need your calculations to be very precise.
+
+3. Decrease DecimalThe Decrease Decimal button decreases the number of decimal places that display in the selected cell. This can make cells with numbers much easier to read.
+
+4. Accounting Number
+    FormatThe Accounting Number Format button automatically formats the selected cells as currency. By default, it uses the dollar sign ($), but other currencies can be chosen by using the drop-down arrow next to the button.
+
+5. Percent StyleThe Percent Style button formats the selected cell as a percent.
+
+6. Comma StyleThe Comma Style button shows or hides the thousands separator for the selected cells.
+    </pre>
+    <h3>5.5.2 Cell Formats</h3> merge and center cells, modify columns, wrap text and more
+    <pre>
+        1. FontAlso called typeface or font family, font refers to a character set that is designed with a particular appearance. Examples include Times New Roman, Arial, Courier New, and Palatino Linotype.
+        
+        2. Font SizeFonts can be set to a particular size through the font size drop-down list. They can also be increased or decreased incrementally using the  buttons to the right of the drop-down list. The unit of measurement used for font sizes is the point.
+        
+        3. Font StyleStyle usually refers to formatting, such as italic, bold, and bold italic. Regular font styles do not include additional formatting. To apply or remove a font style, simply select the text you wish to change and then click either the bold or italic button.
+        
+        4. BordersBorders can be added to a cell to help visually separate data. You can stylize borders in a number of ways, including changing border thickness, adding double borders, or removing borders on specific sides.
+        
+        5. Fill ColorBy default, cells have no fill color. You can add a fill color to a cell by clicking the drop-down arrow on the Fill Color button and clicking a color.
+        
+        6. Font ColorThe default font color for a cell is black. To apply a different color, select one from the drop-down color gallery.
+        
+        7. Format Cells
+            -Dialog BoxMost font changes can be made directly from the ribbon. A few additional options are available on the Font tab in the Format Cells dialog box. These include more underlining options, double strikethrough, and Small Caps, which replaces the lowercase letters in a title with capital letters that are a smaller font size. 
+       
+        1. Vertical AlignmentThese three buttons determine the vertical alignment of text within a cell. While this doesn't matter much when working with the default font size and row height, their use becomes apparent when you increase the height of a row.
+        
+        2. Text OrientationThe Text Orientation is used to choose the direction of text within a cell. By default, text is horizontal, but it can also be oriented vertically or at an angle. This is useful for when you have a long column title but want to maintain a specific column width.
+        
+        3. Wrap TextBy default, text typed into a single cell will continue on the same line. However, if Wrap Text is enabled, Excel will treat the edges of the cell like margins in Word, creating new lines as more text is added.
+        
+        4. Horizontal AlignmentThese three buttons determine the horizontal alignment of text within a cell. Because this formatting is applied to individual cells, it is common to see more than one option used in a workbook. For example, column titles are often centered, while information in the columns are right aligned.
+        
+        5. Decrease/Increase
+                IndentThe Increase Indent button adds a space between the left margin of a cell and its text. Similarly, the Decrease Indent button removes this space. This feature can be useful when creating a tiered list.
+        
+        6. Merge OptionsSometimes you'll want to merge several cells into one cell; for example, when you want to put a title at the top of a column. Merge & Center merges all of the selected cells together and centers the information horizontally. By clicking the drop-down arrow next to Merge & Center, you can access more options. Merge Across will merge the selected cells horizontally but keep each row separate. Merge Cells merges the selected cells together without centering the content. Unmerge will divide a merged cell back into individual cells.
+             
+    </pre>
+    <h3>5.5.3 Cell Styles and Colors</h3> use the cell styles group
+    <pre>
+1. Cell Styles GalleryCell Styles are preset formatting options that you can apply to one or more cells in your workbook. To apply a style, simply select the cell or cells and click the style you would like to apply. Styles are a great way to make your worksheets look better.
+
+2. Clear FormatsThe Clear button will remove all of the formatting from the selected cells but will leave the content intact. This is useful when you want to reformat a spreadsheet without affecting the data.
+
+3. Column Width ErrorWhen your cell shows ######, it means that the column is not wide enough to display the number. You can resolve this error by increasing the column width.
+
+4. Row HeightRow Height opens the Row Height dialog box, where you can define the row height (in points).
+
+5. Column WidthColumn Width opens the Column Width dialog box, where you can define the column width (in points).
+
+6. AutoFitThe two AutoFit tools in the Format drop down adjust row height or column width to match the data in the selected cell.
+    </pre>
+    <h3>5.5.4 Cell Borders</h3> selecting and using Borders in the borders drop down menu
+    <h3>5.5.5 </h3>
+    <h3>5.5.8 Cell Formatting Tip</h3>
+    <pre>
+Fonts, Colors, and Borders:  When deciding on the fonts and colors to use for your spreadsheet, consider the following recommendations:
+    --Use only one or two colors when formatting a spreadsheet.
+    --Most of the time, leave your font color black. However, if you change the fill to a dark color, you may need to change the font to a lighter color.
+    --To make data in tables easier to read, make each row an alternating color (also called banding).
+
+Alignment:  Proper cell alignment can increase a document's readability.
+    --The easiest way to make a good-looking title for your cells is to use the Merge and Center command.
+    --Remember that data can be aligned both vertically and horizontally in your cells.
+
+Number Formatting:  Numbers can be formatted in a variety of ways.
+    --Even though dates don't look like numbers (especially when formatted), Excel recognizes them as numbers. This makes it easy to add and subtract days. For example, adding 3 to January 30 will generate the date February 2 rather than January 33.
+    --Usually you'll only want to display decimal places when you need to see them. For money, consider displaying only two decimal places.
+    --If you run into the ######## error, you should either enlarge the column or reduce the number of decimal places that are displayed.
+
+Cell Formatting:  Below are some facts about resizing rows and columns:
+    --The easiest way to resize a column to fit its data is to double click the right side of the column header.
+    --If you want to resize multiple rows or columns, select the headings of the rows or columns you want to resize and make the changes.
+    --Remember that when you resize a row or column, you must resize all cells in that row or column. Plan your spreadsheet accordingly.
+    </pre>
+
+    <h2>5.6 Entering Functions</h2> using math operators, built-in functions, AutoSum tool
+    <br> Excel formulas start with '=' equal sign, refernce other cells by ex: =A1
+    <br><br><b>=NAME(arg1, arg2, arg3)</b>
+    <br>Formula Tab has built-in formulas
+    <h3>5.6.2 AutoFill Options</h3>
+    month of the years can be "AutoFilled", so can days, there is an "AutoFill" option menu by the cursor in the program (drop down menu).
+    <br> autofill for copying formulas over from other cells, ex: dragging and autofilling the 'total' to other columns in the example on the video
+    <h3>5.6.3 Add and Average</h3>
+    autosum works best for data directly above it (use it at the bottom of a column)
+    <br><b>=SUM(B2:B23)</b> in the example will add the data in column b from cell2 : cell23 (don't use - otherwise it will subtract. use : )
+    <br><br>Average is found using: <b>=AVERAGE(B2:B23)</b> would average the total of those numbers
+    <pre>
+1. AutoSum: When you click the AutoSum, Excel will guess which numbers you want to add and then insert the SUM function into the selected cell. 
+        Even though AutoSum is pretty good at guessing, you should always double-check the generated function before pressing Enter. The drop-down arrow on the AutoSum button opens a list of other functions (discussed below) that can be automatically inserted.
+2. AVERAGE: AVERAGE finds the arithmetic mean of a range of cells.
+3. COUNT
+    Function: COUNT counts the numbers in a range of cells. Count Numbers does not count text or blank cells.
+4. MAX and MIN
+    Functions: MAX and MIN return the highest or lowest number in a range of cells, respectively. This is useful when summarizing very large amounts of data.
+5. Insert Function
+    Dialog Box: More Functions opens the Insert Function dialog box, where you can search for and insert any function. This is especially useful if you are unfamiliar with functions. 
+        This dialog box can also be opened by clicking the Insert Function button next to the formula bar, as long as you don't have an active formula selected.
+    </pre>
+    <h3>5.6.4 Text Functions</h3>
+    <b>=LEFT(A2, 3)</b> will return the 3 left most items from the A2 cell (ex: 3 letter abbreviations for month or day)
+    <br><b>=RIGHT(A2, 4)</b> will return the 4 right most items from the A2 cell (good for social security # - last 4 digits)
+    <br><b>=MID(A2, 2, 100)</b> will start on the 2nd character of the A2 cell and display information from character 2 : character 100
+    <br><br><b>=UPPER(A2)</b> display all information from cell A2 as Upper Case
+    <br><b>=LOWER(A2)</b> display information Lower Case
+    <br><br><b>=PROPER(A2)</b> The first character will be capitalized (useful for working with names)
+    <pre>
+1. CONCAT: CONCAT takes multiple inputs and concatenates them into a single string. It can accept as arguments text, references to cells, and references to ranges.
+2. TEXTJOIN: TEXTJOIN concatenates multiple items using a delimiter, such as a comma, space, or period. The first argument defines the delimiter. The second argument determines whether the function will ignore blank cells. The remaining arguments are the items to be concatenated.
+3. LEFT and RIGHT: LEFT and RIGHT return a specified number of characters from the left or right of a text string. The first argument determines the number of characters, and the second argument supplies the text.
+4. MID: MID returns characters from the middle of a text string, given a starting position and length. The first argument specifies the text. The second argument is a number that determines which character is the first in the returned string, and the third argument is a number that determines how many characters the function will return.
+5. UPPER and LOWER: UPPER and LOWER reformat text to all upper or lower case letters.
+6. LEN: LEN returns the number of characters in a text string.
+7. PROPER: PROPER reformats text to make the first letter of each word upper case and all other letters lower case.
+    </pre>
+    <h3>5.6.5 Concatenating in Excel</h3> combine items for multiple cells
+    <br>ex: first and last names <b>=CONCAT(A2," ",B2)</b>
+    <br><b>=CONCAT(B2,", ",A2)</b> would do last name first
+    <br><b>&</b> is shorthand =Concat; ex: <b>=B4&" "&A4</b>
+    <br><br>TEXTJOIN(" ",1,A2:D2) -- with text join the 1 in that parameter denotes that we will ignore_empty spaces
+    <h3>5.6.6 Formula Facts</h3> Flash Fill, COUNTA and COUNTBLANK = counts nonblank or blank cells, =LEN - finds Length
+    <br>
+    <pre>
+1. Functions List: Most of the time, this box is called the Name Box. However, when you begin typing a formula in a cell (by typing =), it changes into a list of common or recently used functions. This can be helpful when making formulas that require multiple functions.
+2. Cancel/Enter: The Cancel and Enter buttons perform the same action as pressing Esc or Enter on your keyboard, respectively. When entering a formula, it is important that you either click the Enter button or press Enter on your keyboard when you're done. If you don't, 
+    Excel will think that you're still working on your formula when, in fact, you're trying to do something else. If you ever mess up a formula and want to start over, press Esc.
+3. Function Arguments
+    Dialog Box: When you have an active formula, clicking this button opens the Function Arguments dialog box. An argument is a number or cell that Excel uses in calculating the formula. This dialog box is especially useful when entering complicated functions with multiple arguments. 
+        If you don't have an active formula, this button opens the Insert Function dialog box (see below).
+4. Formula Bar: The Formula Bar shows the underlying formulas of the selected cell. In Image 1, if the selected cell were C16 the formula bar would display =SUM(C4:C16). Formulas and other information can be typed directly into the formula bar, which is useful when creating long or complex formulas.
+5. Active Formula: An active formula is a formula that is currently being typed into a cell. In the example above, the active formula is in cell B16. You can tell that it's an active formula because the formula itself is in the cell, not the result. Inactive formulas (such as cell C16) display 
+    the result of the formula. The blue outline around cells B4 through B15 shows that those cells are part of the active formula.
+</pre>
+    <h3>5.6.9 Forumula Tips</h3>
+    <pre>
+Formula Entry:  When entering formulas, consider the following:
+    -Whenever you type parentheses into a formula, each opening parenthesis and its corresponding closing parenthesis are color coded with the same color. This helps you to keep track of where they are.
+    -Any cells you reference in your formula are also color coded. Both the cell coordinates in the formula and the cell itself are highlighted the same color.
+    -If you make a mistake when entering a formula, the easiest way to fix it is usually to delete the entire formula and start over.
+    -Text functions can be applied to numerical data. However, this will store the numerical data as a text value, which may cause problems when using the data in calculations.
+
+AutoSum:  Simple functions can be added to a spreadsheet with the AutoSum button.
+    -The AutoSum button is often the fastest way to add simple functions to your spreadsheet. The functions it provides are SUM, AVERAGE, COUNT NUMBERS, MAX, and MIN.
+    -Make sure to select the cell where you want the formula to appear before you click the AutoSum button.
+    -AutoSum will make its best guess as to what information you want to use for your calculation, but it isn't always perfect. You can fix this by clicking the function you want to use, selecting the data to use, and pressing Enter.
+</pre>
+    <h2>5.7 Using Advanced Functions</h2>
 
 
 
