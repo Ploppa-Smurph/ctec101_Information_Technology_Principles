@@ -349,9 +349,239 @@ AutoSum:  Simple functions can be added to a spreadsheet with the AutoSum button
     -AutoSum will make its best guess as to what information you want to use for your calculation, but it isn't always perfect. You can fix this by clicking the function you want to use, selecting the data to use, and pressing Enter.
 </pre>
     <h2>5.7 Using Advanced Functions</h2>
+    <h3>5.7.1 Relative and Absolute References</h3>
+    absolute reference == F4 - while in the cell name (D4) in example -- or you can type "$D$4"
+    <pre>
+1. Insert Function: The Insert Function dialog box allows you to search for and insert functions. This is especially useful when you're just learning Excel. If you know what you want to do but don't know which function to use, you can type your problem in normal language 
+        and Excel will suggest some functions that may be helpful.
+2. AutoSum:  When you click the AutoSum button, Excel will guess which numbers you want to add and then insert the SUM function into the selected cell. Even though AutoSum is pretty good at guessing, you should always double-check the generated function before pressing Enter. 
+        The drop-down arrow on the AutoSum button opens a list of other functions that can be automatically inserted.
+3. Financial:  As their name suggests, Financial functions are mostly used to calculate financial information, such as interest rates, payments, and loan amortization.
+4. Logical:  Logical functions are useful for when you want to find or analyze data based on some condition. The most common logical function is the IF function, which will perform an operation only if the desired condition is found.
+5. Text:  Text functions manipulate, format, and make calculations from text. The CLEAN function, for instance, removes all non-printable characters from a string of text.
+6. Date & Time:  Date & Time functions are useful when performing calculations that you'd normally do on a calendar. For example, the DAYS function returns the number of days between two specified dates.
+7. Lookup & Reference:  Lookup & Reference functions are used to find individual values within a spreadsheet. When using a sheet with hundreds of rows, the VLOOKUP function allows you to quickly find the information you're looking for.
+8. Math & Trig:  Math & Trig functions perform the same calculations as an advanced calculator. You can use the LOG function to find a logarithm; SIN, COS, and TAN to find trigonometric values; and even ROMAN to convert a number into Roman numerals.
+9. Relative Reference:  By default, all cell references in Excel formulas are relative references. This means that instead of pointing to a specific cell, they point to a location relative to the location of the formula. This is useful when copying formulas. 
+        For example, if you have a formula in column A that displays the total of all cells above it, you could easily copy the formula to other columns to display their totals, without needing to edit the formula. The relative reference updates the formula to its new location.
+10. Absolute Reference:  Sometimes you will want a formula and its copies to all point to the same cell. In these cases, it is best to use an absolute reference. To turn a relative reference into an absolute reference, place your cursor next to the reference and press F4 on your keyboard. 
+        This will add dollar signs to the reference as shown in Image 1.
+    </pre>
+    <h3>5.7.2 Mixed and Cross Worksheet References Advanced Cell References</h3>
+    push 'F4' 3 times for mixed references or "$D4" dollar sign before column and not row (Absolute Column)
+    <br> 'F4' 2 times mixed reference "D$4" dollar sign before row (absolute Row)
+    <br><br> Cross Worksheet = ('Worksheet2') -- include the worksheet name in parens with single quotes. can have a range of worksheets using ('worksheet2:worksheet6')
+    <h3>5.7.3 Named Cells and Ranges</h3>
+    for writing complex functions.
+    <br>use the Name box to name important cells -- you can also name ranges of cells this way
+    <br> name ranges so that you can use them in functions more easily
+    <h3>5.7.4 IF function in Excel</h3>
+    IF(D5>0, .35*D5, "No Fine") == is the ex: in the video about finding if people owe a fine for overdue library books
+    <br> in the formula the first part is the cell you are comparing, the second part is the result of true; you pay .35 cents per day over due the book is, the 3rd part is the result of false
+    <h3>5.7.5 Logical Functions</h3>Sum, Average, and Count Logic functions
+    <br>=SumIf(C4:C17, "Cow", D4:D17) for this ex:
+    <br>=AverageIf(range to check, condition , data cells )
+    <br>=CountIf(range, "condition") -- will count all items in that range that meet the condition
+    <h3>5.7.6 Excel Error Messages</h3>
+    <h3>5.7.7 Advanced Function Facts</h3>
+    <pre>
+1. Show Formulas:  At times, it can be useful to see the underlying formulas in the spreadsheet instead of the results. Use the Show Formulas button to switch between displaying and hiding formulas.
+2. Error Checking:  Error Checking works much like spell checking in Microsoft Word. It scans your current worksheet for common errors and displays recommendations for resolving the potential errors.
+3. Defined Names:  Giving names to data can make your formulas simpler. By selecting the data in a table and clicking Define Name, you can assign a name to the selected data. 
+        After a name has been defined, you can use it in your calculations. For example, if you defined a range as "MyData," you would enter =SUM(MyData) to add the cells in the range. Names can be given to individual cells, ranges, and tables. 
+            In addition to the Defined Names group on the Formula tab, names can be created by using the Name Box on the Home tab.
+4. Trace:  Trace Precedents will show all cells that are used in the calculation of the selected formula. Conversely, Trace Dependents shows all cells that have a calculation based on the selected cell. These buttons are especially 
+        useful when familiarizing yourself with workbooks that you did not create.
+5. Calculation Options:  By default, Excel will automatically recalculate its formulas whenever you make a change. If you'd prefer to turn this functionality off, you can click Calculation Options > Manual. With this option selected, 
+        your formulas will only recalculate when you click Calculate Now.
+    </pre>
+    <h2>5.8 Displaying Data In Charts</h2> importance of visualizing data, problems with using the wrong charts, what to include in chart
+    <br> Charts allow us to spot trends quickly. - recommended charts. drag in additional data if you add it to charts
+    <pre>
+1. Recommended ChartsThe Recommended Charts button shows a list of chart types that would best fit your data. If you don't know what kind of chart to use, this is a good place to start.
 
+2. Column or Bar ChartColumn Charts and Bar Charts are used when your data fall into distinct, independent categories. For example, a column chart could show how many people voted for each candidate in an election.
 
+3. Line ChartLine Charts should only be used to show change over time, measured in even intervals. A line chart would be appropriate for showing the value of a home for the past twenty years.
 
+4. Pie ChartPie Charts show how several parts add up to create a whole. If you want to show how many employees work in each department of a company, you may consider using a pie chart.
+
+5. Scatter ChartScatter Charts are used to show the correlation between two variables. One example of this would be a graph showing the relationship between daily high temperature and ice cream sales.
+
+6. Insert Chart Dialog BoxIn the Charts group, the Charts Dialog Box Launcher opens the Insert Chart dialog box, where you can choose any of Excel's chart configurations for your data and customize your charts.
+    </pre>
+    <h3>5.8.2 Chart Types</h3> which charts are best for your data
+    <pre>
+1. Data Source:  This is the worksheet data that is used to create the table. In Image 2, the purple data is used to form the x-axis, the blue data is used to make the two lines, and the red data is used to name the two groups.
+
+2. Vertical Axis Title:  The vertical axis title can be changed or deleted by using the Chart Elements Selection button.
+
+3. Chart Title:  The title of the chart should be short and descriptive. You can change the chart title by clicking the text.
+
+4. Chart Elements:  Use this button to add or remove details from your chart. It controls the chart title, axis titles, gridlines, and other features.
+
+5. Chart Styles:  Chart Styles can be used to change the look and feel of your chart. You can also use this button to change your chart's colors.
+
+6. Plot Area:  The Plot Area is the area of your chart where your data is graphed. It can be resized or moved within the chart.
+
+7. Horizontal Axis Title:  The horizontal axis title can be changed or deleted by using the Chart Elements Selection button.
+
+8. Chart Legend:  The Chart Legend helps users to interpret the data on the chart. In Image 2, the legend shows which line color represents the Mushroom Car and which represents the Dragon Car.
+    </pre>
+    <pre>
+1. Change Colors:  This button opens the Change Colors gallery, where you can choose from several pre-defined color groups.
+
+2. Chart Styles:  The Chart Styles gallery contains several pre-formatted chart styles that automatically format the background and chart elements. To apply a style, click one of the chart styles in the gallery.
+
+3. Switch Row/Column:  This option switches the row and column of your data set. For example, if you have a column chart where each color represents a month and each set of columns represents a product, 
+        this button will make each set of columns represent a month and each color represent a product.
+
+4. Select Data:  It's usually best to select your chart data before creating a chart. However, there may be times when you want to add data to an existing chart. To do this, use the Select Data button. 
+        This will bring up a dialog box where you can choose what data you want to add to your chart.
+
+5. Change Chart Type:  This button allows you to change your chart to another type.
+
+6. Move Chart:  Sometimes you may want a chart to appear on its own worksheet. The easiest way to do this is to create the chart, then click the Move Chart button, which will move the chart to the desired worksheet.
+    </pre>
+    <pre>
+Chart Types:  When picking a chart type, consider the following recommendations:
+        --Use the Recommended Charts button if you aren't sure which type of chart to use. While it isn't perfect, it does a decent job of selecting the best chart for your data.
+        --Pie charts are useful for seeing the relationship of parts to the whole. However, if you have more than five parts, a column chart might be a better choice.
+
+Creating Charts:  Keep these tips in mind when creating charts:
+        --Create labels for your data before creating a chart. Then you can include the labels in your selection and Excel will automatically add the labels to your chart.
+        --When you select your chart, the cells that contain the source data will be highlighted. If needed, you can drag the highlighted area to add more data to the chart.
+        --Once your chart is created, you can use the Move Chart button on the Design contextual tab to move it to a new worksheet.
+
+Formatting Charts:  Properly formatting a chart makes the data much easier to read and comprehend.
+        --The + button, which appears next to your chart when it is selected, is the best way to add or remove detail from your chart.
+        --While you can add fancy graphics and 3D effects to a chart, it's usually best to stick with something simple and easy to read.
+        --Instead of choosing a color palette from the Change Colors drop down, you can color each part of your chart individually with a custom color. This is especially useful for column charts and pie charts.
+    </pre>
+    <h2>5.9 Organizing Data in Tables</h2>
+    <pre>
+1. Table Name:  In this box, you can give your table a unique name. This allows you to easily refer to your table in formulas.
+2. Remove Duplicates:  Tables often contain duplicate data, which causes unnecessary clutter. This duplicate data can be removed by clicking Remove Duplicates. A dialog box will appear, allowing you to choose which 
+        columns to search for duplicates. When you click OK, all rows with identical information in the selected columns will be deleted from the table.
+3. Convert to Range:  There may be times when you want to remove table formatting but leave the data intact. To do this, click Convert to Range.
+    
+1. Header Row:  This checkbox toggles the header row for your table on and off.
+
+2. Total Row:  When selected, the Total Row check box will add the total row to your table. The total row appears at the bottom of the table and, by default, displays the sum of the numbers in each column. 
+        Instead of the sum, you can make the total row display the average, count, max, min, or other calculations by using the drop-down arrow that appears in each cell of the total row.
+
+3. Filter Button:  The Filter Button check box shows or hides the Filter buttons in the headings of a table. Filter buttons are used to sort and filter data based on certain criteria. For example, you can arrange 
+        your table alphabetically or only display records that are above or below a certain number.
+
+4. Banded Rows/
+    ColumnsBy default, most table designs have banded formatting, a design that alternates every other row. You can enable or disable banding by using the Banded Rows and Banded Columns check boxes.
+
+    5. Table Styles:  Table Styles are preset designs that are applied to a table. Using a style from the Table Styles gallery is the fastest and easiest way to adjust the look of a table.
+
+</pre>
+    <h3>5.9.1 Conditional Formatting</h3> see what items are selling well in tables
+    <h3>5.9.2 Excel Tables</h3>
+    in tables there are filters - use the filter arrow in the header
+    <pre>
+1. Sort Options:  Data in tables can be sorted according to various criteria. The most common ways to sort data are numerically (for numerical data) or alphabetically (for text data).
+
+2. Filter Button:  By default, a Filter button will appear next to each table heading. The Filter button opens the Filter drop down where you can choose how to sort or filter your data. To remove a filter from a column, click the Filter button and click Clear Filter.
+
+3. Number Filters:  Tables provide several filtering options for numerical data, which makes it easy to display only the data you're interested in. For example, if you're interested in only the largest values on a table, you can use the Top 10 or Greater Than filters.
+    </pre>
+    <h3>5.9.3 Table Customization</h3>
+    Remove Duplicates -- and customize Tables in the Table Design Tab
+    <pre>
+1. Conditional Formatting:  Conditional Formatting is used to format cells that meet a certain criterion. For example, you can use it to highlight the highest or lowest values in a range of cells, making them easily visible. Conditional formatting can be applied to all data, including data that is part of a table.
+
+2. Format as Table:  The Format as Table button converts the selected data into a table. By making data into a table, you can easily add table formatting, filters, and total rows to your data.
+
+3. Highlight Cells Rules:  This submenu contains many different conditional formatting rules that you can use to conditionally format numbers that meet the specified criteria, such as all numbers above or below a certain value, all numbers between two values, duplicate values, and even specified dates.
+
+4. New Formatting Rule
+    Dialog BoxClicking New Rule opens the New Formatting Rule dialog box. From here, you can create a custom conditional formatting rule that meets your specific needs. Use this dialog box whenever you have a very specific subset of data you'd like to format.
+
+5. Clear Rules:  Clear Rules is the easiest way to remove conditional formatting. You can use it to remove rules from only the selected data or from the entire worksheet.
+
+6. Manage Rules:  You can use Manage Rules to edit and reorder existing rules in your worksheet. Additionally, if you want to remove one conditional formatting rule but leave the others in place, this menu allows you to delete individual rules.
+    </pre>
+    <h3>5.9.4 Table Facts</h3>
+    Sparklines!! - go to the cell and insert sparkline
+    <pre>
+Creating Tables:  When creating a table, consider the following recommendations:
+        --If you have a total row before you create a table, Excel will treat that row as part of the data. This can be problematic if you want to alphabetize your data because your "total" row will be moved to its alphabetical location. 
+                To avoid this, delete the total row before creating the table, then select the Total Row check box on the Design tab.
+        --If your data doesn't have headers before you create a table, clear the My table has headers check box in the Format As Table dialog box. This will create a new row for your column headers.
+
+Managing Tables:  After a table has been created, you can adjust the table style and format to fit your needs.
+        --You can easily change the color scheme of your table by selecting any of the options in the Table Styles group on the Design tab.
+        --The easiest way to resize a table is to drag the bottom-right corner of the table. Doing this also adds and subtracts information from the table.
+        --If you want table formatting, but don't want any other table functionality, click the Convert to Range button on the Design tab.
+    </pre>
+    <h2>5.10 Summarizing Complex Data</h2>
+    outlines organize trasactional data, good uses of VLOOKUP(), PivotTables answer complex data questions
+    <h3>5.10.1 Creating Outlines</h3> for records of sales or trades -- got to Data tab and subtotal in the outline group
+    <pre>
+1. Group: Use this button to manually group the selected cells into a single outline level.
+
+2. Ungroup: Use this button to manually remove the selected cells from an outline.
+
+3. Subtotal: This button will launch the Subtotal dialog box, which is used to create an outline for the data array that contains the selected cell.
+    
+1. Outline Levels:  These outline symbols collapse or expand the entire outline to one of three levels. Level 1 shows only the grand total, level 2 shows the grand total and subtotals, and level 3 shows all data.
+
+2. Collapse/Expand Outline:  These outline symbols collapse (-) or expand (+) individual portions of an outline.
+
+3. Subtotal:  Subtotals show the sum or average of all data belonging to their own outline level.
+
+4. Grand Total:  The grand total shows the sum or average of all records in the outline.
+</pre>
+    <h3>5.10.2 Pivot Table</h3> Data Analysis
+    <pre>
+1. Insert PivotTable:  This will insert a new PivotTable into your workbook. Excel will make its best guess as to what data to include, but you should double check to make sure everything you want is included.
+
+2. Recommended PivotTables:   This feature recommends a variety of useful PivotTables that can be made with your data.
+    
+1. PivotTable Fields:  This area shows all of the field names (column headings) from your data. To use these fields in your PivotTable, check their box or drag them to one of the four areas below.
+
+2. Filters Area:  Fields added to this area can be used to add custom filters to your PivotTable.
+
+3. Columns Area:  Fields added to this area will be used as column headings for your PivotTable.
+
+4. Rows Area:  Fields added to this area will show up as rows in your PivotTable. They will be grouped based on the order they appear in this area.
+
+5. Values Area:  Fields in this area will have a calculation performed on them, such as sum, average, or count.
+
+</pre>
+    <h3>5.10.3 Advanced Pivot Tables</h3> adding 'Slicers' to pivot table
+    <br> pivot charts are charts for pivot data -- they are auto updating if you use 'Slicers'
+    <pre>
+1. PivotTable Name:  Use this box to change the name of your PivotTable.
+
+2. Insert Slicer:  This command inserts a slicer into your worksheet. Slicers are filters with convenient buttons that are easy to use.
+
+3. Refresh:  If you make a change to your source data, you'll need to refresh by clicking here before the changes will show up in the PivotTable.
+
+4. Change Data Source:  Use this option to change the data source for your PivotTable. For example, if you add additional rows or columns to your data, you can use this to add them to the table.
+
+5. PivotChart:  A PivotChart is a chart or graph that shows information from the PivotTable. If you use a slicer or filter on your table, the PivotChart will automatically update to show the filtered information.
+    </pre>
+    <h3>5.10.4 VLOOKUP</h3><b>=VLOOKUP(G2, A:D, 2, 0)</b> the 1st parameter is what data to search for (in this case data from cell G2) and
+    <br>the 2nd parameter states what area to search, the 3rd parameter asks for the return (which is cell 2 in this ex: a first name)
+    <br> the 4th parameter is either true 1 or false 0, in this case we want false because we need an 'exact match'
+    <h3>5.10.8 Complex Data Tips</h3>
+    <pre>
+Outlines:  When creating outlines, consider the following:
+        --Outlines are most effective when used with transactional data. It also helps when the data are displayed in rows, in the order the transactions occurred (with the oldest at the top).
+        
+        --Organize your data so date/time information is at the left and any columns containing number values are at the right. This will make the outline more intuitive to use and understand.
+
+PivotTables:  When creating PivotTables, consider the following:
+        --To create a PivotTable, your source data must be correctly organized. If your data is organized horizontally, with rows containing fields and columns containing records, you should transpose your data before creating a PivotTable.
+        
+        --If you add new records or fields to your source data, remember to expand your data source by using the Data group of the Analyze contextual tab. Similarly, if you change any of the information in your existing data, remember to Refresh using the same group.
+</pre>
+    <h2>5.11.1 Excel Live Projects</h2>
 
 
 
