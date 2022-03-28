@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 wk10 Networking Basics</title>
+</head>
+
+<body>
+    <h1>CTEC-101 wk10 Networking Basics</h1>
+    <h2>6.2 Networking Basics</h2>
+    <pre>
+    Network Interface	A computer component that provides a port (usually RJ-45) where a network cable can be connected.
+
+    Network Cable	A cable that provides connectivity between network devices. A common network cable connects a computer's network interface with a wall jack.
+
+    Wall Jack	A device, usually located on a building wall, that provides a port (usually RJ-45) where a network cable can be connected. On the hidden side of a wall jack is wiring to a patch panel or to a network device.
+
+    Local Area Network (LAN)	A group of networked computers that are physically close together, usually in the same building.
+
+    Wide Area Network (WAN)	A network of interconnected LANs across a large geographical location.
+
+    Metropolitan Area Network (MAN)	A network that covers a larger geographical area than a LAN, but is usually as large as a WAN. The term generally refers to smaller networks that are connected throughout a city into one larger, centralized network.
+
+    Internet Service Providers (ISP)	Internet Service Providers (ISP) are organizations that provide many services for accessing and using the Internet.
+
+    Bus Topology	A network topology in which all the devices are connected to each other by a single central cable.
+
+    Ring Topology	A network topology in which each host is connected to two other hosts in a circle.
+
+    Star Topology	A network topology in which devices are not connected to each other but rather to a centralized device called a switch.
+
+    Mesh Topology	A network topology where each device on the network has a point-to-point connection to every other device on the network. This topology was previously just theoretical until the rise of smart devices and wireless connecting media which allowed devices to communicate directly to every other device through one network adapter in each device using radio signals and wireless network adapters.
+
+    Physical Address	The unique, burned-into read-only memory address of a network interface. This is also called the media access control address, or MAC address. MAC addresses are burned into the read-only memory of every single network interface, such as wireless network adapters and network interface cards. This makes it virtually impossible to change the device's MAC address.
+
+    Logical Address	An address assigned by software and, as such, can be changed. It includes two parts, the network address and the host address. The most common types of logical addresses are those assigned by the IP protocol and are called IP addresses.
+
+    Default Address Class	A class designation (A through E) that specifies a default subnet mask value which defines the default network address portion of the IP address.
+
+    Internet Protocol (IP)	The principal communications protocol in the internet protocol suite that is used to route information over the internet.
+
+    Modem	Short for modulator/demodulator, a network device that converts digital signals used by modern networks to analog signals that are typically carried by telephone or cable television lines.
+
+    Router	A network device that moves traffic between two different IP networks.
+
+    Switch	A network device that moves traffic within an IP network.
+
+    Access Point	A network device that connects wireless devices to a wired network.
+
+    Firewall	A network security device that protects a network by examining the traffic before transferring it to the network.
+
+    Home Router	A small network device with modem, firewall, routing, and switching features that is used in homes and small businesses.
+
+    Registered Jack 11 (RJ-11) Interface	A network interface or connection with four pins and a clip to hold the plug into a wall socket. RJ-11 is used to connect to a plain old telephone line. In a DSL network, this interface connects the modem to the wall jack.
+
+    Registered Jack 45 (RJ-45) Interface	A network interface or connection with eight pins, that is similar, but wider than RJ-11 connectors. RJ-45 is used to create a wired connection between a computer and a network.
+
+    Bluetooth	A technology used to create wireless connections between computers and devices.
+
+    Radio Frequency ID
+
+    (RFID)	Radio Frequency ID, or RFID, a technology typically used for tacking objects. There are two types of RFID, passive (does not require power) and active (does require power). Passive RFID tags can be embedded in labels and sticker which is helpful for tracking objects.
+
+    Near Field Communications (NFC)	A technology that uses specially encoded tags that respond in a specific way when scanned by a radio frequency reader. NFC is often used by placing a smartphone near a scanner to pay for an item in a store.
+
+    File Server	A computer that provides network access to shared disk storage.
+
+    Mail Server	A computer that provides email services to a network.
+
+    Web Server	A computer that stores web pages and hypertext documents and transmits them to devices requesting these pages.
+
+    Database Server	A computer that stores databases, which are huge repositories of organized data.
+
+    Gaming Server	A computer that provides a gaming environment that tracks events in multiplayer video games.
+
+    Client	A host on a network that consumes network services.
+
+    Server	A host on a network that provides network services.
+
+    Client-Server Model	A computing model where computer servers supply network and computational services (such as email, file sharing, online gaming, and VoIP) that are consumed by client computers.
+
+    SOHO	A LAN that only services a home or small business, it is sometimes referred to as a Small Office Home Office, or SOHO.
+    </pre>
+    <h3>6.2.2 Basic Networking Facts</h3>
+    <h3>6.2.4 Network Topologies</h3>
+    the way hosts are connected to each other.
+    <ul>
+        <li>Bus Topology</li> - send down a single line
+        <li>Ring Topology</li> - difficult to implement in large networks
+
+        <li>Star Topology</li> - modern networking - connected by switch - prevents data from colliding
+        <li>Mesh Topology</li> - each computer has a direct connection through radio signal (wi-fi)
+    </ul>
+    <h3>6.2.5 Network Address</h3>
+    Device Address - MAC Address -- Media Access Control Address; Burned into read-only memory - a physical address for a device
+    <br><b>Physical Address</b>
+    <br><b>MAC Address</b> are 48 bit binary number in 12 character hexadecimal format
+    <br> the first 6 characters (3 hex groups) of a MAC address specify which Manufacturer; the last 6 characters (last 3 pair of characters) are the Interface
+    <br><br><b>Logical Addresses</b>
+    <br><b>IP Address</b> - each segment of the IP address is called an octet. IPv4 - ex: 154.26.4.130
+    <br> as we run out of available IP v4 addresses we are transitioning to IPv6 ex: 35BC:FA77:4898:DAFC:200C:FBBC:A007:8973
+    <br> IPv4 has about 4 billion addresses; IPv6 has 340 Undecillion
+    <h3>6.2.7 Networking Devices and Interfaces</h3>
+    <ul>
+        <li><b>Modem</b> - Modulator / Demodulator - takes incoming signal and turns into Binary to communicate with the computer </li>
+        <li><b>Router</b> - Transfers Data between networks</li>
+        <li><b>Switch</b> - Transfers Data bewteen devices within a network</li>
+        <li><b>Wireless Access Point</b> - similar to a switch, but wireless (wi-fi) </li>
+        <li><b>Firewall</b> - checks incoming data and rejects dangerous data</li>
+        <li><b>Types of Network Plugs</b> - <b>RJ-11</b> - Telephone line has 4 wires and clip</li>
+        <li><b>RJ-45</b> has 8 pins and wider than telephone - an ethernet connection </li>
+        <li><b>Bluetooth</b> - uses radio to communicate within 30' </li>
+        <li><b>NFC / Near Field Communication</b></li> - smart pay devices; uses radio waves within very short distance to communicate
+    </ul>
+    <h3>6.2.8 Network Device and Interface Facts</h3>
+    <pre>
+<b>Server Type</b>
+File server	- File servers provide network access to shared disk storage. They make it easier to share and backup files from a central location.
+        --When a shared drive is set up on a file server, clients can access the network drive from their file system more easily by associating it with a unique letter, such as G: or N:. This is called drive mapping.
+            --The shared disk storage can consist of internal drives, drives directly attached to the server, or through a Network attached storage (NAS) device. NAS devices contain one or more hard drives that users can access over the network.
+        --NAS drives can be used for file sharing, backups, and even streaming media. Each NAS is controlled by some type of internal firmware (often programmed in Linux). You can plug some NAS devices into an Ethernet port, while other NAS devices can be accessed wirelessly. Since the NAS is separate from a computer, it is managed from a Web connection.
+
+Mail server -	Mail servers provide email service to a network. In many ways, they're like virtual post offices. They store incoming mail and send outgoing messages, either to users on the same network or on other networks around the world.
+
+Web server -	Every site you've visited on the World Wide Web, including this one, has been hosted on a web server. Web servers store web pages as hypertext documents. Whenever a webserver gets a request for one of its pages, it transmits the appropriate file to the requester using HTTP.
+
+Database server -	Database servers store databases, which are large repositories of organized data. Clients on the network can send queries to the database server, which returns specific information about the data.
+            -- Clients can also use queries to add, remove, or change data as appropriate.
+
+Gaming server -	Gaming servers keep track of events in multiplayer video games. Most online games have players simultaneously sending inputs via their mouse and keyboard (or controller).
+        --The game server receives all inputs and retransmits them to the other players. This makes the game play out in real time for everyone involved.
+
+
+<b>Networking Devices</b>
+Modem --	Modem is short for modulator/demodulator. Signals that arrive at your network from an Internet Service Provider (ISP), whether through fiber, cable, or phone line, can't be directly understood by your computer.
+        -Instead, the signal passes through a modem that translates it into a series of electrical ones and zeros that travel through a copper wire to your computer. To upload data to the internet, the modem does the opposite, turning ones and zeros into light, cable, or phone signals.
+
+Router --	A router's job is to send signals from one network to another. When you send an email, the signal travels through a wire or radio signal to your network's router. The router sees that data is addressed to a different network and forwards it to the ISP.
+        -The ISP's router looks at the data, sees where it's supposed to go, and sends it to the router on the network where the recipient's mail server is stored.
+
+Switch --	Similar to the way a router transfers data between networks, switches transfer data between devices within a network. Every computer on the network is connected to the switch.
+        -Whenever a computer sends a signal or a signal comes in from the router, the switch looks at the data. If it recognizes the receiving computer as another device on the switch, it sends it directly to that computer. If it doesn't recognize the data, it sends it to the router.
+        -A switch in a Small Office Home Office (SOHO) usually has anywhere from four to eight RJ-45 ports. A switch in the enterprise environment has 20 or more ports. Switches in the enterprise environment can be interconnected. This allows them to provide support for hundreds of connections.
+
+Access point --	Conceptually, an access point (AP) works in a similar way to a switch; it recognizes the device that should receive the signal, then forwards the data to where it needs to go.
+        -The main difference is that APs use Wi-Fi technology to connect devices to the network wirelessly; a switch uses wires.
+        -In an enterprise network, the AP supports more devices than those used in a SOHO.
+
+Firewall --	As amazing as the internet is, it's full of malicious people and software that you want to keep away from your computer. A firewall checks each bit of data (called a packet) that tries to enter your network.
+        -If the firewall decides the packet's safe, it passes it along. Otherwise, it drops or rejects the packet. This firewall function is called packet filtering.
+
+Home router -- For a small network, such as a SOHO, most people buy a single router. These are usually called wireless (Wi-Fi) routers. However, they typically combine features of several of the above devices into one device.
+
+<b>Networking Interfaces</b>
+RJ-11	The Registered Jack 11 interface (RJ-11) has four pins and a clip to hold the plug into a wall socket. RJ-11 is used to connect to a telephone line. In a DSL network, this interface connects the modem to the wall jack.
+        --Many all-in-one devices that perform such services as printing, scanning, and faxing also have a RJ-11 connection. In these devices it is used for the faxing service.
+
+RJ-45	The RJ-45 interface is much more common in today's networks. These jacks have eight pins and are a little wider than RJ-11 connectors.
+        --RJ-45 is used to create a wired connection between a computer and a network. It is most often used to connect computers with Ethernet cables.
+
+Bluetooth	Bluetooth is a technology used to create wireless connections between computers and devices. Bluetooth uses radio signals to connect devices at a short range, usually no more than ten meters.
+
+Radio Frequency ID (RFID)	RFID, can be used for tracking objects. There are two types of RFID, passive (does not require power) and active (does require power). Passive RFID tags can be embedded in labels and stickers for tracking in manufacturing and shipping.
+        --Fixed infrastructure RFID readers can scan data up to 100 feet. Handheld readers can often exceed 50+ feet. Common uses of RFID technology include placing RFID labels on products (such as clothing) to prevent theft and monitoring progress of participants in a race.
+
+Near Field Communications (NFC)	NFC uses specially encoded tags that respond in a specific way when scanned by a radio frequency reader (peer-to-peer). NFC is a subset of RFID. As the name implies, NFC only works within a close range (about two inches).
+        --If you've ever held your smartphone near a scanner to pay for an item in a store, you've used NFC. Another common use of NFC is to get product information. By scanning the NFC code, you can obtain the details about a particular item or product.
+
+
+        <b>Virtual LAN (VLAN)</b>
+        A virtual LAN (VLAN) is a logical grouping of computers based on a switch port. Most screened segments, also known as demilitarized zones (DMZs), are created using a VLAN. You can configure multiple VLANs with varying security requirements on one switch. This keeps the cost down.
+        
+        Although devices connect to the same switch, they cannot see other devices that are configured to a separate VLAN. All communication between separate VLANs must go through the router. When setting up VLANs, keep in mind:
+            -VLAN membership is configured by assigning a switch port to a VLAN.
+            
+            -A switch can have multiple VLANs configured on it, but each switch port can be a member of only one VLAN. The one exception is described below.
+            
+            -VLANs can be defined on a single switch or configured on multiple interconnected switches. When interconnecting switches, a high bandwidth backbone segment is used. The backbone segments are typically between the router and the internet, as well as between the switches themselves.
+            
+            -With multiple switches, each switch can be configured with the same VLANs. The devices on one switch can communicate with devices on other switches if they are members of the same VLAN.
+            
+            -A trunk port is used to connect two switches together.
+            
+            -In a typical configuration with multiple VLANs, workstations in one VLAN cannot communicate with workstations in other VLANs.
+            
+            -To enable inter-VLAN communication, use a router or an OSI Layer 3 switch.
+            
+            -Using VLANs, you can create multiple IP broadcast domains on a switch. Each VLAN is in its own broadcast domain. Broadcast traffic is sent only to members of the same VLAN.
+        
+        A screened subnet, (demilitarized zone) is a segmented network (or subnet) that sits between the private network and an untrusted network, such as the internet. Typically:
+            -Firewalls allow traffic that originates in the secured internal network into the screened subnet and through to the internet.
+            -Traffic that originates in the screened subnet (low-security area) or the internet (no-security area) should not be allowed access to the intranet (high-security area).
+        Because screened subnets can be challenging to access for management and administrative tasks, a server, or jumpbox, can be implemented to provide a tightly controlled access method, or jumping point, for administrators.        
+
+    </pre>
+    <h3>6.2.9 Network Servers</h3>
+    Client Server Model - Client Consumes and Server Provides
+    <ul>
+        <li>Mail Server</li>
+        <li>Database Server</li>
+        <li>Web Server</li>
+    </ul>
+    <h2>6.3 Wired and Wireless Networking</h2>
+    <pre>
+Network Cable -	A cable that provides connectivity between network devices. A common network cable connects a computer's network interface with a wall jack.
+
+Coaxial Cable -	A cable that provides transmission on a network through its inner wire in the form of electrical signals. The wire is made up of four different components: an inner conductor, an insulator made of flexible PVC, a metallic shield, and a plastic jacket coating.
+
+Twisted Pair Cable -	A cable that transmits data through electrical signals and provides better signals because of its eight unique plastic-coated copper wires that are twisted into four pairs.
+
+Electromagnetic Interference -	When an electrical current passes through any kind of copper wire, that creates an electromagnetic field just outside the wire.
+
+Twisted Pair Category -	The different types of twisted pair cabling that are defined by the several aspects of a cabl,e including its transmission specifications and intended use. Common categories include Cat 5e and Cat 6.
+
+Fiber Optic Cable -	A cable that uses light pulses to transmit data instead of electrical signals.
+
+Registered Jack 11 (RJ-11) Interface -	A network interface or connection with four pins and a clip to hold the plug into a wall socket. RJ-11 is used to connect to a plain old telephone line. In a DSL network, this interface connects the modem to the wall jack.
+
+Registered Jack 45 (RJ-45) Interface -	A network interface or connection with eight pins that is similar to an RJ-11 connector, but wider. RJ-45 is used to create a wired connection between a computer and a network.
+
+Ethernet -	Any wired network that conforms to the 802.3 protocols developed and maintained by the IEEE.
+
+Router -	A network device that moves traffic between two different IP networks.
+
+Switch -	A network device that moves traffic within an IP network.
+
+IEEE 802 Standards -	A family of standards that mostly dictate with how data is transferred between hosts in a local area network (LAN).
+
+IEEE 802.11 Standards -	A family of standards under the 802 standards that dictate how data is transferred between hosts in a wireless network. Popular 802.11 standards are 802.11a, 802.11b, 802.11g, 802.11n, and 802.11ac.
+
+IEEE 802.11 Encryption Protocols -	Security protocols that govern how data in a wireless network is secured by encryption. Examples of these protocols are Wired Equivalent Privacy (WEP), Wi-Fi Protected Access (WPA), and WPA2.
+
+Frequency -	A characteristic of a radio signal that carries digital information in a wireless network. 802.11 standards specify two frequencies, 2.4 GHz and 5 GHz.
+
+Attenuation -	A feature of radio waves where the signal becomes weaker as the wave travels further from its point of origin. 802.11 standards require that signals are strong enough to cover a specific distance.
+
+Interference -	Dense material (such as steel) or electronic devices (such as cordless phones) that reduce or block Wi-Fi signals.
+
+Speed -	A characteristic of 802.11 protocols that requires them to transfer data at a specific number of bits per second.
+
+Bluetooth -	A technology used to create wireless connections between computers and devices.
+
+Wi-Fi -	A technology that uses radio signals to connect a device to an access point.
+    </pre>
+    <h3>6.3.1 Network Cables</h3>
+    bound and unbound network media --
+    <br><b>Unbound</b> - Radio Waves and such - no wires
+    <br><b>Bound</b> - Wired
+    <ul>
+        <li><b>Coaxial</b> - 4 parts: inner conductor; pvc insulator; braided mesh; plastic jacket. "F" type connector is a standard cable tv connector </li>
+        <li><b>Twisted Pair</b> - 8 plastic wires twisted into pairs: the pairing of wire is to inhibit EMI (Electro Magnetic Interference) and Crosstalk</li>
+        <br> Twisted Pair Cable comes in UTP (Unshielded); and STP (Shielded) has additional shielding around the wire pair
+        <br> Twisted Pair comes in Catagories - 3 to 8; cat5e - 1gb/s and cat6 - 10gb/s are typical. They have RJ-45 connectors with 8 pins.
+        <li><b>Fiber Optic</b> - uses Light Pulses - central core of clear plastic or glass; cladding around the core; protective layer; sheath</li>
+        <br> Single-mode Fiber (SMF) - 10 micron central core (1/5th diameter of a human hair); can have long cable length and faster speed
+        <br> Multi-mode Fiber (MMF) - multiple lights can pulse; light can diffuse more; cables need to be shorter
+    </ul>
+    <h3>6.3.2 Ethernet</h3>
+    IEEE - Institute for Electrical and Electronics Engineers -
+    <br>802 are a standard of protocols dealing mostly with networking.
+    <br>802.3 protocols are ethernet networks- each computer must have Network Interface Card.
+    <br>NIC's transceiver changes data to electricity for transmission; each NIC has a unique MAC address; the Transmission Medium is normally UTP (Copper Twisted Pair); if you use Fiber the entire network has to be fiber, can't mix UTP and Fiber in a
+    network
+    <br> Ethernet networks use a Star Topology where everything is connected through a 'Switch'. some switches provide Power over Ethernet (POE). POE is only available with Twisted Pair cable (fiber uses light, not electricity)
+    <br> the router forwards packets to outside networks.
+    <h3>6.3.5 Wireless Standards </h3>
+    IEEE 802.11 -- wifi networking standards -- frequency, attenuation,
+    <br>b & g ran on 2.4Ghz with 11 channels that overlap
+    <br>n & ac use 5Ghz protocol
+    <br><br> Higher Frequency radio bands have more 'attenuation' and dissipate more quickly
+    <br>different protocols have different speeds -- ie: 802.11b has 11Mbps; while 802.11ac has 1.7Gbps
+    <br>WPA2 is the current security standard of wifi security
+    <h3>6.3.6 Wireless Standard Facts</h3>
+    <pre>
+        IEEE 802 Standards-	The IEEE 802 family of standards deals mostly with local area networks, and the protocols for wireless networks are found in section 11. A wireless local area network that conforms to 802.11 standards is called a Wi-Fi network. As technology has improved, so have 802.11 protocols. Over time, they have improved in several areas.
+        
+        Encryption Standards-	802.11 contains security protocols, which encrypt transmitted data. The first security protocol was called WEP, or Wired Equivalent Privacy. This protocol eventually became outdated and was replaced with WPA, or Wi-Fi Protected Access. This, in turn, was upgraded to WPA2, which is the most secure and is used today by virtually all secure Wi-Fi networks to provide encryption and authentication services. Below is a brief summary of each of these encryption standards:
+                WEP is an optional component of the 802.11 specifications and was deployed in 1997. WEP was designed to provide wireless connections with the same security as wired connections. This encryption standard has many weakness and should never be used unless there is no other option (which may be the case with older equipment).
+                WPA is the implementation name for wireless security based on initial 802.11i drafts. It was deployed in 2003. WPA was intended as an intermediate measure to take the place of WEP while a fully secured system (802.11i) was prepared. It uses Rivest Cipher (RC4) with a 128-bit key and a 48-bit initialization vector (IV) for encryption. It also uses the Temporal Key Integrity Protocol (TKIP) for encryption, making it more secure than WEP.
+                WPA2 is the implementation name for wireless security that adheres to the 802.11i specifications and was deployed in 2005. This implementation is built upon the idea of Robust Secure Networks (RSN). Like WPA, it resolves the weaknesses inherent in WEP and replaces both WEP and WPA. One of the main differences between WPA and WPA2 is the use of the Advanced Encryption Standard (AES) with a 128-bit key and a 48-bit initialization vector for encryption, which is more secure than TKIP.
+        
+        Frequency-	Wi-Fi signals are sent using radio frequencies. Some standards, like 802.11b and g, use a 2.4 GHz band. This band has eleven channels. Unfortunately, most of these channels overlap with each other. The only non-overlapping channels are 1, 6, and 11. With only three usable channels, it was common for devices using the same network to fight over bandwidth and interfere with each other. To solve this, newer protocols, such as 802.11n and ac, started using a 5 GHz band, which has many more non-overlapping channels.
+        
+        Attenuation-	One of the features of a radio wave is attenuation. As a radio signal travels away from its point of origin, the signal becomes weaker. If you've ever listened to the radio in your car as you've driven out of town, you've experienced attenuation first hand. One of the drawbacks of higher-frequency bands is that they have more attenuation, and therefore cover less distance.
+        
+        Speed-	Another major difference between protocols is how fast they can transmit data. This is measured in bits per second. The table below compares the maximum transfer rates of several versions of the 802.11 protocol.
+        
+        Public Wi-Fi-	Some Wi-Fi networks, including many public networks, are unencrypted as data moves through the network as plain text. This can be extremely dangerous, as eavesdroppers can easily intercept your signals and steal your information. Some public networks provide the illusion of security by using a captive portal, which makes users agree to some terms of service before accessing the network. Don't be fooled, though; these networks are not secure.
+        
+        SSID-	Wireless devices use the SSID (Service Set Identification) to identify the network name. All devices on a wireless network use the same SSID. 
+</pre>
+    <pre>
+        When comparing the different 802.11 standards, consider the following.
+        
+        Today, most wireless networks use either 802.11n or 802.11ac.
+        
+        The 5 GHz frequency provides 24 channels that do not overlap. 2.4 GHz only has 3 channels that do not overlap.
+        
+        Even though 5 GHz bands suffer from greater attenuation and consequently cover less distance, the significantly improved performance of 802.11n and particularly 802.11ac make them better standards in most scenarios.
+        
+        Bluetooth is a wireless networking standard that uses 2.4 GHz radio waves. These are the same type of radio waves used with 802.11 wireless networking, but Bluetooth has a maximum transfer rate of 1 Mbps and is used primarily for ad-hoc or impromptu connections between two devices. A typical example is a set of Bluetooth headphones that connects to a laptop computer.
+        
+        Configuring Wireless Networks
+        -When configuring a wireless network, consider the following to increase productivity and network security:
+        -In many cases, settings to determine how the clients use your wireless network will be determined through the configuration of the Wi-Fi access point (AP). Accessing the configuration of your AP is normally completed using a web configuration page. When you purchase an AP, the manufacturer will give you instruction on how to access this new device remotely. They will often have some type of program that will located the device for you, but eventually the IP address of the device will be used to access the configuration pages of the AP, allowing you to configure your device.
+        -Change the default password used to configure the access point. Many APs come with a default password of admin. Since this can be learned by doing an internet search, you should change this password to ensure someone can't configure your AP.
+        -Eliminate/reduce interference. If you have ever used a cell phone or a wireless computer, you have probably noticed that the Wi-Fi signals can go through such items as wood, glass, brick, and drywall. Metal roofs or other very dense material can block or reduce the Wi-Fi signals. When a Wi-Fi signal is reduced or blocked, this is known as interference. Interference can also be caused by such things as radio-based devices, other Wi-Fi networks that are close, and even electronic devices such as cordless phones, microwave ovens, and fluorescent lights. When a radio signal becomes weaker as the wave travels further from its point of origin is known as attenuation.
+        -Disable SSID broadcast. This makes the network harder (but not impossible) to locate.
+        -Change the SSID to something other than the default. This obscures what type of access point is in use.
+        -When connecting Windows 10 to a wireless network, use the correct location. In Windows 10, selecting Private allows your computer to be hidden and disables file sharing. Selecting Public allows your computer to be discovered and enables file sharing.
+</pre>
+    <h3>6.3.9 Bluetooth</h3>Personal Area Network (PAN)
+
+    <pre>
+    Bluetooth Pairing/Bonding
+To utilize Bluetooth, two Bluetooth devices need to be paired. Pairing means to exchange of security features to ensure the connection is safe. Among other things, this includes encryption. After your devices have been paired, they no longer need to exchange this type of information and can share encrypted data. At this point, the devices are then considered to be bonded.
+How you pair your devices will differ depending on the manufacture and the device. For some devices, like a mouse, you may only need to press a button located on the mouse. Other devices, such a smartphone or a Windows computer, have settings that require configuration. For example, when working with Windows 10, you can use the Settings app.
+</pre>
+    <h3>6.3.12</h3>
+
+
+
+</body>
+
+</html>
