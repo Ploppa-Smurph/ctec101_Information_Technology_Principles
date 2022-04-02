@@ -319,10 +319,354 @@ Wi-Fi -	A technology that uses radio signals to connect a device to an access po
 To utilize Bluetooth, two Bluetooth devices need to be paired. Pairing means to exchange of security features to ensure the connection is safe. Among other things, this includes encryption. After your devices have been paired, they no longer need to exchange this type of information and can share encrypted data. At this point, the devices are then considered to be bonded.
 How you pair your devices will differ depending on the manufacture and the device. For some devices, like a mouse, you may only need to press a button located on the mouse. Other devices, such a smartphone or a Windows computer, have settings that require configuration. For example, when working with Windows 10, you can use the Settings app.
 </pre>
-    <h3>6.3.12</h3>
+    <h2>6.4 Internet Connectivity</h2>
+    <pre>
+Dial up- 	A technology used in the early days of the internet that required a computer to make a phone call to the ISP to establish internet connectivity.
+Digital Subscriber Line (DSL)- 	A technology that uses phone lines to establish high-speed connectivity to the internet through an ISP.
+Cable-	A technology that uses cable TV lines to establish high-speed connectivity to the internet through an ISP.
+Fiber optic- 	A technology that uses fiber optic cables that carry light signals to establish high-speed connectivity to the internet through an ISP.
+Satellite-	A technology that sends signals to and from a satellite to establish connectivity to the internet through an ISP.
+Cellular-	A technology that uses cellular radio signals to establish connectivity to the internet.
+Wi-Fi-	A technology that uses radio signals to connect a device to an access point.
+Virtual Private Network (VPN)-	A tool that allows internet users to create a secure, private network when using a public internet connection. A VPN masks a user's IP address to make actions untraceable and shields the user's data from others.
+Uplink-	The data being transferred from your computer to the ISP.
+Downlink-	The data being transferred from the ISP to your computer.
+Hotspot/tethering-	The process of providing access to a computer through the mobile device's cellular connection.
+</pre>
+    <h3>6.4.1 Internet Service Types</h3>
+    Dial-up, DSL, Cable, Fiber Optic; wireless satellite connection (increased latency); Cellular Connections - radio waves that are rate limited; Wi-fi
+    <h3>6.4.7 Cellular Technology</h3>
+    named after the interconnected transmitters that it uses for communication (cells).
+    <h3>6.4.10 VPN Virtual Private Network</h3>
+    <h2>6.5 Networking Protocols</h2>
+    <pre>
+Internet Protocol (IP)-	The principal communications protocol in the internet protocol suite that is used to route information over the Internet.
+
+Transmission Control Protocol (TCP)-	An important protocol in the internet protocol suite that enables two hosts to establish a connection and exchange data.
+
+User Datagram Protocol (UDP)-	An important protocol in the internet protocol suite that is generally used when speed in transmission is more important than accuracy since the sending computer doesn't verify that the packets were correctly received.
+
+Domain Name System (DNS)-	A protocol that helps internet users and network devices discover other devices using a human-readable hostname instead of numeric IP addresses.
+
+Hypertext Transfer Protocol (HTTP)-	A protocol that governs the transfer of web content between computers.
+
+Hypertext Transfer Protocol Secure (HTTPS)-	A protocol that combines HTTP with the Secure Sockets Layer (SSL) protocol to securely transfer web content between computers.
+
+Simple Mail Transfer Protocol (SMTP)-	A protocol used to send email.
+
+Post Office Protocol 3 (POP3)-	A protocol used to receive email. With POP3, email is deleted from a server after it is downloaded to a client.
+
+Internet Message Access Protocol (IMAP)-	A protocol used to receive email. With IMAP, email is saved on a server even after it is downloaded to a client.
+
+HTTP Method-	A command that tells the server what the user wants to do. The most common methods are POST, GET, PATCH, and DELETE. These methods are used for CRUD operations which stand for Create, Read, Update, and Delete.
+
+Dynamic Host Configuration Protocol (DHCP)-	A network management protocol that assigns IP addresses on a network. It is part of the larger set of built-in networking protocols known as TCP/IP.
+
+Subnetting-	Dividing a network into smaller subnets.
+
+Subnet Mask-	A value given to an address in a subnetted network that tells a computer which numbers are part of the network or subnet address and which are part of the host address.
+</pre>
+    <h3>6.5.1 Internet Protocols</h3>
+    IP - Internet Protocol is a routing protocol --sends data as packets {data + a header} to another computer; receiving computer removes header and rebuilds data to complete the file
+    <br> TCP = Transmission Control Protocol - Make certain items are downloaded fully; adds a TCP header to the packet {along with the IP header and data}; makes certain data arrives correctly by verifying every packet sent -- resulting in slower transfer
+    speed
+    <br> UDP = User Datagram Protocol -- more fast than accurate; no verification of packet receipt, so the data transfer can go faster - ex: VOIP; video streaming
+    <br>DNS = Domain Name System - maps the Domain name to the IP address
+    <br> HTTP - hyper-text link to other documents
+    <br> HTTPS - http with SSL Secure Socket Layer
+    <h3>6.5.2 Email Protocols</h3>
+    SMTP - Simple Mail Transfer Protocol -- send email
+    <br>POP3 - Post Office Protocol 3 -- receive email and delete from server when the message is received
+    <br>IMAP - Internet Message Access Protocol -- receive email and message stays on server
+    <h3>6.5.3 Facts</h3>
+    <pre>
+Application-	The Application layer contains high-level protocols used by processes (applications) running on a host for network communications. The Application layer integrates network functionality into the host operating system and enables network services. The Application layer does not include specific applications that provide services, but rather provides the capability for services to operate on the network.
+
+Transport-	The Transport layer is responsible for error checking and reliable delivery. In the transport layer, each application protocol is identified by a port number. Protocols that are associated with the Transport layer include:
+    -Transport Control Protocol (TCP) - Adds a header to each IP packet. The TCP header helps the receiving computer to assemble the packets into the correct configuration once the entire file is downloaded. The headers also allow the sending and receiving computers to verify with each other that each packet was received correctly.
+    -User Datagram Protocol (UDP) - Is generally used when speed in transmission is more important than accuracy, such as streaming audio or video. Like TCP, UDP adds a header to each packet. However, unlike TCP, the sending computer doesn't verify that the packets were correctly received. This makes transmissions happen much faster but allows transmission errors.
+
+Internet-	The Internet layer is responsible for forwarding packets through multiple networks. This process is called routing and is done by encapsulating the packets into internet datagrams. The Internet layer manages host addressing and routing decisions to identify how packets traverse networks. Protocols that reside at the Internet layer include:
+    -Internet Protocol (IP) - As one of the main protocols in the TCP/IP suite, the IP protocol uses logically-assigned IP addresses to uniquely identify networks and network hosts. This helps in the routing of the packets between each host and network.
+    -Address Resolution Protocol (ARP) - This protocol links an IP address to a host's physicals address (MAC address). For example, when you use a browser to access a site, you use the IP address (a number not too difficult to remember or use). However, to communicate with the host, the process needs to know the MAC address (hardware address) found on the interface card or device. ARP discovers the MAC address for you.
+    -Internet Control Message Protocol (ICMP) - This protocol supports the TCP/IP suite. It's main job is to send error messages and other operational information to let the systems know if the data was transferred successfully or if there was an error during transmission. It is used by network devices, including routers.
+    -Internet Group Management Protocol (IGMP) - This protocol is used by hosts and adjacent routers to establish multicast group memberships. IGMP is an integral part of IP multicast and allows the network to direct multicast transmissions only to hosts that have requested them.
+    
+Link/Network Interface-	The Link layer is responsible for describing the physical layout of the network and how messages are electrically transmitted. It is used to move information between hosts by controlling how individual bits are transmitted and received on the network medium.
+    -The Link layer converts the data to be transmitted into frames by adding a Link layer header that includes physical device addressing information. Each frame processed by the Link layer includes the source MAC address and the destination MAC address. The Link layer then converts the frames into bits for transmission across the network media.
+    -The Link layer corresponds to the functions of the Physical and Data Link layers of the OSI model.
+</pre>
+    <pre>
+        DNS	Domain Name System (DNS) - Matches unique IP addresses with easy-to-read URLs. When you navigate to a website, your computer asks a DNS server to provide the IP address that corresponds to the URL you want to visit. DNS returns the correct IP address, which is then connected using the IP protocol.
+        HTTP-	The Hypertext Transfer Protocol (HTTP) - Is used to identify resources and transfer hypertext pages on the World Wide Web.
+        HTTPS-	Hypertext Transfer Protocol Secure (HTTPS) - Provides secure transfer over the internet. One of the biggest downsides of HTTP is that it transmits data as plain text. An attacker could intercept the signal during transmission and read the sensitive information it contains. When websites need to send or receive data securely, they use HTTPS, which combines HTTP with the Secure Sockets Layer (SSL) protocol. SSL encrypts data so unauthorized parties can't understand the data even if they manage to intercept it.  
+</pre>
+    <pre>
+    SMTP-	Simple Mail Transfer Protocol (SMTP) - Is used to send email. When you send a message, SMTP routes it through the internet to its destination mail server. SMTP is used by all email systems that use the internet.
+    POP3-	Post Office Protocol 3 (POP3) - Is one of two protocols used to receive email. When an email client uses POP3, it grabs messages from the remote server, downloads them to the local client, then deletes them from the server.
+    IMAP-	Internet Message Access Protocol (IMAP) - Is a much more common receiving protocol. With IMAP, email messages stay saved on the remote mail server. This way, people can access their emails from multiple devices, such as a home computer, a work laptop, and a smartphone.
+    Configuring email accounts-	When configuring an email account on your computer or smartphone, you typically need to know the host names of both the incoming and outgoing mail servers. For example, if you want to check your Gmail messages using a different mail client like Microsoft Outlook, you probably enter imap.gmail.com as the incoming mail server and smtp.gmail.com as the outgoing mail server.
+    Email filtering-	Most email clients include a feature that automatically filters out junkmail. While email filtering can be implemented by each user, it can also be enabled in incoming mail services to reduce spam and other unwanted email by blocking email based on the sender address or by content.   
+</pre>
+    <pre>
+    Domain Name System (DNS)
+In addition to TCP/IP, it's important to understand the domain name system protocol (DNS). Every website on the internet has a unique address that the Internet Protocol uses to identify it. It is called an IP address. For example, the IP address for the google.com is 74.125.142.105. If you type that number into a web browser, it will take you to the Google home page. However, imagine having to type 74.125.142.105 every time you wanted to do a Google search.
+
+DNS is a service that maps, or resolves, domain names like testout.com or google.com to their IP addresses. When you type a URL like testout.com into your browser, your computer sends a request to a DNS server asking for the website's IP address. The DNS server looks it up, then sends it back to your computer. This process is known as a DNS query.
+
+DNS is known as a hierarchical system, meaning that several DNS servers are used to locate the desired IP address, since no one DNS server holds all the possible DNS records. These DNS servers are organized in an inverted hierarchical tree structure. At the top of the structure is the root. Under the root are several top-level domains, such as .com, .edu. org. Next comes the sub-domains that are typically assigned to companies (for profit and non-profit), such as .testout, .microsoft, .amazon, and .walmart.
+
+As already mentioned, you are probably familiar with domain name like TestOut.com to access your favorite sites. These domain names are also called a hostname. Hostnames can contain up to 256 alphanumeric characters. They can also contain hyphens. The absolute domain name, also known as the fully qualified domain name (FQDN), specifies the exact location of the domain in the hierarchical tree. For example, myhost located in the parent domain testout.com has the fully qualified domain name of myhost.testout.com.
+</pre>
+    <h3>6.5.4 HTTP Codes</h3>
+    <pre>
+ METHOD	    OPERATION	DESCRIPTION
+POST	      Create	The POST method requests that a web server accept data from the user, usually to store it in a database. POST is used to submit completed web forms, including social media posts and comments.
+GET	            Read	The GET method is used to retrieve data from a web server. Whenever you visit a website, your computer sends a GET request to the site's server.
+PATCH	      Update	A PATCH request tells the server to make a change to an existing resource, such as editing a social media comment.
+DELETE	      Delete	DELETE requests tell the server to delete the specified resource.
+</pre>
+    <pre>
+100-199	Informational-	Informational status codes are temporary responses that let the requesting computer know that the message has been received. They're almost always immediately followed by another status code.
+    Example: 101 means switching protocols. The user has asked the server to change to a different protocol, such as ftp, and the server is agreeing with the request.
+
+200-299	Success-	A success code means that the client's request was understood and accepted.
+    Example: 200 means OK. When you successfully go to a website, the server responds with code 200, which means the request was successful.
+
+300-399	Redirection	Redirection codes mean that the user will be redirected to a different resource, usually after the user does some additional action such as clicking a link.
+    Example: 301 means moved permanently. All requests to this URL should be redirected to a new URL. This is common when a company changes names or rebrands itself.
+
+400-499	Client errors	Client error codes means the user seems to have made a mistake.
+    Example: 404 means not found. The server sends a 404 error when someone requests a file that doesn't exist.
+
+500-599	Server errors	Server error codes indicate that the web server itself is malfunctioning.
+    Example: 503 means service unavailable. This code is sent when a server is either overloaded with too many requests or down for maintenance.
+</pre>
+    <h3>6.5.5 DHCP Dynamic Host Configuration Protocol</h3>
+    <pre>
+    <b>Static IP Addresses</b>
+A static IP address is one that a user manually configures for a device instead of having it assigned by DHCP. The reason that it's called static is that it doesn't change in the way a dynamic IP address does. This is what you need if you want to give a device a fixed address that can be easily accessed in the future. Users often use static IP addresses for things like file servers, network printers, running a printer server, or using a remote access program.
+
+    <b>Dynamic IP Addresses</b>
+A dynamic IP address is one that's handed out by DHCP. It's called dynamic because it can change from time to time. Dynamic IP addresses are used for most home networks because they're the most cost-effective way for internet service providers (ISPs) to assign IP addresses. Instead of always giving the same IP address to your home computer, DHCP pulls from a pool of IP addresses it has at its disposal. Periodically, DHCP can assign you a new IP address when the lease for the current one expires.
+
+    <b>DHCP Servers</b>   
+A DHCP server is a network server that uses DHCP to assign IP addresses and subnet masks. It's vital that every computer on a network have a unique IP address so conflicts don't arise. If a network didn't have a DHCP server, the network administrator would have to manually set up every client who wanted to join the network. This would be a cumbersome and inefficient process, especially if they were dealing with a large network.
+
+When a network computer comes online, it sends a message to the DHCP server to request an IP address. The server then automatically offers to lease an IP addresses to network computers in the order that it receives them. The network computer accepts the lease offer and connects to the network.
+</pre>
+    <h3>6.5.6 Subnetting</h3> ethernet allows 1024 host on a single network.
+    <br>to overcome this problem large companies with 1000s of computers divide their network into Subnets.
+    <br>IP address has 2 parts: Network Address and Host Address ex: 192.168.6.2
+    <br><b>Network Address</b> is like the street; it's the first part of the address: ex: 192.168
+    <br><b>Host Address</b> is more specific, like the house number or host number; ex: 6.2
+    <br><br> <b>Subnet Mask</b> ex: 255.255.0.0
+    <br> the subnet mask defines which numbers are part of the Network (or subnet address) and which are part of the Host Address
+    <br> you can decrease the possible size of your subnet by changing the Subnet Mask to 255.255.255.0 = you would then have 254 possible subnet hosts (ex: 192.168.6.1 -> 192.168.6.254)
+    <br> the highest and lowest host addresses of a range are reserved. 192.168.6.0 = the Network Identifier; and 192.168.6.255 = the Broadcast Address - any messages will be sent to every host on the subnet
+    <br> <br> to make an even smaller subnet then go to binary.
+    <br>Subnet = 11111111.11111111.11111111.11111000 -- leaves only 3 bits for host addresses
+    <br> the host address possibility above would be 001 -> 110; leaving 000 and 111 as the Special Addresses for ID and Broadcast
+    <br>ex: 11000000.10101000.00000110.00000010 -- 192.168.6.00000010
+    <br>in hexadecimal: Subnet Mask is now: 255.255.255.248; IP is 192.168.6.2; Net ID is 192.168.6.0 and Broadcast Add is 192.168.6.7
+    <h2>6.6 Application Delivery</h2>
+    <pre>
+    Local Installation-	The traditional method for delivering applications by installing them on individual desktop computer systems.
+    
+    Network Hosting-	A method of delivering applications by installing them on the local network.
+    
+    Cloud Hosting-	A method of delivering applications by hosting them in the cloud.
+    
+    Software as a Service (SaaS)-	A term associated with cloud hosting. SaaS provides users with the applications they need to do their day-to-day work through the cloud.
+    
+    One Tier-	An application architecture model where programs run as standalone applications on a single computer.
+    
+    Two Tier-	An application architecture model with two separate tiers (a client and a server) where applications store and retrieve data from a central repository.
+    
+    Three Tier-	An application architecture model with three separate tiers where an application presents the user interface on a client workstation, data is processed on an application server, and information is retrieved from a database management system on a database server.
+    
+    n-Tier-	An application architecture model where application developers add as many tiers as they need to create the most efficient services and processes on a network.
+    
+    Platform Compatibility-	A concern with using enterprise software in a network with multiple computer platforms and operating systems.
+    
+    Proprietary Software-	Software that isn't owned but requires the purchase of a license to use the software.
+    
+    Personal License-	A software license given to home and small business customers that allows them to install the software on a limited number of systems.
+    
+    Enterprise License-	A software license, often called a volume license or a site license, that allows the customer to install the software without restriction using the same activation code, typically until a maximum cap is reached.
+    
+    Open Source Software-	Software that can be downloaded, installed, and used without paying a licensing fee. The source code can also be downloaded, modified, and compiled and given to others as long as it is not resold for profit.
+    
+    Software Subscription-	Sometimes called SaaS or on-demand software, software that requires a monthly or annual fee to use the software and receive regular updates.
+    
+    Windows Update-	A feature of the Windows operating system that keeps the system up to date. 
+</pre>
+    <h3>6.6.1 Application Delivery Method</h3>
+    Local App Installation; Network Hosting; Cloud Hosting, SAAS -- Software as a Service
+    <h3>6.6.2 Facts</h3>
+    <pre>
+    Local Installations-	The traditional method for delivering applications is to install them on individual desktop computer systems. Any user who wants to use the software needs a separate installation on their local hard drive. For example, a typical employee might need to install Microsoft Word, Excel, and PowerPoint; Adobe Photoshop; Google Chrome; and a number of other applications. Each of these applications needs to be maintained with security updates and bug fixes, and users need to take responsibility for backing up their documents in case their local system fails.
+        -The main advantage of local installations is that they don’t require a network or Internet connection. Users can continue to do their work when the network goes down. But local systems are time consuming to maintain and difficult to back up. And if employees need to work from another location, they either need to purchase and install a second copy of the application on another computer, or they need to bring their business laptop wherever they go.
+    
+    Network Hosting-	One way to improve the local installation method is to allow users to save their documents and other files to a server on the local network. This makes it much easier for IT administrators to back up files. They simply schedule regular backups on the network server. Local networks can also be used to host applications, which are installed on the server and then accessed remotely from client workstations.
+        -Network installations make it easier to maintain the software and regulate user access. But if the network is congested or goes down altogether, users can’t do their work. And if an employee wants to work from home, they need to set up a Virtual Private Network, or VPN, connection, which lets them log into their work computer remotely.
+    
+    Cloud Hosting-	A third option is to host applications and other services on the cloud. Cloud computing can include storage and processing hardware, application software, and network connectivity, all accessed over the Internet. With the cloud hosting method, applications run on hardware provided in a data center or some other location on the Internet instead of on local devices. This is great because an employee can run the application from her computer at work – and when she goes home and needs to finish a project, she can just log into her home computer, connect to the cloud, run the very same application, and access the same data – because it’s all being stored in the cloud, not on her local hard drive at work.
+        -From a user's standpoint, the great thing about the cloud is its flexibility – you can use whatever device you want from wherever you are and have access to the resources you need without having to install and set everything up manually. Cloud computing is also very attractive to management and to business owners because clouds are usually set up within a pay-as-you-go system. Users can request application services or resources on-demand and then just release those resources when they're done.
+    
+    Software as a Service-	A related term associated with cloud hosting is Software as a Service, or SaaS. SaaS provides users with the applications they need to do their day-to-day work through the cloud. Here again, the advantage of SaaS is that you only pay for what you need. And you can experiment with new software without committing to it. You can try out an application on a rental basis, pay for the time you use it, and if you really like it, you can keep using it.
+        -The main disadvantage of cloud hosting is that you need a reliable Internet connection. Some cloud subscriptions, such as Microsoft Office 365 and Adobe Creative Cloud, include locally installed versions of their apps. These allow users to work while offline, as along as they connect to the Internet every 30 days or so to verify their subscription.
+</pre>
+    <h3>Application Architecture Models</h3>
+    tiers -- one tier (single tier) - single program running on 1 computer
+    <br>two tiers - has a client and a database or file server; ex: CRM Customer Relationship Management; the Service Rep has an app running on the computer in front of them, but needs information hosted on a separate database server.
+    <br>three tier and n-tier (infinite tier) - the app is hosted on an additional server or SASS, the client access the app from an outside source and the app access the database from an additional external source. best for scalability and ease of upgrade
+    <h3>6.6.4 Facts</h3>
+    One Tier- Many common programs run as standalone applications on a single computer. These are what we call single-tier, or one-tier, applications. They include traditional office productivity software and other programs that don’t require access to a
+    separate data source. Two Tier- Business applications that store and retrieve data from a central repository typically operate more efficiently with two separate tiers: a client and a server. A common example would be a customer relationship management,
+    or CRM, system. In this scenario, a sales employee runs a front-end application on her local computer, which requests customer data from the back-end database server. In other words, the graphical user interface and application logic reside on the
+    client and the CRM database resides on the server. The two-tier model makes a lot of sense when data is shared across an organization. The database server typically runs a database management system, such as Oracle or SQL Server, which keeps the data
+    secure, organized, and up-to-date. Three Tiers- A three-tier application would likely present the user interface on a client workstation, process data on an application server, and retrieve information from a database management system on a database
+    server. The advantage of having multiple tiers includes greater scalability and flexibility for applications. Enterprise application developers can more easily update and replace just one piece of the application without having to update the other
+    tiers. Businesses that host application components on their own network servers are responsible for configuring and maintaining everything themselves. Another option is to use a web hosting or cloud hosting solution, where businesses pay a subscription
+    for the services they use but rely on an outside company to update and maintain application components. n-Tier- The term “n-tier” implies that application developers can theoretically add as many tiers as they need to create the most efficient services
+    and processes on a network.
+    <h3>6.6.5 Platforms and Licensing</h3>multiple computer systems need multi platform software
+    <br>web-applications are cross platform.
+    <br>Proprietary software - you only have a license to use the software; only used for fixed number of computers; personal license or enterprise license
+    <br><br>Open Source Software - freely distributed, source code available; financial contributions; free base and paid add-on; training contracts
+    <br><br>SASS - subscription service - automatically updates while the license is current; ex: Adobe Creative Cloud; Microsoft Office 365
+    <h3>6.6.6 Facts</h3>
+    <pre>
+Platform compatibility-	One of the most important features of enterprise software is whether it's compatible with multiple computer platforms and operating systems.
+    If an organization chooses to accommodate different computer systems for its employees, it doesn't make sense to purchase single-platform software. For example, an application designed and programmed only for Windows 10 will typically not work on Linux or Mac OS.
+    
+    Cross-platform software, on the other hand, is designed to work on multiple systems. It might be programmed in a platform-independent language that can be interpreted by different systems. Or the software could be compiled into different versions for different systems.
+    
+    Cross-platform compatibility does not necessarily mean the software will work on all systems. It could be limited to a few key hardware or software platforms.
+
+    Web applications are usually considered cross-platform software because they're designed to run within web browsers on different operating systems.
+
+Proprietary software-	Be aware that when you purchase proprietary software, you don't own it. You're just purchasing a license to use the software. Because you're purchasing only a license and not the software itself, you're not allowed to access the software's source code and make any modifications.
+    The license you purchase usually permits you to install the software on only a fixed number of computers. These installation limits are commonly enforced by the software vendor using online software activation. When purchasing proprietary software licenses, you can usually select from two general types of licenses: personal or enterprise.
+        -Personal license-	Personal licenses are aimed at home and small business customers. Usually, they allow the software to be installed on a limited number of systems, maybe one, two, or a maximum of three systems. A single-use license can be installed on only one computer.
+            --Personal licenses are not the best choice for a large organization that needs to purchase hundreds or possibly even thousands of licenses for a particular software title. Trying to purchase and manage a large volume of personal licenses would be an administrative nightmare, as well as being expensive.
+        -Enterprise license	To make things easier and more cost effective, many software vendors offer enterprise licenses (also called volume licenses or site licenses). Enterprise licenses allow the customer to install the software without restriction using the same activation code, typically until a specified maximum is reached.
+        -Another model is to limit the number of employees who can use the software at any one time. These concurrent licenses might be a better solution for software that is used infrequently by many employees.
+    Whatever licensing model an organization chooses, system administrators are responsible for monitoring and staying within the licensing agreement. Violating an agreement is software piracy.
+
+Open source software-	Open-source software is usually freely distributed. That means you can download, install, and use the software without paying a licensing fee. This is similar to the idea of freeware or shareware, but with open source software, the source code is freely available to anybody who wants it.
+        That means you can download the source code for an application, modify it, recompile it, and then use the modified version of the software. In fact, you could even post it for other users to download and use as well. You just can't resell it for profit.
+            Organizations that release open-source products typically use a variety of alternative options for generating revenue. For example, they may rely on contributions. Some open-source projects will ask you to contribute financially so they can keep working.
+            Open-source projects may release a base version of their software that they give away for free and offer highly-desirable add-ons for a fee. Other open-source projects may provide support or training contracts. They may release their software for free but then charge a fee for providing technical support.
+            Some open-source projects will partner with a commercial organization. In this situation, two versions of the application will probably be created. One version is proprietary and another is open-source. The proprietary version is typically used to finance the development of the free version.
+
+Software Subscriptions-	Since most software today can be installed and updated online, many software companies are moving toward a subscription model, often called Software as a Service (SaaS) or on-demand software. Users pay a monthly or annual fee to use the software and receive regular updates. The software is set up to automatically download and install updated versions as long as the subscription is current.
+        Individuals and businesses can save money up front by not purchasing a perpetual software license, but they have to pay the subscription fee for as long as they want the software. Popular subscription-based apps include Microsoft Office 365 and Adobe Creative Cloud.
+
+Licensing and Agreements-	Regardless of the platform you use for your software, you will be required to accept some sort of licensing software agreement, usually referred to as the End-User License Agreement (EULA). In most cases (unless otherwise stated) you are allowed to install and license the software on only one computer. This is known as a single use license.
+        Most software requires a license or product key to unlock the software. When used, the product key generates a unique product ID or serial number. This number is often required to obtain technical support. The key is obtained after legally purchasing the software and is usually a string of characters, sometimes printed on the package or electronically sent after an on-line purchase.
+        When purchasing a license that can be used by multiple people for a corporation that may have hundreds of employees, software vendors let you purchase a group license often for an unlimited number of uses. This is also known as a concurrent license.
+        Concurrent licenses can be applied via the employees' network connection and are referred to as Client Access Licenses (CAL). Keep in mind that most software agreements also allow the vendor to collect and store certain data from the use of the software.
+        It is also important to remember that it is illegal to copy, use, or distribute unauthorized copies of a vendor's software. This software is known as pirated software. Not only is pirated software illegal, but it often can contain bugs and sometimes viruses.
+        Although not required, most vendors also want you to register the software. This often gives you added benefits, such as being able to recover you license if lost or other types of services such as technical support.
+</pre>
+    <h3>6.6.7 Software Installation Best Practices</h3>
+    <h3>6.6.8 Facts</h3>
+    <pre>
+CD or DVD installation-	To install an app from a CD or DVD drive, insert the disc and follow the instructions on the screen. If the installation does not begin automatically, you may need to adjust the AutoPlay settings on the computer.
+
+After installing an app from a disc, you may need to download and install an updated version of the app from the vendor's website.
+Internet installation	Before installing an app from the internet, make sure the website or publisher is a trusted source of software. Then, download the installation file and scan it for viruses and other malware.
+
+Most anti-malware programs, such as Windows Defender, scans downloaded programs automatically. When you're confident the installation file is safe, run it and follow the instructions on the screen.
+App store installation	Online app stores facilitate the purchase, downloading, and installation of apps. These include the Microsoft Store (comes preinstalled with Windows), the Google Play Store, and the Apple App Store.
+
+Online app stores work hard to ensure that only trusted apps are available for download or purchase.
+Software subscription	Software has traditionally been sold as a perpetual license installed on a user's computer. However, the subscription model has become increasingly common in recent years.
+
+This model is often called Software as a Service (SaaS) or on-demand software. Users typically pay a monthly subscription fee to access the software over the internet.
+
+Advantages of this method include automatic software updates, lower up-front costs, and lower hardware requirements. Popular subscription-based apps include Microsoft Office 365 and Adobe Creative Cloud.
+Web application	While desktop applications are installed and configured on individual computers, web applications are delivered to computers over the internet through a web browser.
+
+Web apps typically do not require an installation, but they need a live internet connection to function. Compared to desktop apps, web apps are often limited to a smaller subset of features. Since web apps reside on remote servers, they always include the latest software updates.
+Legitimate software sources	There are many malware files that are disguised to look like legitimate software downloads. To ensure the software you download is from a reliable source, be sure you are accessing it from credible merchant, vendor app stores. or the Original Equipment Manufacturer (OEM).
+
+If you need software that is available only from a third-party source, research the source to look for accreditation. Immediately run an anti-malware scan when you download it to check for any malicious files.
+Questions to confirm credibility of sources include:
+
+Does the website have a valid digital certificate?
+Is the download secure through HTTPS?
+Does the software have a vendor digital signature? Is that signature trusted by the computer?
+Have you checked with others on a forum for their experience with the download?
+Updates and patches	When bugs and security vulnerabilities are discovered in software, responsible vendors publish file patches or updates to fix the problems. This includes application patches, driver updates, and operating system updates.
+
+These updates can be included in one update that can also include new features. These combined updates are called service packs on Windows. Remember to always perform a backup prior to downloading a service pack or system patch.
+
+The best place to find software updates is on OEM websites such as Dell, HP, and Apple. Before downloading patches from a third-party website, make sure the site is legitimate.
+
+If you install an app from a disc, it's probably already out-of-date. In this case, you'll want to download and install an updated version of the app from the vendor's website.
+
+Cloud-based software subscriptions such as Office 365 and Adobe Creative Cloud are configured to install updates automatically as they become available. Web apps always include the latest software updates since they reside on remote servers.
+Anti-malware and disabled unused features	Besides patching and updating, it's important to install anti-virus/anti-malware software to protect your hardware, and systems. Anti-malware can protect your software from corruption from malware or viruses.
+
+Anti-malware software is especially important to update regularly. Yo protect against vulnerabilities, apply any patches as soon as you are notified.
+Another best practice to limit vulnerabilities is to disable features that are not in use, as well as, remove administrative privileges that are not necessary.
+
+Software removal	In addition to keeping the software on your computer system updated, you should also remove or uninstall software that you no longer need. You might find that an app has been installed on your system without your knowledge or that your system came preinstalled with software that you will never need or want.
+
+Removing software and then reinstalling it can also be a way of troubleshooting software that has stopped working or is not working properly. If you are having an issue with software currently installed, you may be able to use a Repair option. If that fails or you want to remove the app for some other reason, you may need to do a clean uninstall.
+
+A clean uninstall removes the files and settings associated with the application. This can sometimes be done with programs, such as Windows Settings app (or Control Panel), but often requires additional manual steps as specified by the app's developers.
+</pre>
+    <h2>6.7 Network Troubleshooting</h2>
+    <pre>
+Ping-	A utility that sends a single packet to a specified network address and waits for a reply. It's typically used to determine whether an IP address is accessible.
+
+Tracert-	A utility that shows the exact path a packet takes between two hosts on different networks.
+</pre>
+    <h3>6.7.1 Network Troubleshooting Tools</h3>
+    ping and tracert
+    <h2>6.8 Networking Careers</h2>
+    <pre>
+Network Administrator-	A person that maintains and expands a company's network. They install and configure network media, create and manage user accounts, implement firewalls and other network security, manage an organization's mail system, configure network printers, and maintain Internet connectivity.
+
+Network Architect-	A person that develops and implements an organization's communication network, including the hardware and software components needed for both physical and wireless connections.
+
+Network Technician-	A person that works closely with network administrators to ensure uninterrupted access to the company network. They troubleshoot problems reported to a company's IT help desk and assist users in resolving network connection problems, such as replacing defective network cables and modifying Wi-Fi settings.
+</pre>
+    <h3>6.8.2 Facts</h3>
+    <pre>
+Network architect-	Network architects develop and implement an organization's communication network. This includes the hardware and software components needed for both physical and wireless connections. Based on the needs of an organization, network architects typically:
+    Design intranets, cloud infrastructure, and information security.
+    Work with communication hardware such as cabling, routers, and network adaptors.
+    Are familiar with network protocols, data formats, and project management.
+    In addition to several years of on-the-job experience, these positions typically require industry certifications in network design and implementation.
+
+Network administrator-	Network administrators maintain and expand a company's network. They have a broad range of responsibilities, including:
+    Install and configure network media.
+    Create and manage user accounts.
+    Implement firewalls and other network security.
+    Manage an organization's email system.
+    Configure network printers.
+    Maintain internet connectivity.
+    Perform regular backups of files saved on the network.
+    Train users in accessing network resources.
+
+Network technician-	Network service technicians work closely with network administrators to ensure uninterrupted access to the company network. Job responsibilities include:
+    Troubleshoot problems reported to a company's IT help desk.
+    Assist users in resolving network connection problems, such as replacing defective network cables and modifying Wi-Fi settings.
+    Network technician jobs typically do not require as much education or on-the-job experience as architects, engineers, and administrators.
+</pre>
+
+
+
+
 
 
 
 </body>
+
 
 </html>
