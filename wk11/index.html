@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 wk 11 Databases and SQL</title>
+</head>
+
+<body>
+    <h1>CTEC-101 wk 11 Databases and SQL</h1>
+    databases, database management system, principles of relational database design, SQL commands identify challenges of dealing with big data, careers in databases
+    <h2>7.2 Intro to Databases</h2>
+    how are databases similar to spreadsheets, how are they different? how do database objects work together?
+    <h3>7.2.1 </h3>
+    <pre>
+Database-	A structured set of data held in a computer, usually in a way that is accessible by multiple concurrent users.
+
+Data Modeling-	A way to help programmers and other related parties make sense of database information.
+
+Operational Data-	Data that is produced by an organization's everyday operations. It's gathered in real time to provide a snapshot of what's happening in the present.
+
+Analytical Data	Historical- data that is used to help people make decisions in the present. It's various categories include market data, transactional data, sensor data, natural language, and machine data.
+
+Database Management System (DBMS)-	Software that allows users to define, manipulate, retrieve, and manage data stored in a database. Examples are Microsoft SQL Server, Oracle Database, MySQL, and Microsoft Access.
+
+Table-	A data structure in a relational database that is comprised of fields (columns) and records (rows).
+
+Query-	A method of asking questions about the data stored in a database.
+
+Form-	A graphical interface that allows users to query a database by filling in information on the form.
+
+Report-	An easy-to-read listing of the results of a query.
+</pre>
+    <h3>7.2.1 What is a database?</h3>
+    organized collection of information: messages, pictures, names and contact info,
+    <br>Databases all feature centralized access; security and privilege levels; recovery; scalability
+    <br><br><b>DBMS</b>Data Base Management System - we will use Access in this course; MySQL, PostSQL are two additional ones
+    <h3>7.2.2 Data Modeling</h3>
+    Database Processes --
+    <pre>
+--Creation - One of the first processes that should be considered, is to determine exactly what will be stored in the database, where the data will be stored, and how to make the data accessible to those who need. it.
+
+--Input/import - The next process to consider is how the data will be entered into your database. In some cases much of the data can be entered manually. At other times, you may want to import the data from another source.
+
+--Storage - Some applications can be used to generate and present data for visual consumption only. The calculator in Windows is a good example. When the calculator is closed, all the data it generated is lost. However, many other applications need some place for its data to be stored so it won't be lost when the application is terminated. This storage is often referred to as data persistence. Persistent data is typically stored on a hard disk. A database is one option for persistent data storage.
+
+--Queries - The information stored in a database is useful only if it can be easily retrieved. One of the best ways to retrieve database information is to use queries. A database query is a request to access data from the database.
+
+--Reports - Closely related to queries is the ability to take the data queried and to transform it or format it in a way that makes it easy to read and interpret.
+</pre>
+    <b>Database vs Flat File System (Spreadsheet or CSV)</b>
+    <pre>
+--Processing speed - Databases can store thousands, millions, or even billions of data points. Imagine keeping track of a billion rows on a spreadsheet – it wouldn't be easy. Fortunately, a good database makes analyzing a million records just as easy as analyzing a few dozen.
+
+--Backup and recover - Databases provide tools to backup information entered within seconds of it being committed. This means that through this backup process and through replication, lost data can be easily recovered.
+
+--Forced Data types - A data type is an attribute attached to a value that tells the compiler or interpreter how the data should be used. Databases let you control or force data types and to validate the information entered.
+
+--Concurrent use - Databases allow many individual users to access the data at the same time without having to wait or take turns. A database can support thousands or even millions of users at one time. This is difficult to do with a flat file system because of the high speeds required to track transaction. In most cases, when a single file is opened, a lock is placed on the file preventing it from being used by other users.
+
+--Security - Databases have measures in place to make sure only authorized users can get to the data. Additionally, users can have different privilege levels. While a top-level administrator can view and edit all the data, lower-level users may be able to see records but not change or delete them.
+</pre> There are different Data Models: Conceptual; Logical; and Physical. each has it's own level of complexity
+    <br>
+    <ul>
+        <li>Primary Key- found in one or more columns of data and contains a unique ID for the row (ie: home address)</li>
+
+        <li>Foreign Key- refers to another database's primary key</li>
+
+        <li>Entity- an entity is a real-world element, like customer or product sold</li>
+
+        <li>Attribute- the properties of an entity; customers name and address; products description and price</li>
+
+        <li>Relationship- is an association or dependency between two entities; sale of a product to a customer would be a relationship between 2 entities</li>
+    </ul>
+    <ul>
+        <li><b>Conceptual Database</b> - least complex, shows: entities, attributes, and relationships</li>
+        <li><b>Logical Database</b> - include: Objective and scope of model; Names of entities in the model; Diagramming Conventions; Business Data Points; Data Abstractions</li>
+        <li><b>Physical Database</b> - focuses on how to implement a data model within a specific DBMS. Includes Technical and Performance requirements for hardware the database will run on. Physical model should provide enough detail so the database can
+            be created</li>
+    </ul>
+    <h3>Analytical vs Operational Data</h3>
+    Operational data answers the "What?" questions, like, "What were our inventory levels today?" It doesn't deal with hypotheticals but instead in concrete, strictly observable things.
+    <br><br>Analytical Data is historical data that is used to determine present and future decisions. Answers "What If?" questions
+    <pre>
+-Market data: Use this data type to gauge markets trends in order to decide what to do in the present, such as which companies to invest in.
+
+-Transactional data: Use this data type to look at what customers have historically purchased in order to decide what products to make in the present.
+
+-Sensor data: Use this data type to observe historical data from sensors, such as weather and climate information over time.
+
+-Natural language: Use this data type to observe language, such as social media posts that can be used to look for trends in customer preferences.
+
+-Machine data: Use this data type to look at data generated by computer hardware or software. You can better understand your technological landscape this way.
+</pre>
+    <h3>7.2.4 DBMS Database Management System</h3>
+    people can create, read, update, and save data. Access is less powerful than SQL, MySQL, PostSQL and other Databases
+    <br>Tables, Queries, Forms, and Reports
+    <h3>7.2.5 DBMS Facts</h3>
+    <pre>
+Microsoft SQL Server-	Microsoft SQL Server is a proprietary relational database management system developed by Microsoft. It was released in 1989.
+    It is a database server that supports transaction processing, business intelligence, disaster recovery, and analytic applications. As an enterprise software solution, it provides robust security and protection for a company's databases.
+
+Oracle Database-	Oracle Database is a highly-scalable, robust, industry-standard DBMS. It was released in 1980 by Oracle Corporation. It is commonly trusted by larger companies to manage and secure enterprise databases.
+    Oracle continually provides software updates to maintain a high quality product. Oracle DB supports more programming languages than Microsoft SQL Server and MySQL.
+
+MySQL-	MySQL is an open-source DBMS that was originally released in 1995. Oracle acquired the technology and now owns and maintains MySQL. Many people who manage their own websites and databases prefer to use MySQL because it provides SQL database implementation that works well for small to medium websites.
+
+Microsoft Access-	Microsoft Access is a DBMS developed by Microsoft that works effectively to create and manage small relational databases with a few users. It was released in 1992 as part of Microsoft's Office suite.
+    Access databases are composed of four kinds of database objects: tables, queries, forms, and reports. An advantage to using Access is that it is easy to set up and can be a great introduction to relational databases for inexperienced users.
+</pre>
+    <h2>7.3 Relational Databases</h2>
+    <pre>
+Relational Database-	A database that holds data on multiple related tables.
+
+Table-	A data structure in a relational database that is comprised of fields (columns) and records (rows).
+
+Field-	A single attribute of each record in a table.
+
+Record-	A single instance of an entity stored in a database table.
+
+Primary Key-	A field in a table that uniquely identifies a record.
+
+Foreign Key-	A field that corresponds to the primary key field in another table.
+
+Query-	A method of asking questions about the data stored in a database.
+
+Form-	A graphical interface that allows users to query a database by filling in information on the form.
+
+Report-	An easy-to-read listing of the results of a query.
+
+Normalization-	A design technique that organizes data in a database in an optimal way. This results in it being easier to add, remove, and update data without introducing errors.
+</pre>
+    <h3>7.3.1 Relational Databases</h3>
+    <b>Fields</b> are columns of information from spreadsheets
+    <br><b>Records</b> are the rows of information that make up the fields
+    <br><br>1-to-many relationships -- 1 person can have multiple phone numbers
+    <h3>7.3.2 Relational Database Facts</h3>
+    <pre>
+Schema-	The schema is the general structure of a database. The schema defines the logical groupings and relationships between database objects such as tables and fields.
+
+Table-	Tables store the information in a relational database. Each table is comprised of fields (columns) and records (rows). There is no limit to the number of fields and records a table can contain, as long as there's enough storage space on the drive.
+
+Query-	Queries are questions used to retrieve data stored in database. Generally, it's not useful to look at an entire data table. Instead, database users build queries that retrieve the relevant information. For example, if you've ever searched for a single TV show from a streaming service, you've queried a database.
+
+Form-	Most database users don't write queries in query language directly. Instead, they enter information into a form that builds the query automatically.
+    A good example of a form is the search bar of a search engine. When you enter search terms and press enter, the information from the form is entered into a query that retrieves the information.
+        Forms are used in a relational database to build the objects in the fields through manual input. For example, when you fill out a soccer registration form online, the information you type in the form fields is entered into the database.
+
+Report-	A report is a formatted, easy-to-read listing of the results of a query. Without reports, query results would resemble a spreadsheet. When you search for an online video and are presented with a list of relevant options, the list is a report.
+
+Primary key-	Most records in a database require a way to distinguish them from other records. A primary key is a unique identifier that distinguishes records. Primary keys are usually numbers, but they can be any unique value. For example, a phone number, it is a primary key. Even though other people may share your same first and last name, nobody else shares your phone number.
+
+Foreign key-	Often, a table in a database references records in another table. It does this by using the primary key value of the record it' wants to reference. A foreign key is a primary key from another table..
+
+Field-	A field describes a single attribute of each record in a table. For example, you may have a field for first names in a database. Every person's first name is stored in the first name field. Fields are comparable to columns on a spreadsheet.
+    The schema of a database can prevent some fields from being left blank. This is called a NOT NULL constraint. It requires a value to be entered into the field whenever a new record is created.
+        Databases allow for a constraint to be applied to a field in a table. Constraints are limitations on the value that can be entered into the field. For example, you can add a constraint to make sure the field is never empty, or to require the format of a telephone number.
+        --Constraints limit what is entered into a field. This means you can determine the type and form of information to be entered. This is used to avoid what is known as Garbage In, Garbage Out (GIGO).
+
+Record-	A record is a single instance of data stored in a database table. For example, in a database of people, each individual person is a record. Generally, each record has one field designated as the primary key. Records are comparable to rows on a spreadsheet.
+
+SQL (Structured Query Language)-	SQL is a computer language used by most relational databases for creating queries. Using SQL, a database user can view, edit, delete, and create database records.
+
+Table relationships-	You may want to associate data in one table with data in another table. To do this, add a foreign key field to one of the tables. Bringing data from multiple tables together is called a table relationship.
+        The most common type of relationship between tables is a one-to-many relationship. An example of this is a phone number. A phone number can belong to only one person, but each person can have multiple phone numbers.
+</pre>
+    <h3>7.3.3 Spreadsheets vs Databases</h3>
+    easier to access and modify large numbers of records in databases
+    <h3>7.3.4 Database Structures</h3>
+    the Schema is a structure for a database. Resources; Events; Agents
+    <br> Resources = Products; Agents = People (Employees and Customers); Events are how Resources and Agents interact; ie: a customer places an order for product
+    <br><br> the next part of planning a database is deciding which Field goes into which table.
+    <br>ie: all fields will need a Primary Key; break the information down into the most data you can, don't make a field for names, make a field for FirstNames and a field for LastNames instead
+    <br>ex: for Product field you will have a Primary Key, a Product Name, a Product Typ, and Product Price.
+    <br> ex: in the Agents field we an employee field and a customer field. both will need a primary key, a first name, and last name field
+    <br> ex: the employee Addresses field would need a separate field for house number, street, city, state, and zipcode
+    <br><br> the Events (in this example the Orders) represent a Relational Data Table - it will use information from the Resource and Agent tables
+    <br> a relational table is built using Foreign Key Fields that pull data from other tables, you can also add additional fields, ie: a Date field
+    <h3>7.3.5 Types of Relationships</h3>
+    1-to-1 = ex: a student or employee and their ID #. there will only be 1 ID# for a student, even if they share a name with another student
+    <br>1-to-Many = ex: building and classrooms. In 1 building there will be many classrooms
+    <br>Many-to-Many = ex: a student and a teacher. often Many-to-Many relationships require a 3rd table called a Intermediary (or Junction) Table that keeps track of every teacher-student relationship
+    <h3>7.3.6 Relational Methods</h3>
+    CRUD (Create, Read, Update, Delete)
+    <br><br>DDL Data Definition Language - deals with Database Structure
+    <br>CREATE - create new database or table
+    <br>ALTER TABLE - modify fields, or define primary and foreign keys
+    <br>DROP - delete a table
+    <br><br>DML Data Manipulation Language - deals with Data Manipulation of Records
+    <br>INSERT - Create a new record or row
+    <br>SELECT - read information from a database
+    <br>UPDATE - change a record
+    <br>DELETE - deletes a record
+    <br><br> important to Backup the database with BACKUP and RESTORE
+    <br>also you can have a Database Dump that makes a copy of your database as a CSV file
+    <br><br> Permissions:
+    <br>GRANT SELECT TO Jeff - lets jeff run SELECT queries
+    <br>DENY DROP TO Jeff - prevents jeff from deleting tables with DROP command
+    <h3>7.3.7 Normalization</h3>
+    organizes data in an optimal way
+    <br> Normal Form is a set of rules on how data is structured
+    <br>1NF, 2NF, 3NF
+    <br><b>1NF</b> First Normal Filter - all cells must have single values
+    <br><b>2NF</b> all First Normal Filters must be met. in the example we split the data into 2 tables; the first is customers each with a unique primary key; the second table contains a primary key for movies watched and a foreign key relating to the
+    customer tables primary key
+    <br><b>3NF</b> must meet all 2NF requirements plus be an attribute of the primary entity
+    <br> for the 3NF example we have to split into 3 tables; customers with primary key and attributes of first name, last name pointing to the primary key;
+    <br> movies are a new table with a movie id primary key, the name and genre of the movie are the attributes of the movie id key
+    <br> as an Event data table - Views then has it's own primary id - and draws it's data from the customer and movie tables -- the attributes are drawn from other tables
+    <h3>7.3.8 Database Design in Microsoft Access</h3>
+    <h2>7.4 Querying Database</h2>
+    <pre>
+        Query-	A command sent to a database. Queries are most commonly used for CRUD operations (create, read, update, delete).
+        
+        Direct Access-	A method of accessing a database directly using the database management system itself.
+        
+        Query Builder-	A method of accessing a database using a graphical user interface that allows users to select what actions they want to perform on a database.
+        
+        User Interface Access-	A method of accessing a database using forms that allow users to interact with the database.
+        
+        Programmatic Access-	A method of accessing a database using custom computer programs.
+        
+        SQL-	A computer language that makes relational databases work.
+        
+        Data Definition Language (DDL)-	Database commands that change the structure, or schema, of the database.
+        
+        Data Manipulation Language (DML)-	Database commands that modify the records within the database and not the schema itself.
+</pre>
+    <h3>7.4.1 Database Access Methods</h3>
+    Direct Access with SQL commands
+    <br> a Query Builder is another option - the
+    <br> also people use User Interface Access ie: using a website or many customer rep / call center jobs
+    <h3>7.4.2 Database Access Facts </h3>
+    <pre>
+Direct Access- 	Database management systems give administrators direct access to their databases. From here, they can write SQL commands to create new databases and interact with existing databases.
+
+Query Builder-	A query builder provides a graphical user interface where people can select what actions they want to perform on a database. Then, the builder translates the user’s choices into SQL commands and runs them. This is helpful when a person may need to interact with a database but doesn't know how to write SQL commands.
+
+User Interface Access-	For some databases, most users won’t ever need to interact with the data directly. Instead, they fill out information on a form. A SQL query gets the information from the form and uses it to send a command to the database. Then, the results of the query are formatted as an easy-to-read report and sent back to the user. When you log onto your bank account or search for a library book, you’re accessing a database through a user interface.
+
+Programmatic Access-	Humans aren’t the only ones who need access to databases; many computer programs need it too. Developers can write code into their software that reads, writes, updates, and deletes database records programmatically.
+</pre>
+    <h3>7.4.3 Intro to Queries</h3>
+    allows you to make informed decisions - allows you to sift through data and get the info for which you are looking
+    <br>search engines are an example of a front end input which creates a SQL query on the back end
+    <h3>7.4.8 SQL Structured Query Language - Sequel</h3>
+    <b>SELECT BookID, Title FROM Books</b> -- returns BookID and Title from the Books Table
+    <br><br><b>SELECT * FROM Books</b> -- will return all Fields and Records from Books Table
+    <br><br><b>SELECT * FROM Books WHERE BookID=5</b> -- returns the record from Books that has BookID of 5
+    <br><br><b>SELECT * FROM Books WHERE Title LIKE '%Encyclopedia%'</b> -- this will search the Title Field for books containing the word 'Encyclopedia' -- the % is wildcard in SQL
+    <br><br><b>SELECT * FROM Books WHERE Title LIKE '%Encyclopedia%' AND Author = 'Sobol, Donald J.'</b> -- further narrows the search for a specific author in a specific format
+    <h3>7.4.9 Basic SQL Commands</h3>
+    <h4>DDL Data Definition Language Commands - change the 'schema' (structure) of a database</h4>
+    <pre>
+    CREATE TABLE:	The CREATE TABLE command can add a new table to an existing database.
+            Example:
+            CREATE TABLE books (
+            id int,
+            title text
+            );
+    
+        Creates a new table with two fields—an integer field for the primary key and a text field for the title.
+    
+    ALTER TABLE:	ALTER TABLE is used to add, change, or remove fields on an existing table. It also lets you define primary and foreign keys.
+            Example:
+            ALTER TABLE books
+            ADD author text;
+    
+         Adds a new text field to the books table to store the author of each book.
+    
+    DROP TABLE:	The DROP TABLE command deletes an entire table, including all the data stored in it.
+             Example:
+            DROP TABLE books;
+    
+        Deletes the books table and all its records from the database.
+    
+    CREATE DATABASE:	The CREATE DATABASE command allows you begin a brand-new database.
+            Example:
+            CREATE DATABASE library;
+        
+        Creates a new database using only one parameter.
+    
+    CREATE VIEW:	The CREATE VIEW command creates a virtual table populated from an SQL statement result-set.
+           Example:
+            CREATE VIEW book_authors AS
+            SELECT column1, column2, ...
+            FROM books
+            WHERE junior_fiction;
+    
+        Displays a table with book authors from the junior fiction category.
+    
+    CREATE INDEX:	The CREATE INDEX command creates an index within a table which can be used to accelerate the speed of query retrieval time.
+            Example:
+            CREATE INDEX book_copyrightdate
+            ON books (column1, column2, ...);
+        
+        Creates an index for copyright dates from the books table.  
+</pre>
+    <h4>DML Data Manipulation Language Commands - deal with records inside the database</h4>
+    <pre>
+INSERT INTO and VALUES:	These commands work together to add new records to an existing table. The INSERT INTO command tells the database which table should store the new record. VALUES tells the database what to write in each field.
+    Example:
+    INSERT INTO books (id, title, author)
+    VALUES (12345, "The Cat in the Hat", "Dr. Seuss")
+Adds The Cat in the Hat to the books table.
+
+SELECT:	The SELECT command lets you view the specific information you want from the database. It's commonly used with the asterisk (*) operator, which tells the computer to include everything.
+    Example:
+    SELECT * FROM books
+Returns all records from the books table
+
+WHERE:	The WHERE command lets you narrow your query to only the results you want.
+    Example:
+    SELECT * FROM books WHERE author = "Dr. Seuss"
+Returns all records from the books table where the value of the author field is Dr. Seuss.
+
+UPDATE and SET:	The UPDATE command makes changes to existing records in a table. It's usually used with the SET command, which tells the database the changes to make.
+    Example:
+    UPDATE books
+    SET title = "Green Eggs and Ham"
+    WHERE id = 2345
+Finds all records with an id of 2345 (probably just one book) and changes the value of the title field to Green Eggs and Ham.
+
+DELETE:	The DELETE command deletes records from a table.
+    Example:
+    DELETE * FROM books WHERE id = 2468
+Deletes all records from the books table where the value of the id field is 2468. Using the primary key field is a good way to make sure you don't accidentally delete a wrong record.
+</pre>
+    <h4>DCL Data Control Language and other common SQL Commands - backing up and restoring databases; Permissions</h4>
+    <pre>
+    BACKUP DATABASE:	The BACKUP DATABASE command creates a backup copy of the database.
+        Example:
+        BACKUP DATABASE library
+        TO DISK = "C:\Users\student\Desktop"
+    Backs up the entire database to the desktop. (Many relational database management systems also provide stored procedures to backup individual tables.)
+    
+    GRANT:	The GRANT command gives a user specified permissions to a specific database object and is part of the data control language within SQL.
+        Example:
+        GRANT SELECT ON books TO marian;
+    Gives the user marian permission to run select queries on the books table.
+    
+    REVOKE:	The REVOKE command removes the specified permissions to specific database objects and is also part of the data control language within SQL.
+        Example:
+        REVOKE DROP ON books FROM marian;
+    Makes it so the user marian can't drop the books table.
+    
+    Database Dump:	Another way to back up a database is to export the data into a format that can be read by another program like a spreadsheet. This is called a database dump. It typically stores the database schema and data in a CSV file. The command syntax for exporting and importing a database dump depends on the database platform you are using.   
+</pre>
+    <h2>7.5 Non-Relational Databases</h2>
+    <pre>
+    Structured Query Language (SQL):	A computer language used by most relational databases for creating queries.
+    
+    Structured Data:	Data that can be divided into discrete categories.
+    
+    Unstructured Data:	Data that doesn't follow a clear pattern.
+    
+    Semi-Structured Data:	Data that has some discrete categories but also other information that doesn't follow a clear pattern.
+    
+    Big Data:	Extremely large sets of data, usually automatically recorded, that can be analyzed to show insights into human behavior trends.
+    
+    Data Extraction:	The process of gathering and organizing big data.
+    
+    Data Mining:	A broad and open-ended analysis of extracted big data.
+    
+    Big Data Analytics:	The process of asking specific questions to help interpret big data.
+    
+    NoSQL:	Nonrelational databases that arise from big data. 
+</pre>
+    <h3>7.5.1 Non-Relational Databases</h3>
+    Structured, Non-Structured and Semi-Structured
+    <ul>
+        <li><b>Structured or Relational</b> - Relational databases, has uniform information. ie: a library with books - each book has a title, author, publication date, etc</li>
+        <li><b>Non-Structured or Document</b> - a document database store different types of files: ex photos, articles, telegraph transcripts, journals and poems </li>
+        <li><b>Semi-Structured or Key-Value</b> - using a key-value database, ex: animals and their lifespan database, you won't need wingspan field for dog or favorite prey field for butterfly</li>
+    </ul>
+    <h3>7.5.2 Non-Relational Database Facts</h3>
+    <pre>
+Structured data:	Structured data is data that can be divided into discrete categories. For example, all the books in a library catalog have a title, author, publication year, etc.
+    This kind of data is easy to store in a structured table, where every book has a value for every field. It is perfect for a relational database. Relational databases store data that can be retrieved and manipulated through a predefined schema in a query language.
+
+Non-structured (unstructured) data: 	Non-structured data is data that doesn't follow a clear pattern. Imagine an archive of primary sources about the American Civil War that includes journals, newspapers, photographs, telegrams, and poems.
+    A good way to keep track of all these different resources would be a document database. Document databases can store lots of different kinds of files. In our example, a user could enter a search term such as newspaper and get a list of the newspaper articles in the database. The file system on your computer is an example of a document database.
+        Extensible Markup Language (XML) is a language like html, except that instead of the tags indicating how to display information, XML creates tags and codes to provide structure for the documents or other objects in a non-structured database. This allows for a variety of data files in the database.
+
+Semi-structured data:	Somewhere between structured and non-structured data are semi-structured data. These data don't fit into the rigid rows and columns of a table but have some things in common. For example, think about classifying different kinds of animals. Every animal species has a name, average size, and life expectancy. However, a dog doesn't need a field to store its wingspan, and a butterfly doesn't need a field for its favorite prey.
+    These kinds of data can be stored in a key/value pair database. A key is a category of information, kind of like a field. Using a key/value database, we could store information about a variety of objects. Some keys would be common to all the objects, but others would be different.
+        Key/value pair databases do not have a query language. The pairs can't be queried; only the key can be queried. A direct request, such as the commands get, put, or delete, are used to retrieve specific data. The key must be known because there is no search option.
+</pre>
+    <h3>7.5.3 Non-Relational Database Challenges</h3>
+    <ul>
+        <li><b>Learning Curve</b> - no standard program, so each varries greatly</li>
+        <li><b>Overhead Cost</b> - it is expensive to invest in data mining </li>
+        <li><b>Validating and Securing Data</b> - Relational DB use ACID (Atomicity, Consistency, Isolation, and Durability) to secure the DB, non-relational does not follow that</li>
+        <li><b>Combining Approaches</b> - Data Warehousing</li>
+    </ul>
+    <h3>7.5.4 Big Data</h3>
+    every day internet post, military data, search engine searches -- Big Data refers to analyzing data from many sources - governments can sift through info to find terrorist, cities can keep up with traffic flow
+    <br> Big Data refers to analyzing unassociated data sets and the amount of data that is also stored
+    <br>Data mining and Big Data Analytics
+    <br> Ethical Implications from all this information
+    <h3>7.5.5 Big Data Facts</h3>
+    <pre>
+Data Extraction:	Before analyzing and interpreting big data, it needs to be gathered and organized. This is a challenge because big data is typically unstructured and distributed over several locations. And because it's so complex, combining various types of information, big data can't be processed quickly into a relational database. Very often, it includes images, documents, complex numbers, and video. And the data are constantly expanding.
+
+Data Mining:	Data mining is a broad and open-ended analysis of extracted data. Data mining experts use automated tools and algorithms to discover trends or patterns in the data. These patterns can be descriptive, helping us understand what's going on in a business operation. Or the patterns might be predictive, putting data scientists in a better position to identify potential threats or forecast future trends.
+
+Big Data Analytics:	Big data analytics is the process of asking specific questions to help interpret data. For example, a business might be interested in making an informed decision regarding product features. Medical researchers can use patient information and gene mappings to predict who might need specific treatments. Cities can take advantage of traffic sensor technology to better design roads and keep traffic moving smoothly.
+
+Conventional Database Tools:	Conventional database tools work well with structured data that are organized into relational databases and data warehouses. These tools are designed for relational database management systems (RDBMS) and use Structured Query Language (SQL) for querying and maintaining the databases. Traditional tools do not work well with big data, which requires query languages and other tools that are more flexible and dynamic.
+
+NoSQL:	Because of the unstructured and complex nature of big data, we typically can't use SQL to query an organized collection of relational databases. For this reason, the nonrelational databases that arise from big data are often called NoSQL. NoSQL databases are sometimes called "Not only SQL," since the query languages that support them are often used in conjunction with certain relational database features that do support SQL.
+
+Big Data Ethics:	Since big data is often obtained without the knowledge or consent of users, information can be sold to other organizations in a way that violates user privacy. Another potential problem is that big data analytics can uncover misleading or harmful information on innocent people. For example, we might falsely associate a person with terrorism. This same kind of analysis could also warn health insurance companies when an applicant has a higher risk for genetic disease. These examples illustrate why big data needs to be used with caution and ethical responsibility.
+</pre>
+    <h2>7.6 Database Careers</h2>
+    <pre>
+Database Administrator:	A person who is responsible for designing, maintaining, backing up, and securing an organization's databases.
+
+Data Scientist:	A person who focuses on data analysis, especially as it relates to data mining and big data analytics. These positions require even more advanced programming and analytical skills.
+
+Database Developer:	A person who designs and implements databases, usually by writing SQL code and conducting performance tests to ensure database optimization.
+
+Data Analyst:	A person who specializes in gathering and analyzing data to inform business decisions.
+</pre>
+    <h3>7.6.2 Database Career Facts</h3>
+    <pre>
+    Database Administrator:	A database administrator (or DBA) is responsible for designing, maintaining, backing up, and securing an organization's databases, which include inventory tracking, customer relationship management, and personnel data. While larger companies usually have a dedicated DBA, systems administrators often assume the role in smaller companies. DBAs are in charge of managing enterprise database platforms such as Microsoft SQL Server and Oracle Database. They often work closely with data analysts to query databases and provide information to help businesses make informed decisions.
+    
+    Database Developer:	Database developers also design and implement databases, but their work focuses more on writing SQL code and conducting performance tests to ensure that database systems are optimized for the needs of clients. In addition to understanding SQL, database developers typically have programming expertise in other languages, such as Java and Python.
+    
+    Data Analyst:	A data analyst specializes in gathering and analyzing data to inform business decisions. They use their expertise in mathematics and statistics to find relevant trends and patterns in data. Data analysts often work with sales and marketing teams to analyze and interpret performance data, create reports, and recommend ways to improve company processes. Their work often focuses on extracting and mining Big Data, which is the vast amount of data that’s collected and stored online.
+    
+    Data Scientist:	The work of data scientists also focuses on data analysis, especially as it relates to data mining and Big Data analytics. However, these positions require even more advanced programming and analytical skills. Data scientists work with machine learning algorithms that help them build predictive models and develop strategies for business success. They’re proficient in using the latest business intelligence tools, including dashboards, data mining and visualization tools, reporting, and predictive analytics.
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
