@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 HTML, CSS, and JavaScript</title>
+</head>
+
+<body>
+    <h1>CTEC-101 HTML, CSS, and JavaScript</h1>
+    <h2>8.2 Programming</h2>
+    <pre>
+Computer programming-	A way of giving computers precise, line-by-line instructions to follow. Computer programming uses programming languages.
+
+Programming language-	A formal language comprising a set of instructions that produce various kinds of output. A compiler converts the high-level programming languages into machine language (ones and zeros).
+
+Scripting language-	A programming language that supports scripts and uses an interpreter that compiles the code line by line at runtime.
+
+Pseudocode-	A way to represent code in a manner that is easier for a wide range of people to understand.
+
+Data type-	An attribute attached to a value that tells the compiler or interpreter how the data should be used.
+
+Identifier-	A user-defined name of a program element, such as a variable or constant.
+
+Container-	A program element, such as an array or vector, that holds a set of values.
+
+Function-	A computer routine or snippet of code that can be reused in a computer program.
+
+Object-Oriented Programming (OOP)-	A programming paradigm based on the concept of objects that can contain both data and programming code.
+
+Encapsulation-	An OOP concept that describes how data and methods are bundled together within one unit or class.
+
+Assembly language-	A human-readable, low-level computer language that is a symbolic representation of binary machine language.
+
+Compiled language-	A computer programming language, such as C and C++, that uses a software tool called a compiler to translate the code into binary machine language.
+
+Interpreted language-	A computer programming language, such as Python, JavaScript, and Ruby, that requires a program called an interpreter to execute the instructions written in the source code each time the application is run.
+
+Runtime engine-	A special interpreter that translates bytecode into computer specific machine language. Bytecode is a platform independent, low-level language that is compiled from source code.
+
+Algorithm-	Specific, step-by-step procedures that illustrate how a problem will be solved.
+
+Flowchart-	A visual representation of the logic in a program.
+</pre>
+    <h3>8.2.1 Intro to Programming</h3>
+    <h2>8.3</h2>
+    <h3>8.3.1 Data Types</h3>
+    <ul>
+        <li>int</li>
+        <li>float</li>
+        <li>char</li>
+        <li>boolean</li>
+    </ul>
+    <h3>Variables and Arrays</h3>
+    Variables, Constants, Arrays: all 3 are ways to hold data for the program to use later
+    <h3>8.3.3 Programming Logic</h3>
+    Branching and Looping - Branching = if-else statements; Looping = for, while statements
+    <h3>Programming Logic Facts</h3>
+    <pre>
+Flowcharts-	The main purpose of flowcharts is to visually represent the flow (sequence) of logic in a program. An advantage of using flowcharts is that they make programming logic easier to read, especially for those who have little experience with programming.
+
+Flowcharts allow you to visually follow the sequence of steps the program takes. The following are important symbols associated with flowcharts:
+⊂⊃ Pill Shape - Pill shapes represent the start or end of a program.
+▱ Parallelogram - Parallelograms represent input or output.
+◇ Diamond - Diamonds represent decisions answered with a Yes or a No.
+▭ Rectangle - Rectangles represent processes.
+➝ Arrow - Arrows determine the logical flow of the program.
+Branching	By default, computer programs start at the first line, then execute one line at a time until the end. However, many programs need to change their behavior based on user input or other circumstances. This is called branching.
+
+Consider the following common example. In the pseudocode (the plain language description of what the code is doing), the program is watching for the user to click Add to cart. When they do, it checks to see whether the user is logged in. If the user is, the code adds the item to the cart and suggests similar items. If not, the user gets redirected to the login page.
+
+This type of conditional branching is typically made up of IF-ELSE statements inside the program. In the example, if the user is logged in, the program runs the code under the IF statement. Otherwise, it runs the code under the ELSE statement.
+Looping	One thing computers excel at is doing the same thing over and over in exactly the same way. In programming, this is called a loop. There are two main types of loops: for loops and while loops.
+For loops run a specific number of times. Using the online store example:
+The user adds a few more items to the shopping cart and is ready to check out.
+On the checkout page, the computer loops through the items in the cart, running the for loop for each item.
+It displays the item name to the list and adds the price to the running total.
+The number of times the loop runs is determined by the number of items.
+After the last item, the loop stops.
+While loops keep running as long as a certain condition is met. Consider the following example from an online card game.
+The game has a block of code that says while cardsInHand < 5.
+When the program gets to this block, it checks the number of cards in the player's hand.
+If it's less than 5, it removes a card from the deck and puts that card into the player's hand.
+Then, it loops back to the top and checks again.
+If the number of cards in hand is still less than five, it deals another card.
+Once the player has five cards, this condition is no longer met, so the loop stops running.
+Algorithms	Algorithms are specific, step-by-step procedures that illustrate how a problem will be solved. They include all the necessary logic, such as conditional statements, branches, and loops. Before they are implemented in code, algorithms are often expressed in flowcharts or in pseudocode.
+Operators	Just as there are operators in a math sentence that specify what to do with the numbers, there are operators in code. Each coding language has its own operators. For pseudocode, there are some basics to be familiar with.
+
+Relational operators:
+== is equal to. This means it returns TRUE if both conditions are the same.
+= is equal to.
+!= is not equal to.
+> greater than.
+< less than.
+>= greater than or equal to.
+<= less than or equal to.
+Logical operators (used to test multiple conditions simultaneously):
+AND - If both statements are TRUE, the whole statement is considered TRUE.
+OR - If either condition is TRUE, the whole statement is also considered TRUE.
+XOR - If only one of the conditions is TRUE, the whole statement is considered TRUE.
+NOT - The whole statement is not TRUE.
+Pseudocode of other programming languages:
+&& - If both statements are TRUE, the whole statement is considered TRUE.
+|| - If either condition is TRUE, the whole statement is also considered TRUE.
+! - The whole statement is considered not TRUE.
+Other keywords:
+START - Starts the pseudocode.
+INPUT - Data provided through a keyboard or other input device.
+GET/READ - Input taken from a data file.
+PRINT/SHOW/DISPLAY - Displays output on the screen.
+SET/INIT - Initializes values.
+Comments	As you write your code, it is very helpful to document what the sections of the code do. This way when you or a coworker come back to update or troubleshoot the program, you can easily see what was intended. When adding comments, keep in mind:
+To add documentation within the program itself, you must use a comment symbol or delimiter.
+This symbol may vary, depending on the program being used, but common comment symbols include the hash (#), an apostrophe ('), or double forward slashes (//).
+Lines of code that are preceded by a comment symbol are ignored by the program when the code is run.
+Procedures and Functions	The purpose of pseudocode is to explain in a concise and easily understandable way what the code will do. It should be easy for another programmer to understand and follow. Be sure to eliminate any extra or confusing statements.
+
+Often you can use the same segment of pseudocode multiple times. Programmers learn quickly that it is a time-saver to reuse code. The code that you reuse repeatedly is called a procedure or a function.
+Procedure - A specific piece of code that can be reused without creating any output and without needing input.
+Function - A specific piece of code that can be reused, but requires input and output.
+</pre>
+    <h3>8.3.5 Functions</h3>
+    Don't Repeat Yourself - DRY -- functions and loops
+    <h2>8.4 Programming Paradigms and Process</h2>
+    <pre>
+    Programming Paradigm-	A method a computer uses to solve a specific problem or perform a specific task.
+    
+    Procedural Programming-	A method that focuses on telling a computer what to do to reach a certain objective. It takes a linear, top-down approach to solving problems by creating routines and subroutines that perform computations.
+    
+    Declarative Programming-	A method that focuses on instructing a program what needs to be done instead of telling how to do it. Instead of giving the computer step-by-step instructions, the code simply says what the end result must be.
+    
+    Object-Oriented Programming (OOP)-	A programming paradigm based on the concept of objects which can contain both data and programming code.
+    
+    Encapsulation-	An OOP concept that describes how data and methods are bundled together within one unit or class.
+    
+    Version Control Systems (VCS)-	Software tools that help teams manage files and source code over time.
+    
+    Integrated Development Environments(IDE)-	A set of programming tools that work together to make a programmer's job easier.
+    
+    Application Programming Interfaces (API)-	A set of protocols and tools that help programmers build applications that connect or communicate with databases, operating systems, and other services.   
+</pre>
+    <h3>8.4.1 Programming Paradigms</h3>
+    a paradigm in programming is a method used to solve a problem or perform a task.
+    <pre>
+    Procedural Programming
+        The procedural programming paradigm focuses on telling a computer what to do to reach a certain objective. It takes a linear, top-down approach to solving problems by creating routines and subroutines that perform computations. It's sometimes also known as imperative programming.
+        The programmer splits his or her code into smaller units, called functions or procedures, so that they can be reused when the need arises. When the program is compiled, it's executed in a linear order, going to the first function, and then the second, and so on until the last function is executed. This kind of programming easy to write and understand, and it's often the first paradigm taught in introductory programming classes.
+
+    Declarative Programming
+        Declarative programming focuses on instructing a program what needs to be done instead of telling it how to do it. Instead of giving the computer step-by-step instructions, the code simply says what the end result must be. Examples of the declarative paradigm are markup languages like HTML, style sheet languages like CSS, and query languages like SQL.
+</pre>
+    <h3>8.4.2 Object Oriented Programming OOP</h3>
+    modeling real world objects into computer code - Java and Python
+    <br><b>Class</b> is the template - contain methods that perform operations
+    <br><br><b>Objects</b> - specific models built from the class
+    <br><br> <b>Encapsulation</b> - hide values in a class to prevent uncontrolled changes from being made
+    <br> keep the methods Public and the other values private
+    <h3>8.4.3 Version Control</h3>
+    important because it keeps track of project history;
+    <h3>8.4.4 IDE - Integrated Development Environments</h3>
+    <pre>
+Most IDEs include the following components:
+        Text or code editor
+        Project windows for convenience
+        Compiler
+        Debugger
+        Language-specific features
+
+Once you've learned how to use an IDE, it can greatly streamline your work. The following are some of the added features that many IDEs provide to programmers:
+        Autocomplete key words
+        Highlights syntax, making it easier to follow
+        Supports external plug-ins
+        Displays your execution results in a separate window
+        Can organize your work into folders that keep your project orderly
+</pre>
+    <h3>8.4.5 API - Application Programming Interface</h3>
+    <h3>8.4.6 Basic Python Scripting</h3>
+    <pre>
+Open an Online Python Compiler	Open one of the following online Python compilers in your browser.
+Repl.it
+GDB Online
+Enter Code to Create Random Password Generator	
+Delete any contents in the console pane of the Python compiler.
+Enter the following code into the console pane.
+
+import random
+characters = "abcdefABCDEF1234!@#$"
+
+length = 8
+password = "".join(random.sample(characters, length))
+print(password)
+
+Click the "Run" or "Execute" button above the console pane.
+Notice how a different password is generated each time you execute the code.
+Try changing the number of characters in the password as well as which letter, number, and symbols are utilized to generate the password.
+Enter Code to Simulate Dice Roll	
+Clear the previous code from the Python compiler and input the following. Be sure to use consistent indentation.
+
+import random
+print("Roll the dice!")
+while True:
+	input("Press Enter to roll")
+	roll1 = random.randint(1, 6)
+	roll2 = random.randint(1, 6)
+	print(roll1)
+	print(roll2)
+
+Click the "Run" or "Execute" button above the console pane.
+Notice how two different numbers are displayed each time you press Enter.
+Press the stop button above the console pane to end the program.
+To make sure you understand how this script works, add 2 more dice to the game and try it out.
+Create Your Own Python Script	
+Write a script that can randomly select a classmate for a prize.
+Utilize the random function and the random.randomint() function you used in the dice game to select a random number out of 30 students.
+</pre>
+    <h3>8.4.7 Activity: Basic JavaScript</h3>
+    <pre>
+        Open an Online JavaScript Editor	Open one of the following online JavaScript editors in your browser.
+        W3Schools
+        jsfiddle.net
+        codepen.io
+        Tutorials Point
+        Enter and Run Sample Code	
+        Delete any contents in the left pane of the JavaScript editor.
+        Enter the following code into the left pane.
+        <body>
+            <h1>My JavaScript Button</h1>
+        
+            <script>
+                function celebrate() {
+                  alert("You are coding with JavaScript!");
+                }
+            </script>
+        
+            <button onclick="celebrate()">Click me!</button>
+        </body>
+        Click the "Run Code" or "Preview" button at the top of the left pane.
+        In the right pane, you will see a button that says "Click Here!".
+        If you have entered the code correctly, a pop-up should appear on your screen after you click this button.
+        Click the "OK" Button to close the pop-up window.
+        Modify the Page Style	
+        Enter the following code above the first line (<body>) that you have previously entered.
+        <style>
+            body {
+                background-color: beige;
+                text-align: center;
+                color: chocolate;
+                font-family: Arial;
+            }
+        </style>
+        Click the "Run Code" or "Preview" button at the top of the left pane and see what changes in the right pane.
+        Experiment with changing the colors, alignment, and fonts. What limitations do you find as you try different style options?
+        Customize the Button	
+        Enter the following code just before the line that contains </style>.
+        button {
+            text-align: right;
+            height: 60px;
+            width: 200px;
+            background-color: GoldenRod;
+            border-radius: 10px;
+            border-width: 3px;
+            border-color: SaddleBrown;
+        }
+        
+        button:hover {
+            background-color: DeepPink;
+            cursor: pointer;
+        }
+        What changes do you see?
+        Try changing the different options to customize your button.  
+    </pre>
+    <h2>8.5 Web Development</h2>
+    <pre>
+Frontend Development-	Programming development that creates the things users see and interact with on a website.
+
+Backend Development-	Programming development that handles the behind-the-scenes work of a website that's not apparent to the average user. This includes serving content to users, managing user accounts, and accessing information from databases.
+
+Hypertext Markup Language (HTML)-	A markup language interpreted by web browsers.
+
+Cascading Style Sheet (CSS)-	A file associated with a web page that describes how HTML elements are to be displayed.
+
+JavaScript-	A programming language commonly used to create interactive effects within a web browser.
+    </pre>
+    <h3>8.5.1 Web Programming Overview</h3>
+    Front end and Back end development
+    <br>Front end - make website user friendly and attractive
+    <br>Back end - maintain servers, security,
+    <br> Full Stack - front and back end technology
+    <h3>8.5.2 HTML, CSS, JavaScript</h3>
+    Hypertext Markup Language - HTML - markup language - NOT programming
+    <br>CSS - Cascading Style Sheet -
+    <h3>8.5.3 HTML, CSS, and JavaScript Facts</h3>
+    HTML HTML isn't a programming language, but a markup language. It is used to create the content and structure of a website. It specifies what should be displayed. It works by adding tags to text. The web browser interprets the tags to display the content
+    we see on a webpage. Most tags have two parts, the opening tag that is surrounded by angle brackets (e.g.,
+    <html>), and the closing tag that has angle brackets and a forward slash (e.g.,
+
+    </html>). For example, in an HTML document, if we typed "<strong> "Hello World!"</strong>" and loaded it into a web browser, the browser would display Hello World! in bold letters. Common tags include the following: The
+    <html> tag lets the browser know that it should interpret the document as HTML. The
+
+    <head> tag contains the title of the webpage, links to stylesheets, and metadata to help search engines find the page. The
+
+        <body> tag contains all the elements that will be presented on the screen. The
+            <p> tag formats text as a paragraph. The <a> tag creates a hyperlink.
+The <h1> tag designates text as a first-level heading.
+<pre>
+CSS	While you can use HTML to specify the style of text and images, it's cumbersome and inefficient. CSS gives websites their style (their look and feel). HTML specifies what should appear and CSS determines what it looks like.
+
+On most webpages, the table style, font, margins, and background are all generated by CSS.
+JavaScript	JavaScript makes webpages interactive. JavaScript code tells the browser how to react to user inputs such as dragging the mouse. JavaScript tells the content from HTML and CSS what to do.
+
+As an example, consider the to-do list application below. It has an HTML file to give it structure and a CSS file to give it a style.
+
+However, without JavaScript the app is static; it doesn't do anything. If we click buttons or try to add a new item to the list, nothing happens. Adding JavaScript makes the webpage respond to input from the user such as deleting a task when you click the trash can, allowing users to add new items, and showing the input field when the user clicks the plus icon.
+</pre>
+<h2>8.6 Programming Careers</h2>
+<pre>
+    Application Developer	A person who creates applications for computers and mobile devices.
+    
+    Web Developer	A person who creates websites and other technologies that are delivered through the internet.
+    
+    QA Engineer	A person who makes sure the quality of a finished software application meets the standards of the company.
+    
+    Database Programmer	A person who writes code to design, create, implement, and maintain databases.  
+</pre>
+<h3>8.6.1 Careers in Computer Programming</h3>
+<h3>8.6.2 Computer Career Facts</h3>
+<pre>
+Application Developer-	Application Developers are one of the most common careers in programming. Their job is to create applications for computers and mobile devices. They usually work together in teams, and they create all kinds of software: word processors, games, database systems, graphics programs, web browsers, and much more.
+
+Web Developer-	Web developers create websites and other technologies that are delivered through the Internet. For example, the course you're using right now was created by a highly-qualified team of skilled web developers. There are three main types of web development.
+
+Frontend developers- use HTML, CSS, and JavaScript to create websites. Everything you see when you visit a website was made by a frontend developer.
+
+Backend developers- do the behind-the-scenes coding that you don't see directly. Databases, user accounts, and security are all part of the backend.
+
+Full-stack developers- do both frontend and backend work.
+
+QA Engineer-	Companies hire Quality Assurance or QA Engineers to make sure the quality of the finished product meets the standards of the company. Any time a programmer writes code, there are bound to be a few bugs that pop up. Whenever these bugs make it to the end customer, it hurts the company. QA specialists monitor software development in order to maintain a high quality product.
+
+Database Programmer-	Database programmers write code to design, create, implement, and maintain databases. Since databases store vital information that must be easily accessible and secure, database programmers are vital for most large companies.
+</pre>
+
+
+
+
+</body>
+
+</html>
