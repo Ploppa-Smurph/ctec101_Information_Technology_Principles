@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-101 CyberSecurity wk14</title>
+</head>
+
+<body>
+    <h1>CTEC-101 CyberSecurity wk14</h1>
+    <pre>
+Snooping-	Attempting to secretively discover private information about a person, company, or other entity.
+
+Wiretapping-	A form of eavesdropping that uses programs such as packet sniffers to capture data being transmitted over a network.
+
+Social Engineering-	The use of deception to gain personal and/or private information for unlawful purposes.
+
+Reconnaissance-	The passive gathering of information about a potential victim.
+
+Pretexting-	Tricking a victim into revealing sensitive information under false pretenses.
+
+Email Attack-	Exploiting a victim using email messages.
+
+Browser Attack-	Convincing a victim that they are performing a legitimate task within their web browser window when, in fact, they are being tricked into revealing sensitive information or installing malware on their computer.
+
+Man-in-the-Middle Attack-	An attack where the attacker secretly relays and possibly alters the communications between two parties who believe they are directly communicating with each other.
+
+Replay Attack-	An attempt to connect to a server by capturing and resending authentication information.
+
+Impersonation-	TCP session hacking and other methods where an attacker takes over the communication to a server by appearing to be the victim.
+
+Denial of Service-	An attack that attempts to overload a system so that the services it provides are no longer available to legitimate network clients.
+
+Malware-	Software designed to infiltrate or damage a computer system without the owner's consent or knowledge.
+
+Password Attack-	An event in which a hacker tries to gain access to a secure account, such as an email or bank account, in order to steal personal information.
+
+Identify Theft-	An occurrence in which thieves steal other people's personal and financial information for their own personal gain.
+</pre>
+    <h3>10.2.1 Confidentiality Concerns</h3>
+    Snooping - often an inside problem
+    <br> Wire Tapping - eaves dropping - packet sniffers that intercept data on a wired or wireless network
+    <br> Social Engineering - tricking people to reveal personal information
+    <br>Reconnaissance = shoulder surfing, dumpster diving, eavesdropping
+    <br> Email hoaxes
+    <br> Browser Attack - tricks people into revealing sensitive information by making a website look genuine
+    <br> Pop-Up Attack - part of Browser Attacks
+    <h3>10.2.2 Confidentiality Facts</h3>
+    <pre>
+Snooping-	A technique used to secretively discover private information about a person, company, or other entity. This is often an insider threat within organizations.
+    For example, an employee may look at emails when a computer is left logged in and unattended. Another example is an IT employee who has administrative access looking in confidential employee files.
+
+Wiretapping	A common threat that involves the direct use of technology. In the digital world, wiretapping is a form of eavesdropping that uses programs such as packet sniffers to capture data being transmitted over a network.
+    With the proper tools, unauthorized people can intercept data on either a wired or a wireless network. One of the best ways to protect against wiretapping threats is to use data encryption.
+
+Social engineering-	Techniques that use deception to gain personal and/or private information for unlawful purposes. Be aware that:
+    Attackers are often more successful in obtaining confidential information using social techniques rather than technology, such as wiretapping.
+        Attacks may be done in person, on the phone, in a browser window, or through an email message.
+    Attackers often trick victims into revealing sensitive information.
+    -The internet is a great way to learn about the latest social engineering exploits.
+    It is important to keep the work area physically secure by locking doors and having security keys for authorized personnel.
+    Technological security measures are only partially effective against these types of attacks. The most important thing you can do is to train users to:
+    Be aware of their surroundings when entering pins or passwords.
+    Lock workstations when they walk away from them.
+    Be familiar with the many types of social engineering attacks and how to avoid becoming a victim.
+    Know who they can share information with and who they should not share information with.
+    Know the procedures for confronting unauthorized people in the workplace where security could be compromised.
+
+Reconnaissance-	A type of social engineering exploit that passively gathers information about a potential victim. The goal is to get the information needed to further exploit the victim. Common reconnaissance techniques include the following:
+    -Shoulder surfing is looking over a user's shoulder to obtain for sensitive information displayed on the screen. The attacker can also:
+        Watch keystrokes being typed on a keyboard.
+        Observe a user through a window.
+        Obtain information from video footage or surveillance cameras.
+    -Eavesdropping is overhearing a conversation to obtain sensitive information.
+    -Dumpster diving is searching through trash for discarded documents containing sensitive information.
+
+Pretexting-	A engineering technique that attempts to trick the victim into revealing sensitive information under false pretenses. Pretexting can take many forms such as:
+    Intimidation to frighten a user into revealing information or performing an action. The attacker assumes a false position of authority over the victim and attempts to use intimidation to obtain sensitive information.
+    Familiarity to leverage a supposed friendship to convince the victim to allow access, provide sensitive information, etc. Social validation uses peer pressure to coerce the victim into bending rules or revealing confidential information.
+
+Email attacks-	A form of social engineering that attempt to exploit a victim using email messages. Email attacks may come in the following forms:
+    Phishing emails are crafted to appear as though they were sent from a legitimate organization, such as a bank or an e-commerce website. These emails convince the user to click a link that opens a malicious website where the user is then tricked into providing sensitive information.
+    Spear phishing is a variation of phishing attacks that involves gathering as much information about the victim as possible, such as online bank or credit card company. The attacker then sends phishing emails that appear to be from the trusted bank or credit card company.
+    Scams and hoaxes prey on recipients who are overly-trusting. The attacker tries to trick the user into to doing something such as sending a small amount of money in return for a supposedly greater amount of money later, deleting key system files, or downloading malware.
+
+Browser attacks-	Browser attacks are a type of social engineering. The attacker tries to convince the victim that revealing sensitive information or installing malware on the computer is a legitimate task. Browser-based attacks can take many forms including the following:
+    Pharming redirects web traffic intended for a legitimate site to a malicious site that looks identical to the legitimate website. Once there, the victim is tricked into supplying sensitive information, such as usernames, passwords, bank account numbers, or credit card numbers.
+    Rogue anti-virus attacks employ a pop-up browser window that tells the user the computer is infected with a virus and to click a link to clean it. Sometimes this exploit merely tricks users into paying for worthless software they don't need. However, it is also frequently used to install malware on the victim's computer.
+</pre>
+    <h3>10.2.3 Integrity Concerns</h3>
+    Man-in-the-middle (On-Path Attack): intercept data between server and client
+    <br>Replay Attack: sniffs packet trying to get authentication. hacker then tries to log into server with client's captured credentials.
+    <br>Impersonation: TCP hijacking - you gain control of the host and logically disconnect. then you cut off the client and pretend to be the client.
+    <br>there is an HTTP Cookie hijack, also.
+    <br>Impersonation is also called 'Session Hijacking'
+    <h3>10.2.4 Integrity Facts</h3>
+    <pre>
+On-path attack-	An on-path attack (also known as a man-in-the-middle attack) is a real-time attack on a live network connection. In this type of attack, a hacker intercepts communication between a client and a server. The hacker's computer impersonates the server to the client. At the same, the hacker impersonates the client to the server. The hacker can then intercept and modify the data in transit. With the right software and the right vulnerabilities, this attack is quite easy to perform.
+    On-path attacks are commonly used to steal credit cards, online bank credentials, and other confidential information. On-path attacks are often able to capture data being sent in plain or clear text (text that has not been encrypted). Encrypted text is known as cipher text. The process or algorithm used to encrypt/decrypt the cipher text is known as the cipher.
+
+Replay attacks-	In a replay attack, a hacker sniffs the packets between a client and a server in hopes of obtaining authentication information. When the client and server are no longer communicating, the hacker resends the captured authentication material and tries to connect to the server.
+    The server thinks the hacker's computer is the original client and accepts the connection. In this case, the hacker doesn't have to decrypt the captured authentication information, only submit the still-encrypted credentials. After authenticating to the system, the hacker gains access to the victim's resources or data.
+
+Impersonation-	The term impersonation usually refers to a social engineering tactic where a hacker pretends to be a member of senior management who is authorized to gain access to a system. In hacking technology, it can also refer to hijacking a networking session and masquerading as another identity.
+    For example, in a TCP session hijacking, the attacker gains access to a host on the network and logically disconnects the client; the hacker then pretends to be the client. The concept of session hijacking can also be used with an HTTP session. For example, the hacker could hijack cookies from a web browser. To the web server, the hacker appears to be the original web client and takes over the original HTTP session that's already been initiated.
+    If an attacker captures a user's username and password through social engineering or other means, the attacker could impersonate the user by logging into the user's account with the captured authentication credentials.
+
+Unauthorized changes-	On-path attacks, replay attacks, and session hijacking are often used to gain unauthorized access to a system. With system access, hackers can steal even more confidential information. They can also alter or corrupt data. Cyber criminals often launch destructive malware attacks that compromise data integrity and disrupt communication networks.
+</pre>
+    <h3>10.2.5 Availability Concerns</h3>
+    Data needs to be available.
+    <br>Denial of Service Attack: DOS attack attackers overload a server with bogus request so real transactions cannot occur.
+    <br> Distributed Denial of Service Attack: a 'Zombie Master' (or 'Bot Herder') uses bot malware to increase the impact of the attack. the Zombie Master uses malware infected machines to each launch DOS attacks. the infected machines are know as 'Zombies'
+    <br>Power Outages - you need a UPS or Uninterrupted Power Supply
+    <br>Hardware Failure - RAIDS -
+    <br>Data Destruction - accidental or intentional
+    <br>Service Outage - Cloud systems sometimes go down -- keep offline copies of important files
+    <h3>10.2.6 Availability Facts</h3>
+    <pre>
+Denial of service (DOS)-	The goal of a denial of service attack is to overload a system so that the services it provides are no longer available to legitimate network clients. To understand how these attacks work, consider a simple analogy. Suppose you went to the bank to deposit a check. When you get to the bank, you find that the lobby is filled with people and you're unable to get inside. None of the people inside the bank are bank customers. They're there only to disrupt the bank's ability to service customers.
+    This is similar to how a denial of service attack occurs. For example, let's say your company has a web server that provides driver downloads to customers. With a denial of service attack, the attacker overloads the server with false requests to the point that legitimate requests can't be processed. In some cases, a denial of service attack may even exploit a flaw in the operating system of the web server that can cause it to reboot or crash.
+        -A variation of this type of attack is called a distributed denial of service attack (DDOS). In this case, the attacker uses bot malware to enlist multiple systems to increase the magnitude of the attack. The compromised systems, called zombies, are infected with malware that allows them to be remotely manipulated by an attacker who's often called a zombie master.
+
+Power outage-	We all know that without electricity, computer systems won't work. A bigger concern is that when a computer system loses power abruptly, it can corrupt and lose data.
+    This is why critical systems such as database servers and web servers should be equipped with an uninterruptible power supply (UPS). These systems provide a temporary power source during an outage that gives the system enough time to shut down cleanly without data loss or corruption.
+
+Hardware failure-	Hardware failures can occur for many reasons, such as power surges, power spikes, overheating, and dust accumulation. While some of these causes can be prevented, computer components such as hard disks will eventually fail.
+    To maintain access to data on critical systems, most businesses maintain redundant copies of data on separate disks.
+
+Data destruction-	System administrators are often responsible for the disposal and destruction of sensitive data stored on old hard disks. This is particularly important when storage devices leave an organization.
+    However, data destruction can also occur for malicious or accidental reasons. Natural disasters, acts of terrorism, and accidental coffee spills can all harm computer components and destroy data. To prepare for these events, businesses should store regular backups of data in different locations.
+
+Service outage-	As businesses rely more and more on cloud hosting solutions for their products and services, their productivity depends on the reliability and quality of their internet connection. However, even if the internet is up and running, employees may not be able to access their files when the cloud service is down.
+    Google, Amazon, Microsoft, and other cloud hosting businesses work hard to avoid any downtime, but there will always be short periods of hardware or software failure. For this reason, businesses should keep offline copies of any critically important files or applications.
+</pre>
+    <h3>10.2.7 Digital Privacy</h3>
+    Communication Services - Email, Social Media, File Sharing Services, etc... they will each have privacy settings
+    <br>Metadata is information about the information - include where and when you use a service, the language, type of device
+    <br> Privacy at Work - companies can see what you do
+    <h3>10.2.8 Digital Privacy Facts</h3>
+    <pre>
+Social media and email-	Social media, email, instant messaging, and file sharing services generally have controls that let users decide what information is available to which people. For example, a social media user may want text posts to be visible to the general public, but only allow friends to view their pictures, and not let anyone see the phone number and email address.
+    However, anyone who uses online services should be aware that any information they share will likely be made available to third parties, including advertising and marketing firms, government institutions, and others who are interested in analyzing big data.
+
+Marketing metadata-	It's important to understand that when you signed up for your social media or email account, you agreed to that company's terms of use. Facebook, Instagram, and Gmail don't provide their services for free because they're nice; they do it because they want to make a profit.
+    These companies make profits by extracting metadata from information they process on your behalf. Metadata (information about information) can include where and when you use the service, the language you use, the sites you access, keywords from your posts and messages, the kind of device you're using, etc. These companies analyze the data and use it for marketing and advertising. They can also sell their metadata to other companies.
+
+Secure transactions-	Entering personal information or conducting financial transactions online is convenient and efficient. However, consumers need to adopt safeguards to protect themselves against identity theft and fraud.
+    Safeguards include sharing a mobile device only with people you trust, never using public Wi-Fi to conduct ecommerce, using strong account passwords, verifying that all online transactions are conducted using data encryption (HTTPS), and conducting ecommerce transactions only with businesses you trust.
+
+Internet usage monitoring-	Some employees may think that access to the internet at work should be completely unrestricted. However, this isn't the case. Consider that the company owns or pays for the computers, the network infrastructure, and the internet connection, not to mention the time of the employee.
+    Because inappropriate computer use can be a huge liability for a company, most companies require employees to agree to an acceptable use policy (AUP) or a fair use policy. These types of policies specify exactly what can be done with such things as the corporate network, website, computer/systems, and facilities.
+        The content of these policies vary depending on the organization. For example, nearly all companies prohibit employees from accessing adult content or engaging in illegal activities. Some policies restrict personal computer use to designated break times, and others prohibit it altogether.
+        In addition, some companies use these policies to specify the type of hardware or software that can be installed on the employee's company computer. While companies are within their rights to impose any restrictions, most recognize that being too restrictive tends to drive employees away.
+        Another issue is any communications made through a company's network, including private email, may be stored and monitored. Therefore, employees should exercise judgment and caution when using company computers for personal use, even when such use is allowed by the acceptable use policy.
+        Employees often bring their own devices (laptops, tablets, and phone )to the workplace. The employer has the right to expect employees to follow rules of behavior. These rules should be implemented to protect the network and the organization as each device brought in increases the vulnerability of the network.
+
+Data protection-	To improve the security of sensitive information on your device if it is lost or stolen, you should consider the following:
+    -Remote wipeThis feature allows you to send a command to your mobile device to delete data. It can keep sensitive information from falling into the wrong hands.
+    -Screen lockWhile determined hackers can find ways around a screen lock, having a lock will keep casual users from getting access to your device.
+    -Locator appLocator applications might help you find a misplaced device before a determined hacker does. Turning off locations services does not improve your device's security and it will make it harder to find your device if you lose it.
+        -To avoid having your mobile device exploited by a hacker or infected by a virus, you should consider the following:
+    -Operating system updatesKeeping the operating systems up to date with the latest updates and patches ensures you have fixes for known security issues.
+    -Device authenticationIt's important to configure your screen lock to require some sort of authentication to physically access your device.
+    -Anti-malwareAnti-virus apps can protect your device. Make sure to research, find, and install the most effective ones.
+
+Workplace surveillance-	Employers may implement guidelines and methods to monitor many aspects of the workplace.
+    This type of workplace surveillance is often classified as follows:
+        -Physical monitoringPhysical monitoring is often used to monitor the physical whereabouts of employees while on company property. This usually done with some type of camera (CCTV). This helps ensure the security of not only the company's assets but can also help in protecting the employees. In addition, some companies may have requirements for alcohol and drug testing.
+        -Security assuranceSecurity assurance polices allow companies to monitor the type of data employees send to ensure that they are not divulging confidential information or are compromising the company's security.
+        -Monitoring dataTo gain an understanding of an employee's productivity, some companies monitor and analyze data communication, such as the duration of phone calls made.
+</pre>
+    <h3>10.2.9 Malware Types</h3>
+    software designed to harm a computer system without a users knowledge or consent.
+    <br>Virus - scan and keep definitions up to date; real time protection
+    <br>Worm - can propagate itself
+    <br>Trojan - seems like a legit piece of software - can cause a lot of damage -- sometimes used to make a 'zombie' in DDOS attack
+    <br>Spyware - intercept data or assume partial control over a system - can install additional software
+    <br>Adware - plays and displays ads to users - spies on browsing history
+    <br> Be certain to install Anti-Malware software and update regularly
+    <h3>10.2.10 Password Attacks</h3>
+    <b>Dictionary Attack</b> - use a 'dictionary' of common words and word combinations to try and guess the password
+    <br><img src="./img/t_itf2_passwordattacks_img1.jpg" alt="Dictionary Attack" width="40%">
+    <br> A Dictionary attack can be used to uncover a decryption key so that encrypted data can be decrypted.
+    <br><br> <b>Brute Force</b> - where attacker tries to use every possible combination of letters and numbers until they find the password - require a great deal of computing power
+    <br><img src="./img/t_itf2_passwordattacks_img2.jpg" alt="Brute Force" width="40%">
+    <br><br><b>Traffic-Interruption</b> - attack uses sotware to interrupt the network traffic and intercept passwords as they're passed between computers.
+    <br><b>Man-in-the-middle (MITM) attack</b> - hacker impersonates website or app to convince someone to enter their password
+    <br><b>keylogger attack</b> - software is installed on a system that record's keystrokes
+    <br><br><b>Social Engineering Attacks</b>
+    <h3>10.2.11 Identity Theft</h3>
+    Identity theft is stealing someones PII (Personally Identifiable Information)
+    <br> Identity Fraud = is using that information for illicit gain.
+    <h3>10.2.12 Recognizing Social Engineering Exploits</h3>
+    <h2>10.3 Authentication</h2>Authentication, Authorization, and Accounting = AAA
+    <pre>
+Type 1 Authentication-	A type of authentication that requires the user to provide something that they know, such as a password or PIN.
+
+Type 2 Authentication-	A type of authentication that requires the user to provide something that they have, such as a key fob, electronic chip, or smart card.
+
+Type 3 Authentication-	A type of authentication that requires the user to provide something that they are, such as a fingerprint, handprint, retinal pattern, face, or voice.
+
+Multifactor Authentication-	Authentication that requires two or more evidences of authentication, usually of different types.
+
+Single Sign-on-	A method of authenticating with one system to gain access to other related systems.
+
+Discretionary Access Control (DAC)-	A type of access control where a user has complete control over a resource, and also determines the permissions other users have to those resources.
+
+Role-based Access Control (RBAC)-	A type of access control that restricts access based on the user's role in an organization.
+
+Mandatory Access Control (MAC)-	A type of access control that historically was associated with multilevel security and military systems and may use a security clearance to restrict access to resources. The security manager controls the security policy, and users aren't able to override the policy.
+
+Accounting-	The process of keeping track of user activity while attached to a system.
+
+Logging-	The capturing and storing of computer and user events.
+
+Non-repudiation-	The ability to ensure that someone can't deny that they performed a certain act.
+</pre>
+    <h3>10.3.1 Authentication</h3>
+    proving you are who you say you are. Type 1 - something you know; Type 2 - something you have; Type 3 - something you are.
+    <br><b>Type 1</b> - pattern, password, PIN
+    <br><b>Type 2</b> - Key, Fob, Electronic Chip, Smart Card - more secure than Type 1 - harder and more expensive to implement
+    <br><b>Type 3</b> - Fingerprint, Handprint, BioMetrics - More secure than Type 1 or Type 2
+    <br><b>Multifactor Authentication</b> - authenticate yourself with more than 1 Type
+    <br><b>Single-Sign-On</b> - by authenticating 1 time you have access to sites, email, youtube
+    <h3>10.3.2 Authentication Facts</h3>
+    <pre>
+    
+Type 1 authentication-	Type 1 authentication is something you know. It is the most common authentication type. If you're reading this lesson, you used type 1 authentication when you logged into the TestOut account. When you enter an account password, the system can be reasonably sure you are who you claim to be. Other kinds of type 1 authentication are:
+        Personal identification numbers (PINs)—single-use passwords, and answers to security questions. This kind of information is known as personally identifiable information (PII).
+        Passphrase—some programs require a group of words, rather than a single-word password. This adds complexity to the authentication. Therefore, it is more secure than a password.
+        Pattern lock—many smart phones have the user authenticate by drawing a specific pattern on the screen.
+    Type 1 authentication is cheap and easy to implement. The downside is that it's also easy to dupe. If the password, passphrase, pattern, etc., is compromised, someone can easily authenticate into the account.
+
+Type 2 authentication-	Type 2 authentication is something you have. Examples of type 2 factors are:
+        Keys.
+        Hardware tokens such as fmaobs, electronic chips, and smart cards.
+        Physical location. For example, you can set your smartphone to unlock automatically if it's inside your home.
+        Software tokens. Software tokens are typically used as part of a two-factored authentication process.
+            Software tokens are stored on a device such as a desktop computer, laptop, PDA, or cell phone and can be duplicated. Typically, when accessing a system that uses software tokens, you enter your user name and password. Then, you enter the soft token that is sent to you in a text message or email.
+        An app can also be installed on a device such as your cell phone. The app constantly sends soft tokens that are timed with the system you are trying to connect to.
+            One time password (OTP). This is a password that is generated, sent, and used for only one session. It is a randomly generated value. It eliminates the password being guessed, cracked or discovered. The risk is that these OTPs are vulnerable to interception.
+    Type 2 authentication is more secure than type 1. Someone would need to physically steal or copy your authentication token to impersonate you. The downside is that it's more difficult and expensive to implement.
+
+Type 3 authentication-	Type 3 authentication is something you are. Computers can use biometric scanners to measure unique aspects of your physical body, such as your fingerprints, handprints, retinal patterns, face, or voice.
+    Type 3 authentication is more secure than type 1 or type 2. The downside is that it's more difficult and expensive to implement.If you have a fingerprint scanner on your phone, that's type 3. Type 3 authentication is the most expensive authentication type to implement and the hardest to dupe.
+
+Multifactor authentication-	Systems and accounts that need extra security often require multifactor authentication, generally from two or more types. This means you must authenticate yourself two or more times to gain access to a system. A common example is to require a type 1 password and a type 2 smart card.
+
+Single sign-on-	Single sign-on (SSO) is a method that allows you to log into one system and have access to other related systems. A common example of SSO is Google services. By authenticating one time, you gain access to your Gmail, YouTube, and Google Drive accounts.
+</pre>
+    <h3>10.3.3 Authorization</h3>
+    Process of deciding what a user can do after being authenticated. kept on ACL (Access Control List).
+    <br><b>DAC (Discrete Access Control)</b> - the owner (or creator of the list) is the only one that has Full Access Rights. ex: google docs
+    <br>next 2 are 'Rules based' the modify the ACL based on established rules
+    <br><b>Role-based Access Control (RBAC)</b> - grants access based on assigned role; ex: TestOut - Students can access the course, Teachers can access all students in their course, Administrators can access all Students and Teachers under them.
+    <br><b>Mandatory Access Control (MAC)</b> - each object in the system is given a numeric value and each member is assigned a security level - they can access anything equal to their current level. -- ex: government and military
+    <h3>10.3.4 Authorization Facts</h3>
+    <pre>
+Discretionary access control (DAC)-	Emphasizes the importance of the owner (creator) of a resource. The owner:
+    Is the only person with full access rights to the resource.
+    Can modify the ACL to allow others to view, edit, or copy.
+    Can also transfer ownership to another user.
+        Google Docs is an example of the DAC model. When you create a Google doc, you specify the permission others have for the document.
+
+Role-based access control (RBAC)-	Modifies the ACL based on pre-configured rules. Role-based access control systems grant permissions to users based on each user's role. For example, in this course:
+    As student user, you have permission to view course resources, such as videos, labs, and text lessons. You also have permission to view your own gradebook. However, you don't have permission to view your classmates' grades or make direct changes to the gradebook.
+    Teachers have the same permissions as students, plus the ability to view and edit the grades of students in their classes. However, they can't access grades of students in other teachers' classes.
+    Administrators can view and edit the grades for every student at the school, regardless of who the teacher is.
+        In each case, the user's permissions are determined by the user's role.
+
+Mandatory access control (MAC)-	Uses security clearance levels to specify the users who can access designated resources. It is also a rule-based control system. Mandatory access control is often used by governments and militaries. In this model:
+    Each resource in a system is given a numeric clearance level, as is each user.
+    The more sensitive the data, the higher its level.
+    To access a given resource on the system, a user must have a clearance level equal to or higher than the level of the resource.
+        Mandatory access control is an example of least privilege. Each user is given only the permissions required for assigned tasks.
+</pre>
+    <h3>10.3.5 Accounting</h3>
+    in an Access Control Framework - Accounting is keeping up with who is doing what on the system. If something goes wrong it is vital to security and determining problems.
+    <br>Accounting is the Logging of Events
+    <br><b>Events</b> are things such as users signing in or out, accessing or modification of files
+    <br><b>Logging</b> is keeping a detailed list of each event. - it will note the date, username, computer id, log in time, and log out time
+    <br>another important aspect of logging is <b>Non-Repudiation</b> - taking methods to prove someone did a crime - things like setting up cameras for video; another was is by using Type 3 authentication (Biometrics)
+    <h3>10.3.6 Accounting Facts</h3>
+    <pre>
+        Logging-	At its core, accounting is simply the logging of events. To understand this, you must understand two terms: events and logging. An event can be just about anything that happens on a computer. A user signing in or signing out; accessing or modifying a file; and visiting a website are all commonly used as accounting events.
+            Logging is keeping a detailed list of each event. For example, whenever a user signs into a computer, the log will record the user's name, the computer the user accessed, the date and time of the login, and how long the user stayed signed in. Another example is the log of websites visited by the user in the web browser's history tab.
+        
+        Non-repudiation-	If someone is caught trespassing on a network or stealing data, the person will probably deny it. Non-repudiation is taking measures to verify the identity of someone performing an action.
+            One of the most common non-repudiation techniques is to set up surveillance cameras. Video is commonly used for identification. Another non-repudiation measure is to implement strong authentication protocols.
+            Because type 3 biometric factors such as fingerprints and retinal scans are hard to duplicate, they provide strong evidence that an account was being used by its proper owner and not by another person.
+                Two more examples are signatures and receipts. Having a physical or even a digital signature can provide proof that someone created a file or approved an action or document. A receipt for a product or a service can provide proof that a person was intentionally involved in the transaction.
+</pre>
+    <h3>10.3.7 Create a User Account</h3>
+    <h3>10.3.9 Configure iPad Access Control and Authentication</h3>
+    <h2>10.4 </h2>
+
+
+</body>
+
+</html>
