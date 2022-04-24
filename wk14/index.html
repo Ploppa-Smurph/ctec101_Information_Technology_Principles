@@ -295,7 +295,533 @@ Mandatory access control (MAC)-	Uses security clearance levels to specify the us
 </pre>
     <h3>10.3.7 Create a User Account</h3>
     <h3>10.3.9 Configure iPad Access Control and Authentication</h3>
-    <h2>10.4 </h2>
+    <h2>10.4 Data Encryption</h2>
+    <pre>
+Data Encryption-	The process of encoding or translating data into another form so that only the intended recipient can decrypt and read the data.
+
+Caesar Cipher-	An early example of encryption used by Julius Caesar to send confidential military messages.
+
+Data at Rest-	Data in a persistent storage medium, such as a hard drive or optical disc.
+
+Data in Transit-	Data that are being transported from one device to another, whether by radio, electrical, or light signals.
+
+Symmetric Encryption-	A form of encryption that uses only one key to encrypt and decrypt a file. This is a less secure form of encryption.
+
+Asymmetric Encryption-	A form of encryption in which both parties involved have a public key and a private key. By using complex mathematical formulas, the computer generates the keys in a way that any file encrypted with the public key can only be decrypted by the private key.
+
+Security Certificate-	A way for two computers to verify their identity before they exchange information.
+    </pre>
+    <h3>10.4.1 Encryption</h3>
+    DES encryption uses 56 bit encryption
+    <br>AES encryption is 256 bit encryption
+    <h3>10.4.2 Encryption Facts</h3>
+    <pre>
+The Caesar cipher-	One of the earliest examples of encryption was the Caesar cipher, which was used by Julius Caesar to send confidential military messages. The cipher worked by substituting each letter for the one that comes three letters later. A became D, B became E, and so on. Even if the message was intercepted, the enemy couldn't read it. Only Caesar's generals, who knew the key, could decrypt and understand his messages.
+    The Caesar cipher is a good model for what happens in modern encryption. Plain text is encrypted using a key and only people who have the key can decrypt it.
+
+Data at rest-	Digital data is generally in one of two states: at rest or in transit. Data at rest is data in a persistent storage medium, such as a hard drive or optical disc. Examples of data at rest include data found on files, disks, or mobile devices.
+    Data at rest can be encrypted, either within specific files and folders, or the entire storage medium (full disk encryption).
+
+Data in transit-	Data in transit are data that is being transported from one device to another, whether by radio, electrical, or light signals. Examples of data in transit include email, Hypertext Transfer Protocol Secure (HTTPS) used to encrypt Web pages, a virtual private network (VPN), or mobile applications.
+    Data in transit can also be encrypted.
+
+Encryption standards-	Whenever you send information from one computer to another, there is an opportunity for a third party to intercept the signal. This is a major concern because private information can be used to steal a person's money, impersonate identity, etc.
+    Encryption algorithms scramble signals to make them unreadable to anyone who doesn't have the correct key to unscramble them. Even if a criminal intercepts an encrypted signal, the data will be useless.
+        One way an attacker can try to find a key is by brute force. This means trying every possible key, one at a time, until one of them works.
+    --In 1977, IBM developed the Data Encryption Standard (DES). DES encryption used 56-bit binary keys. Each key could be one of 72 quadrillion possible values. DES worked fine for several years, but by the late '90s computers had become so powerful that a brute force attack on a DES key would take a few days.
+    --In 2001, the Advanced Encryption Standard (AES) was created. AES keys can be up to 256 bits long, which would take a modern computer trillions of years to brute force.
+
+Wi-Fi encryption-	Wireless network routers often support different encryption protocol standards. For the highest level of Wi-Fi security, use Wi-Fi Protected Access 2 (WPA2). WPA2 has replaced WPA and Wired Equivalent Privacy (WEP).
+    In addition to using the latest wireless encryption method, be sure to use a strong network password and ensure that your wireless router has the latest firmware updates installed.
+        Do not use the WEP standard, which is vulnerable to even the most novice hackers.
+
+Email encryption-	S/MIME (Secure/Multipurpose Internet Mail Extensions) is a protocol used to encrypt emails. It allows the sender to digitally sign and encrypt emails.
+    An encrypted email server will encrypt email communications between the server and an email client but will store the email in an unencrypted form. A proper certificate must be used to encrypt and decrypt S/MIME emails.
+
+HTTPS-	Information is transferred on the World Wide Web using the HTTP protocol. However, HTTP transfers data as plain text with no encryption. To add encryption, websites use a protocol called SSL. When combined, HTTP and SSL make HTTPS, which both transmits and encrypts data.
+</pre>
+    <h3>10.4.3 Asymmetric Encryption</h3>
+    Both parties need a public and private key -- more secure. Send a message with the receiver's public key and they use their private key to unlock.
+    <br>They in turn send you a message with YOUR public key and then you use your private key to unlock it.
+
+    <h3>10.4.4 Certificates</h3>
+    Security Certificate is a way for 2 computers to verify they are who they are before exchanging data
+    <br> after the certificate is approved the computer and server complete a 'Handshake'.
+    <br>Certificates are issued by the Certificate Authority and they validate a website.
+    <h3>Configure File Encryption</h3>
+    <h2>10.5 Device Security</h2>
+    <pre>
+        Device Password-	A method of protecting a computer device from unauthorized access by forcing users to log in before using the system.
+        
+        Firewall-	A device that controls the flow of network traffic to protect systems from unauthorized network connections.
+        
+        Anti-Malware Software-	Software that helps protect against malicious software infections.
+        
+        Anti-Spam Software	Software that helps remove unwanted, unsolicited email.
+        
+        Ecommerce-	The buying and selling of products or services electronically, typically through the internet.
+        
+        Data Destruction Policy-	Directions for disposing computer devices and destroying data when it's no longer needed or when a storage device needs to be replaced.
+        
+        Windows Defender-	Anti-malware software that is installed and configured by default on Windows systems.
+        
+        Windows Firewall-	A host-based firewall installed by default with Windows that loads every time the computer starts up.  
+</pre>
+    <h3>10.5.1 Password Best Practices</h3>
+    keep your password secret! -- never share your password - 16 or more characters include letters, #s and symbols
+    <br> password manager
+    <br> account policy for a business - group policies -- in the Local Group Policy Editor we can Enforce password history, set a Max password age, a Min password age and other parameters
+    <br>Account Lockout Policy can also be configured -
+    <br> most websites have a reset password option.
+    <h3>10.5.2 Password Facts </h3>
+    <pre>
+Password habits-	With your password, attackers can take your money, steal your private information, and even commit crimes while pretending to be you. Because of this, it is vital that you adhere to the following good password habits.
+    Keep your password secret. Never write it down, and never send it in an email. If a customer support representative asks you to send your password through an email, chat, or phone call, they're most likely a criminal trying to scam you. If you must share your password, share only it with a person you completely trust, such as a spouse.
+        -Choose a secure password. A good password should be 16 or more characters and contain a combination of letters, numbers, and symbols. Also, choose a password that would be difficult to guess. Birthdays, anniversaries, and names of family members are poor choices for passwords. Do not use the word password as your password.
+    -Use a unique password for every account you have. If you use the same password for multiple services or sites, a data breach at one will compromise your security at all of them.
+        -Never enter your password into an unencrypted website. If you do, it will be sent as plain text and someone could intercept the signal and learn your password.
+
+Password managers-	Because most users have dozens of accounts for applications and websites, many people choose to use a password manager.
+    Password managers are installed as an app or a web browser extension that's accessed with a master password. The password manager generates and encrypts passwords for all of your individual accounts.
+        Most password managers are safer and more secure than storing a list of usernames and passwords. It is much better than using the same password for multiple accounts. The main risk with password managers is if the master password is somehow compromised, all accounts can be accessed.
+
+Group password policies-	Most companies use a configuration setting called an account policy to encourage employees to choose secure passwords. Account policies can be configured on individual computers or they can be grouped together and stored on a network domain as a group policy. Group policies can be applied to any account that logs into the domain.
+    The following are a few local account policy settings that you can enforce on Windows:
+        Password history is a setting that is designed to keep people from reusing old passwords. With password history enabled, you can choose from 1 to 24 passwords for the system to remember. A value of 24 means that the user has to use 24 unique passwords before being allowed to reuse a previously used password.
+        Maximum password age is a setting that determines the number of times a password is valid before it expires and the user is forced to change it. A typical value for this setting is 90 days.
+        Minimum password age is a setting that prevents users from reverting to old passwords immediately after changing a password. This is usually set to one day.
+        Minimum password length can be set from zero to 14 characters.
+        Password complexity is a setting that makes sure a password isn't too easy. Complexity requires that the password doesn't include a user's account name and that it includes a combination of lower- and upper-case letters; numbers; and non-alphabetic characters such $,%,$,#, etc.
+        Storing passwords using reversible encryption is a feature that should be disabled. Enabling it can allow certain applications to store passwords as plain text. This would make user accounts much less secure.
+
+Account lockout policies-	Account lockout policies are settings that protect an account if users fail to authenticate successfully after a certain number of attempts.
+    For example, an account lockout threshold is set to six invalid logon attempts. After six incorrect passwords, the user is locked out of the account. The purpose of account lockout policies is to prevent hackers from trying to guess someone's password and gain access to the system.
+        Since it's common for users to forget passwords, administrators often need to unlock user accounts, typically by resetting the password.
+    Account lockout policies can also include an account lockout duration and lockout counter reset time. This means that if an administrator is not available to unlock an account, a user can wait a certain amount of time before trying again.
+
+Password reset options-	Website accounts are often set up with a built-in password reset option. This allows users to reset the password. To verify identity, a user must either answer security questions, such as mother's maiden name, or enter a security code that's sent to a cell phone or to an email address.
+    When a password is reset, a user is typically notified by email to make sure the resetting was intentional.
+        -Passphrases	Passphrases are best when they use:
+        --Random wordsAlthough a passphrase can be as simple as, I love music because it makes me happy. It is best if the phrase is combination of common words, but not necessarily a flowing sentence. For example, music Meat moonbeam tomato. The longer the password or passphrase is, the harder it will be to guess.
+        ---SymbolsAdding symbols such as @#! to the passphrase makes it that much more difficult to guess or crack.
+        ----SpacesOne of the main differences between passwords and passphrases is that passphrases can include spaces in between the words in the passphrase, again making it that much more difficult to guess or crack.
+</pre>
+    <h3>10.5.5 Securing Devices</h3>
+    Personal info on computers are prime targets for hacking.
+    <ul>
+        <li>Device Passwords: change the default password</li>
+        <li>Firewalls: control the flow of network traffic - configures what is allowed and not allowed. Network or Host Firewalls -- most networks use both</li>
+        <li>Anti-Malware: virus, worms, trojans, spyware, adware</li>
+        <li>Spam Filters: anti-virus spam filtering</li>
+        <li>Data Destruction: dispose of Data before getting rid of computer or devices</li>
+    </ul>
+    <h3>10.5.6 Securing Devices Facts</h3>
+    <pre>
+Device passwords-	Wireless access points, routers, and other devices often ship with a default password that an attacker can easily find on the internet. For this reason, it's important to change the default password to something secure.
+    Computing devices such as laptops and smartphones typically give the option of using the device without a password or using another authentication method. While it's convenient to use devices without security, it's a really bad idea. If you lose the device, sensitive data could immediately be in the hands of a stranger.
+
+Firewalls-	Firewalls control the flow of network traffic and protect systems from unauthorized network connections. They're configured with a set of rules that define what kind of traffic is allowed and not allowed.
+    For example, if a malicious user on the internet tries to establish a connection to a computer, the firewall identifies it as a violation and blocks the connection. There are two general types of firewalls:
+        Network firewalls are configured at the border of the network, where it connects to the internet. By placing a firewall in this location, it can protect an entire network. Proxy servers can be configured as network firewalls as well.
+        Host firewalls are installed on individual computer systems and protect only that system. For those who run a Windows system, Windows Defender Firewall is enabled by default. There are many third-party host firewalls available as well.
+            To avoid conflicts, be sure to uninstall Windows Defender Firewall if you choose a third-party firewall.
+    Typically, most networks use both types of firewalls. Network firewalls must be purchased and manually installed. Host-based firewalls are usually installed and enabled by default on most computer systems.
+
+Data encryption-	Data encryption is the process of translating data into an unreadable form that can deciphered only with a secret key. Windows 10, for example, can encrypt your entire device. This is a form of data encryption at rest.
+    Other technologies provide the ability to encrypt the data when it is being sent to another device, typically over the internet.
+
+Backups-	Making a copy of your data, typically on a separate device, is another way to protect your data. This copied data is known as a backup.
+    Having a backup of your data means that if your data is corrupted, you haven't lost your data. You can retrieve the data from the backup.
+
+Anti-malware-	Anti-malware software should be installed on computer systems to detect and prevent malware infections. Malware includes several types of malicious software:
+    Viruses that attach to files and spread when the files are opened.
+        Worms that infect systems and spread automatically through the network.
+    Trojan horse programs that appear to be useful programs but secretly install malware without your knowledge.
+        Spyware that tracks your computer or browser activity.
+    Adware that displays unwanted pop-up advertisements.
+        --Starting with Windows 7 and later, anti-malware software called Windows Defender is installed and enabled by default on Windows systems. You can also install third-party anti-malware packages.
+
+            You can have only one anti-malware package installed on a computer at a time.
+            If you install a package and later choose a different one, be sure to uninstall the existing package before installing the new one.
+            --Anti-malware works as follows:
+                Viruses and malware are identified by signatures or definitions.
+                Attacks, including new attacks, are added to the software's database of viruses and malware.
+                The software searches the computer for these signatures.
+                The anti-malware software needs to be updated regularly. It can recognize the infection on a computer only if the software is current.
+                You can be proactive in preventing malware by taking the following actions:
+                Regularly scan for malware.
+                Avoid logging on with administrative privileges unless necessary.
+                Exercise caution when opening file attachments, downloading files from the internet, installing new software, and clicking links in emails.
+                Set your anti-malware software to automatically scan your network on a regular basis. Sometimes malware can come from an infected machine in the network.
+                A few signs to watch for that can indicate your system has been infected with malware are:
+                    Pop-ups show up in your browser and all the sites you visit.
+                Sluggish processing time for websites to load or processing activities to complete.
+                The system repeatedly crashes.
+                A different toolbar displays. Sometime extra toolbars display.
+                The default web browser has changed. You may get suspicious search results.
+                Banner ads (third-party advertisements) display across the screen, often on multiple pages and often advertising free bogus security software programs.
+                Redirection to a website different than the one you specified. It usually displays advertising, but could also attempt to capture authentication credentials.
+                When an infected file is detected, the anti-malware software is usually good at taking care of the problem. You can manually configure the actions you want the software to take in the event of a detected infection. You can have:
+                The infection removed through cleaning.
+                    The infected file quarantined by blocking the file from being opened.
+                The infected file erased.   
+
+Anti-spam-	Spam is unwanted, unsolicited email that's sent to an email account. Key points are:
+    Spam often carries viruses, advertisements for questionable products, and phishing attacks.
+        Opening an attachment can execute a malicious file that infects your computer.
+        Clicking a hyperlink in the message can take you to a malicious website.
+        Some anti-malware software can block spam for you, but some can't. If your package doesn't, consider installing additional anti-spam software or switching to an anti-malware package does block spam.
+        Although some spam is merely annoying; it does use processing resources.
+
+Data destruction-	When computers wear out or become obsolete, they're typically replaced with newer systems. System disposal can present a security risk. You must dispose of computers in a manner that prevents sensitive data from being exposed.
+    If you're selling or recycling a computer, use a special utility to wipe the hard disk drive clean. Deleting the files is insufficient. The data still remains on the drive and can be easily reconstructed by someone with the right skills.
+        Disk wiping software overwrites the hard drive with random data, obliterating any old data that's still on the drive. If you're disposing of a computer, consider destroying the hard disk to make the data it contains inaccessible.
+
+Updates and patches-	A best practice is to update or patch your computer on a regular basis. This helps to protect the devices from being exploited by the latest types of attacks.
+    Patches and updates are needed for the operating systems, software, and even firmware. These patches can also help prevent zero day attacks, which are attacks that exploit a vulnerability in software before developers discover the vulnerability and patch it.
+</pre>
+    <h3>10.5.9 Ecommerce Safeguards</h3>
+    buying and selling products electronically - protect against ID theft and Fraud.
+    <br> Business-to-consumer (Amazon) or Consumer-to-consumer (Etsy or Ebay);
+    <br> Shopping carts save a small file as a 'cookie' in your browser.
+    <br> Secure Payment Services (Paypal)
+    <br> be careful what you share - and make certain you trust
+    <br> Don't save a credit card on sites
+    <br> Firewall
+    <br> Strong Password
+    <br> Credit Card instead of Debit Card because it has better security.
+    <br> verify HTTPS - for encryption
+    <br> make certain the site is legit
+    <h3>10.5.10 Ecommerce Facts</h3>
+    <pre>
+    Be careful what you share-	Share personal information only when it's required and requested by a legitimate business that you trust. Avoid saving credit card numbers and other financial information in your online account.
+            If you use a mobile device for ecommerce, share only your device with people you would feel comfortable sharing your wallet with.
+    
+    Don't use public WiFi-	Never conduct ecommerce transactions using public WiFi or public computers that might have spyware installed. Ideally, you should do your online shopping on your home computer, behind a firewall with an up-to-date operating system and antivirus software installed.
+            Use passwords and credit cards-	For online accounts, create strong passwords and use a credit card instead of a debit card whenever possible. Credit cards include better protection against online fraud.
+    
+    Use HTTP Secure-	Verify that the online retailer is conducting secure transactions using HTTPS rather than HTTP. This ensures that your financial data will be encrypted and less likely to be stolen by a hacker.
+
+    Shop with legitimate businesses-	Conduct ecommerce transactions with people and businesses you trust. Investigate all online shopping websites and apps to make sure they're legitimate. Scammers keep themselves busy creating fake storefronts for unsuspecting customers.
+        Examine URLs closely to make sure they don't include slight variations or misspellings of legitimate sites. If you're unfamiliar with an online shopping retailer, see if they have a social media presence and check out product reviews.
+        If you're shopping online, make sure you're using a reputable online shopping site.
+           -When using peer-to-peer payment services such as Venmo, limit your transactions to people you know and trust.
+    
+    Be suspicious-	Be extremely suspicious about deals that seem too good to be true. More often than not, these deals are online scams. 
+</pre>
+    <h3>10.5.11 Windows Defender</h3>
+    Detects malware - the default if no other programs are installed.
+    <h3>10.5.12 Window Defender Facts</h3>
+    <pre>
+Malware detection & removal-	Anti-malware software has two main functions: virus removal and real-time protection. To detect and remove existing malware, Windows Defender can scan the file system for characteristics that might point to an existing malware infection.
+    The problem is that if you run a scan and you find malware on the system, it means your system's already infected and needs to be cleaned up.
+
+Real-time protection-	The second aspect of system protection is detecting malware before it infects your system. An example of this would be downloading a file from a malicious website on the internet. This is what we mean by real-time protection.
+    Instead of just scanning for malicious files on your hard disk drives, real-time protection watches what you're doing and tries to detect malware as it's entering the system.
+
+Manual scans-	By default, Windows Defender scans your system on a regular schedule. However, you can go to the Windows Defender Security Center from the Settings App and manually scan the system. Windows Defender gives you three scanning options to choose from:
+    -A quick scan tells Windows Defender to check for malware but it's only going to look in the places where it's most likely to be found, such as your system folders. It does not scan the entire hard disk drive.
+    --The full scan option means it scans every file on the entire hard disk drive. The disadvantage of a full scan is that it takes a lot longer to go through every single file on the hard disk.
+    ---A custom scan allows you to run the scan where you think the malware might be. You can click Custom and then select the location that you want to scan.
+
+Virus definitions-	In the Windows Defender Security Center, you can see if your virus definitions are up to date. Definitions are files that are used by Windows Defender to locate threats such as viruses and spyware. It's important that these definitions are kept up to date to protect your system from any possible new viruses or threats.
+    Windows Defender automatically updates protection definitions periodically, but you can also manually force an update in the Windows Defender Security Center. The History tab lists items that were detected as potentially harmful.
+</pre>
+    <h3>10.5.13 Use Windows Defender Lab</h3>
+    <h3>10.5.15 Windows Firewall</h3>
+    Filter network traffic based on rules.
+    <br>analyzes network traffic and compares to the rules.
+    <br>Network Firewalls are separate equipment.
+    <br> Software Firewalls are setup on local system.
+    <br> windows has some predefined settings -- network location awareness: depends on public or private networks
+    <h2>10.6 Business Continuity Plans</h2>
+    <pre>
+Information Sensitivity:	An attribute used to classify information based on the risk of public disclosure.
+
+Public/Private Classification:	A scheme for classifying information based on different levels of public/private distinctions.
+
+Government/Military Classification:	A scheme for classifying information based on government and military requirements.
+
+Data Destruction Policy:	Directions for disposing computer devices and destroying data when it's no longer needed or when a storage device needs to be replaced.
+
+Data Center:	An area used to store and share such things as computer systems, applications, data, and other components such as switches and routers. Data centers may be a room in a building, an entire building, or a group of buildings.
+
+Data Redundancy:	A method of increasing fault tolerance by storing data in a way that ensures that the data is recoverable in case of hardware failures. RAID arrays and replication are two data redundancy strategies.
+
+Network Redundancy:	A method of increasing fault tolerance by providing multiple network paths between hosts. 
+
+Site Redundancy:	A method of increasing fault tolerance by providing a complete duplicate of the computers and data at a location away from your main business location.
+
+Power Redundancy:	A method of increasing fault tolerance by providing power backups and power failover.
+
+Failover:	The ability to automatically switch to a redundant component/system, such as a power source, a hard disk, a network, or a site.
+
+Redundant Array of Independent Disks (RAID):	A way to combine smaller and less-expensive disks into a single unit that works together to provide data redundancy.
+
+Backup File:	A copy of a file which can be used when the original file has been lost or corrupted. Backup files are typically stored on a separate device, such as a disk, the cloud, or in the network.
+
+Ad Hoc Backup:	Unscheduled backups performed periodically.
+
+Regular Backup:	Regularly scheduled backups.
+
+System Backup:	A backup of the system software, including operating system files.
+
+Bare Metal Backup:	A backup that gives you the ability to restore an entire system, including the operating system without needing to install anything on the computer prior to the restoration.
+
+Database Backup:	A backup of data stored in a database.
+
+Local Backup:	Backups that are stored in the same building or even the same room as the computer systems they are taken from.
+
+Off-site Backup:	Backups that are stored at a location far enough from a possible natural disaster while being close enough to recover the data and systems within a reasonable amount of time.
+
+Disaster Recovery:	An area of security planning with the goal of protecting an organization from the effects of a natural or human-induced disaster.
+
+Network Attached Storage:	A device that contains one or more hard drives that users can access over the network.
+
+Business Continuity:	The process of creating systems of prevention and recovery to permit ongoing operation, before and during disaster recovery.
+</pre>
+    <h3>10.6.1 Handling Confidential Information</h3>
+    1 of the most important responsibilities is protecting privacy of customers and the business.
+    <br>Highly Sensitive: PII (Personally Identifiable Information); PHI (Protected Health Information); CCI (Confidential Company Information)
+    <br> Medium Sensitive: Possible embarrassment but nothing highly sensitive.
+    <br> Low Sensitive: Limited to No Harm
+    <br><br>another way to do it is:
+    <br>Public Distribution:
+    <br> Public Limited Distribution: NDA - can't distribute or talk of the software
+    <br> Private Internal: For internal use and not to be released
+    <br> Private Restricted: Trade Secrets - Exclusive info - source code for iOS or Google Search Algorithms
+    <br><br>Government and Military
+    <br>Unclassified
+    <br>Sensitive
+    <br>Confidential
+    <br>Secret
+    <br>Top Secret
+    <br><br> Data Destruction - wiping HDD clean or destroying the HDD
+    <h3>10.6.2 Handling Confidential Information Facts</h3>
+    <pre>
+Information sensitivity:	Many organizations classify information based on a scale of high, medium, or low sensitivity.
+    -Highly-sensitive information must be secured against hackers and disposed of according to applicable laws and regulations. Highly-sensitive information includes:
+    -The personally identifiable information (PII) of employees or customers. Examples are social security number, home address, driver's license number, date of birth, etc.
+    -Protected health information (PHI) includes a patient's medical records, payment history, and current health status.
+    -Confidential company information that could result in an extreme loss of public trust, financial loss, or operational harm is also classified as highly sensitive. Examples include financial statements, new product designs, and business deals.
+    -Medium sensitivity applies to information that if disclosed could possibly result in significant (though not extreme) harm, financial loss, or personal embarrassment.
+    -Low sensitivity applies to information that if disclosed would result in limited or no harm.
+    -You must carefully handle information that is categorized as medium or highly sensitive. Policies and procedures to protect the information should include:
+    -Consent from customers to store and use the information.
+    -The use of encryption, authorization protocols, and access levels to protect the information.
+    -Storage on media that secures information through network access controls and/or data encryption.
+
+Public/private classifications:	A popular scheme for classifying information is to use levels with public/private distinctions.
+    -Public with full distribution allows anyone to have a copy of the information. Examples include a publicly accessible website, company brochures, and marketing material.
+    -Public with limited distribution allows public access with restrictions. An example is a software company that distributes code or software to a limited group for beta testing. Testers are typically required to sign a non-disclosure agreement (NDA) that restricts them from distributing the software and discussing its features.
+    -Private generally has at least two levels.
+    -Private internal includes documents that should not be released to the public. Distribution is limited to individuals within the organization. Examples are personnel records, financial ledgers, accounting documents, and customer lists.
+    -Private restricted includes information that if publicly leaked would cause significant damage to the organization. Restrict access to this information to a limited group of authorized personnel within the organization. Examples are trade secrets (such as Google search algorithm) and strategic information.
+
+Government/military classifications:	Companies that work with government and military contracts must use government/military classification levels. The United States government uses the following specific levels. Most countries use a similar system.
+    -Unclassified information can be viewed by the public and poses no security threat.
+    -Sensitive but unclassified information is unclassified information that the government or military would prefer not be available. Disclosure could cause harm, but the harm would be minimal.
+    -Confidential information can be released under the Freedom of Information Act. Releasing this information to the public could possibly damage military efforts.
+    -Secret information can cause serious, irreparable damage if disclosed. Examples of secret information include troop movements, deployments, and overall capabilities.
+    -Top Secret is the highest classification. The release of top secret information can pose a grave threat to the country and national security. This includes weapons programs and intelligence-gathering activities.
+    -Data destruction policies	Data security policies should include directions for disposing of data (including destroying it) when it's no longer needed or when a storage device needs to be replaced. This is especially important when dealing with highly sensitive or classified information. Data destruction techniques include:
+    -Using a special utility to wipe hard disk drives clean by overwriting them with random data.
+    -Destroying the physical hard disk to make the data it contains inaccessible.
+
+Human Resources policies:	Managing an organization's employees is complex. Clear policies help the organization function within the standards outlined by management. These policies should address:
+    -Protecting employees against discrimination.
+    -Screening potential employees including background checks and verification of skills qualifications.
+    -Taking disciplinary actions.
+    -Terminating an employee.
+    -Using personal devices in the workplace.
+    -Sharing data and implementing physical network security.
+    -Ensuring employee safety.
+    -Responding to different types of incidents.
+    -Using company equipment and services.
+    -Establishing privilege levels for job types.
+</pre>
+    <h3>10.6.3 Fault Tolerance</h3>
+    be prepared for things to go wrong -- that is Fault Tolerance. Provide Redundancy.
+    <ul>
+        <li><b>Data</b>: RAID - Redundant Array Independent Disks -- all data is stored on 2 or more disks simultaneously. also Cloud</li>
+        <li><b>Network Redundancy</b>: install multiple NICs or Allow Multiple Paths to create redundant connections. </li>
+        <li><b>Power Redundancy</b>: UPS Uninterruptible Power Supply -- a big battery. </li>
+    </ul>
+    <h3>10.6.4 Fault Tolerance Facts</h3>
+    <pre>
+Data center:	A data center is an area used to store and share such things as computer systems, applications, data, and components such as switches and routers.
+    These data centers may be a room in a building, an entire building, or a group of buildings. Data centers are a main areas of focus when implementing fault tolerance.
+
+Data redundancy:	Hard disks can fail unexpectedly. To avoid data loss, many systems implement a Redundant Array of Independent Disks (RAID). With RAID, all data is stored on two or more disks simultaneously. If a disk fails, the data is accessible using the other disks.
+    Another data redundancy strategy is replication, which is copying data to a different physical location. Storing data in a separate location, protects the data even in the event of a fire or other disaster.
+
+Network redundancy:	For a server to work, it must be connected to the other computers on the network. There are two main ways to provide fault tolerance for a server:
+    Install multiple network interface cards into the server. If one card fails, the others can take over.
+    Allow multiple paths between the server and the computers on the network.
+    With redundant connections, it's much less likely that a server will be cut off from the network.
+
+Site redundancy:	If a major catastrophe were to happen, it's possible your building or complex could be destroyed. To provide fault tolerance under these circumstances, you can implement site redundancy.
+    Site redundancy provides a complete duplicate of the computers and data at a location away from the main computer systems. The main site and the redundant site are connected by high-speed data lines that allow the data created at the main site to be duplicated at the remote site in real- or near-real time.
+
+Power redundancy:	Computers need a constant supply of electricity to work. To protect against data or service loss from power outages, it's important to have redundant power.
+    An easy way to do this for individual machines is to plug them into an uninterruptible power supply (UPS). A UPS is a large battery that's connected both to the computer and the wall outlet. As long as power is coming in from the wall, the computer uses that power. However, if the power from the wall shuts off, the computer immediately switches to battery power.
+
+Failover:	As seen in the previous examples, having redundancy can be very beneficial. An important part of redundancy is the ability to switch to and use the redundant component automatically.
+    When a redundant system kicks in automatically, it is known as failover.
+</pre>
+    <h3>10.6.5 Install a UPS Lab</h3>
+    <h3>10.6.7 RAID Implementations </h3>
+    <img src="./img/t_itf2_raidimp_img1.jpg" alt="raid" width="50%">
+    <pre>
+Fault-tolerance: This describes the degree to which the array can survive one or more disk failures. This helps to protect the data that's stored inside.
+
+Performance: This describes the degree to which the read/write capacity of the array is greater than an individual disk. This helps boost overall system performance.
+
+Capacity: This describes the amount of data that can be stored across all the disks of the array. This helps increase system storage capacity.
+    </pre>
+    <br><b>Striping</b>: means splitting the flow of data into blocks of a certain size and then writing these blocks across the array one by one. The blocks are stored across different drives in the array, giving the image of a stripe of data that covers
+    multiple drives. Striping can help improve the overall performance of your system.
+    <img src="./img/t_itf2_raidimp_img2.jpg" alt="raid" width="50%">
+    <br><br><b>Mirroring</b>: means that the RAID array stores identical copies of data across different drives at the same time. This ensures that if one of the drives fails, you don't lose important data because it's backed up on other drives in the
+    array.
+    <img src="./img/t_itf2_raidimp_img3.jpg" alt="raid" width="50%">
+    <br><br><b>Parity</b>: is another way to help protect against data loss, in which data can be recalculated with the help of other drives if one fails.
+    <br><br>A RAID controller is a card inside of the computer that manages the different hard disks or solid-state drives (SSDs) that work together in the RAID array. Sometimes, this job can be undertaken by a software program, though software RAID setups
+    are often not as powerful as versions created with hardware.
+    <pre>
+RAID Levels:
+--There are several levels of RAID implementations which are just different setups that can be used in a RAID format. RAID 0, RAID 1, RAID 5, and RAID 6 are the most common types of RAID implementations.
+    RAID 0: evenly assigns data across at least two disks without parity information, redundancy, or fault tolerance. It uses striping to increase computer performance.
+
+    RAID 1: makes a copy of all data on at least two disks (redundancy), but doesn't have parity information, striping, or spanning disk space across multiple disks. It uses mirroring to provide some protection and sometimes increases data speed.
+
+    RAID 2: distributes the data evenly in bits rather than in data blocks.
+
+    RAID 3: incorporates byte-level striping with a parity disk.
+
+    RAID 4: incorporates block-level striping with a parity disk.
+
+    RAID 5: assigns data across two or more disks with distributed parity and striping. It provides increased performance and can survive the loss of a member disk. RAID 5 requires at least three disks (two for data and one for parity).
+
+    RAID 6: the same as RAID 5 but with an extra parity block. It also increases performance and can survive the loss of a disk.
+</pre>
+    <h3>10.6.8 Create RAID Array Lab</h3>
+    <h3>10.6.10 Backup Considerations</h3>
+    <ul>Data File Backup
+        <li>Ad-Hoc - periodic and unscheduled backups</li>
+        <li>Regularly Scheduled backups</li>
+        <li>Individual backup systems</li>
+        <li>NAS - Network Attached Storage Device</li>
+    </ul>
+    <ul>System Software Backup
+        <li>Full System Backup</li>
+        <li>Incremental backups</li>
+        <li>Database Servers require different backups</li>
+        <li>Differential backups and Transactional backups</li>
+    </ul>
+    <ul>Storing Backups
+        <li>Stored On-site</li>
+        <li>Off-Site Backup</li>
+        <li>Cloud Storage Backup</li>
+    </ul>
+    <h3>10.6.11 Backup Facts</h3>
+    <pre>
+Critical data:	The data that is most important to you or your company is considered to be critical data. It should be evident that you must implement a plan to back up the files containing critical data.
+    What is not so evident is the importance of settings files. These files also contain critical data. They are sometimes stored in a location other than where the data files are stored.
+
+Data file backups:	Electronic data files can easily become corrupted, lost, or destroyed, especially when a storage device fails. They can also be accidentally deleted or modified by users.
+    With a backup process in place for data files, users can focus on productive tasks.
+
+Ad hoc backups:	Ad hoc backups are unscheduled backups performed periodically. They are better than no backup at all. But regularly scheduled backups are a much better way to protect data.
+
+Regular backups:	Regularly scheduled, daily backups are essential for businesses that rely heavily on stored data and information. These are usually scheduled each evening to avoid any work disruption during the day.
+    Individual users can install and use their own external hard drives or other backup systems. However, most businesses require users to store important files on network servers. These servers can be backed up efficiently through data redundancy, replication, and traditional backup systems.
+
+Bare metal backups:	Most backups back up only data, such as files. A bare metal backup backs up the entire computer including the operating system without requiring software to be reinstalled.
+
+Network attached Storage:	A good option for many home and office networks is to install a Network Attached Storage (NAS) device. These devices contain one or more hard drives that users can access over the network. NAS drives can be used for file sharing, backups, and even streaming media.
+    However, using NAS as a form of backup is often more expensive than purchasing an external disk that can be attached to your system.
+
+System backups:	In addition to backing up data files, it's important to back up system software as well. These backups are particularly important before installing new applications on a system or making significant system configuration changes.
+    Maintaining a regular backup process for an entire computer system is a bit more complicated than simply copying selected folders or files to a disk. System backups typically require the following:
+    Full disk image—System backups begin by capturing a full image of a disk at a certain point in time.
+    Incremental backups—Most of the operating system, applications, and other files will not change much from day to day. To capture the files that do change, perform incremental backups that include only files that have been added or modified since the last backup.
+    System restoration—If a system fails, users can restore system files by using the last full backup and then all incremental backups since that point in time.
+
+Database backups:	Database servers require a different sort of backup process. Because enterprise databases are constantly in use, database backups need to account for transactions that may not have been fully committed when the backup was created.
+    These types of systems are known as a Relational Database Management System (RDBMS). RDBMS use transaction logs that record all transactions and the database modifications made by each transaction. When backing up a database, it is critical to also back up the transaction log. These backups are typically performed by database management systems.
+        Databases require the following types of backups.
+        --Full backups back up all data at specific points in time.
+        ---Differential backups include only the data that has changed since the last full backup.
+        --Transaction log backups allow administrators to restore a database to a particular moment in time by rolling back transactions and preserving database integrity.
+        ---Replication is a mirror copy of the database saved on a separate host. When a transaction is made to the database, it is saved to the master and the replica.
+        --Read-only copies of a database are made through snapshots. Read-only backups are often used when the data in the database no longer needs to be updated. These can be used to store data for historical purposes or to recover from a serious error where other transaction rollbacks have failed.
+
+Local backups:	For convenience, administrators often store backups locally. The backups are in the same building (even the same room) as the computer systems they're backing up. This allows data to be restored quickly when a file has been lost.
+    A disadvantage to local backups is that they do not prepare organizations for more widespread failures, such as natural disasters.
+
+Off-site backups:	Business continuity and disaster recovery plans always need to account for the local destruction of data and devices. Traditionally, offsite backups are stored on digital linear tape (DLT) cartridges within a tape vault.
+    The large storage capacity of these systems makes them ideal for server backups. The location of these backups needs to be far enough from a possible natural disaster, while being close enough to recover the data and systems within a reasonable amount of time.
+
+Cloud storage:	The emergence of cloud storage has changed the way many businesses backup their data. Cloud storage provides a convenient, flexible, and scalable alternative to traditional backup methods. In some cases, cloud storage can fulfill the requirement for offsite backups.
+    One disadvantage of using the cloud is that a remote backup requires a lot of network bandwidth and a reliable internet connection. Cloud backups and restores may take significantly longer than using local storage devices.
+
+Restoring data from backup:	The only way to ensure that you have protection against data loss is to regularly test your restoration procedures. This activity will reveal whether your backup process is functioning properly and whether your restoration and recovery procedures are accurate.
+    Restoration privileges should be restricted to trusted staff to prevent confidentiality violations.
+</pre>
+    <h3>10.6.12 Use Backup Software Lab</h3>
+    <h3>10.6.14 Configure File History Lab</h3>
+    <h3>10.6.16 Restore Data from File History Lab</h3>
+    <h3>10.6.18 Disaster Recovery</h3>
+    an important aspect for Business Continuity Plan - Disaster Recovery and Extended Disruption
+    <br>Critical Business Functions: Business Impact Analysis helps report tangible and intangible impacts
+    <br> Restoring Data and Databases -- getting CRM up and running
+    <br> Restoring Access to Data and Communications
+    <br>Disaster Recovery Exercises
+    <h3>10.6.19 Disaster Recovery Facts</h3>
+    <pre>
+Business continuity plans:	A good disaster recovery plan needs to be informed by the other components of the business continuity plan. For example, a business impact analysis identifies critical business functions that need to be performed during disasters and other times of disrupted operations.
+    Business executives must prioritize critical business functions, spell out a recovery timeframe, and estimate the tangible and intangible impacts on the organization. A tangible impact would be financial loss. Intangible impacts are things like loss of customer trust.
+
+Prioritization:	Understanding the most critical business functions can help IT administrators prioritize the systems that need to be restored first after a disaster. These might include email, financial systems, and customer relationship management systems (CRM).
+
+Restoring data:	In most cases, bringing mission-critical systems back online includes restoring databases needed by employees and customers. Essential data can be restored from backups that have been stored off-site or on the cloud.
+    Another option would be to switch over to an alternate site that has replicated essential data and services. Data restoration plans need to verify that the data have not been have been corrupted and that replicated databases have been synchronized.
+
+Restoring access:	In addition to restoring data, disaster recovery plans include procedures on how to resume applications and restore access to data, hardware, communications, and other IT infrastructure. Systems need to be brought back online carefully, in the proper sequence, to ensure that the core systems come up first.
+    Once the disaster has concluded, plans need to be in place for reverting to the original site. To make sure the plan will be successful, it's important to conduct disaster recovery exercises that simulate real-world disasters.
+</pre>
+
+    <h2>10.7 CyberSecurity Careers</h2>
+    <pre>
+Systems Administrator:	An IT professional who is responsible for securing networks and responding to intrusions.
+
+Computer Forensics Expert:	A person who works closely with law enforcement officials to investigate security breaches, cyber-attacks, and other crimes.
+
+Security Analyst:	A person who is in charge of designing and implementing security methods to protect an organization's computer systems and networks.
+</pre>
+    <h3>10.7.1 Careers</h3>
+    System Admin - Secures network and responds to intrusions
+    <br>Computer Forensics Expert: works with law enforcement investigates security breach
+    <br>Information Security Analysts: pentesting and vulnerability assessment
+    <h3>10.7.2 Facts</h3>
+    <pre>
+Systems Administrator:	In smaller organizations, a systems administrator is typically responsible for securing networks and responding to intrusions. They install and configure access controls, backups, and firewalls; monitor network performance; and detect unauthorized access. Systems administrators oversee company databases, email servers, and file systems. But one of their most important tasks is to monitor and maintain system security.
+
+Computer Forensics Expert:	A computer forensics expert works closely with law enforcement officials to investigate security breaches, cyber-attacks, and other crimes. They recover digital evidence such as emails and file metadata, some of which may have been damaged or deleted from storage devices. Forensics experts need to be thoroughly familiar with data encryption methods, operating systems, programming languages, and forensic software applications.
+
+Security Analyst:	Information security analysts or engineers are in charge of designing and implementing security methods to protect an organization's computer systems and networks. In addition to installing firewalls and anti-malware protection, they research new threats and vulnerabilities, inspect the company's network for security breaches, and recommend measures to prevent future attacks. When necessary, they coordinate with law enforcement
+     to investigate incidents. Security analysts understand and use ethical hacking techniques such as penetration testing and vulnerability assessment.
+    </pre>
+
+
+
+
+
+
+
+
+
 
 
 </body>
